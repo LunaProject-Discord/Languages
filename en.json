@@ -1,0 +1,2224 @@
+{
+    "separator": " - ",
+    "yes": "Yes",
+    "no": "No",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "current": "Current",
+    "empty": "Empty",
+    "help": "Help",
+    "loading": "Loading…",
+    "info": "Information",
+    "success": "Success",
+    "warning": "Warning",
+    "error": "Error",
+    "commands": {
+        "about": {
+            "title": "About",
+            "description": "Showing an overview of this bot.",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [
+                {
+                    "title": "Version",
+                    "description": "{bot:version} (Build {bot:build})"
+                },
+                {
+                    "title": "Update Info",
+                    "description": "{bot:update}"
+                },
+                {
+                    "title": "Creator",
+                    "description": "{bot:authors}"
+                },
+                {
+                    "title": "Library",
+                    "description": "{bot:librarys}"
+                },
+                {
+                    "title": "Server count",
+                    "description": "{bot:servers}"
+                },
+                {
+                    "title": "Channel count",
+                    "description": "{bot:channels} (TC: {bot:channels:text}, VC: {bot:channels:voice})"
+                },
+                {
+                    "title": "User count",
+                    "description": "{bot:users} (User: {bot:users:user}, Bot: {bot:users:bot})"
+                },
+                {
+                    "title": "Invite bot",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Support server",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Administrators",
+                    "description": "{bot:admins}"
+                }
+            ],
+            "hint": {
+                "title": "Hint",
+                "description": "You can view detailed updates with `{bot:prefix}about update` and \n`{bot:prefix}about admins` with administrator information."
+            },
+            "args": {}
+        },
+        "help": {
+            "title": "Help",
+            "description": "All command Prefix in `{bot:prefix}`.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "Searching…{lang:separator}{embed:title}",
+                    "description": "Searching for command. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The specified command could not be found.",
+                    "fields": []
+                },
+                {
+                    "title": "Searching…{lang:separator}{embed:title}",
+                    "description": "Searching for categories. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The specified category could not be found.",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "",
+                    "description": "[Click here for Bot invite]({replace:join}) | [Click here for Support server]({replace:support})"
+                },
+                {
+                    "title": "Hint",
+                    "description": "Only some commands are displayed. Type `{bot:prefix}help` to see all the commands."
+                }
+            ],
+            "hint": {
+                "title": "Hint",
+                "description": "If you enter a command name as an argument at the end of the help command,\nThe detailed information of the entered command will be displayed.\nExample: `{bot:prefix}help about`"
+            },
+            "args": {
+                "search-command": {
+                    "title": "Command: `{cmd:name}`{lang:separator}{embed:title}",
+                    "description": "{cmd:description}",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "Usages",
+                            "description": "{cmd:usages}"
+                        },
+                        {
+                            "title": "Aliases",
+                            "description": "{cmd:aliases}"
+                        },
+                        {
+                            "title": "Category",
+                            "description": "{cmd:category}"
+                        },
+                        {
+                            "title": "Types that can be executed",
+                            "description": "{cmd:type}"
+                        },
+                        {
+                            "title": "Authority required for user",
+                            "description": "{cmd:users}"
+                        },
+                        {
+                            "title": "Authority required for Bot",
+                            "description": "{cmd:bots}"
+                        }
+                    ],
+                    "hint": {}
+                },
+                "search-category": {
+                    "title": "Category: `{replace}`{lang:separator}{embed:title}",
+                    "description": "{replace}",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "Commands",
+                            "description": "{replace}"
+                        }
+                    ],
+                    "hint": {}
+                }
+            }
+        },
+        "document": {
+            "title": "Document",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The document under the specified condition could not be found.",
+                    "fields": []
+                },
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "{replace}{lang:separator}{embed:title}",
+                    "description": "{replace}",
+                    "fields": [
+                        {
+                            "title": "Update date",
+                            "description": "{replace}"
+                        }
+                    ]
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "ping": {
+            "title": "Ping",
+            "description": "Getting Ping...",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "I got a ping.",
+                    "fields": [
+                        {
+                            "title": "Ping",
+                            "description": "{replace}ms"
+                        },
+                        {
+                            "title": "WebSocket",
+                            "description": "{replace}ms"
+                        }
+                    ]
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "follow": {
+            "title": "Channel follow",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "normal": {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Service notifications have been sent to this channel.",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "develop": {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Service development status is now sent to this channel.",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "serversettings": {
+            "title": "サーバー設定",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "設定を変更できませんでした。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "設定を変更しました。",
+                    "fields": [
+                        {
+                            "title": "変更内容",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "設定を変更しました。3秒後に直前の画面に戻ります。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "ヘルプ{lang:separator}{embed:title}",
+                    "description": "サーバー設定は、`{bot:prefix}{cmd:name} server [引数...]`で、\nユーザー設定は、`{bot:prefix}{cmd:name} user [引数...]`で変更できます。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "home": {
+                    "title": "{embed:title}",
+                    "description": "{replace:a}: 時刻と言語\n{replace:b}: 機能\n{replace:c}: ログ\n\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "date-language": {
+                    "title": "時刻と言語{lang:separator}{embed:title}",
+                    "description": "{replace:a}: タイムゾーンの設定\n　 {replace:timezone}\n{replace:b}: 表示言語の設定\n　 {replace:language}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "date": {
+                    "title": "タイムゾーン{lang:separator}{embed:title}",
+                    "description": "タイムゾーン IDを入力してください。\n[タイムゾーン ID](https://ja.wikipedia.org/wiki/%E6%99%82%E9%96%93%E5%B8%AF_(%E6%A8%99%E6%BA%96%E6%99%82)) はこちらから確認してください。\n\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "language": {
+                    "title": "言語{lang:separator}{embed:title}",
+                    "description": "設定したい言語を選択してください。\n\n{replace:ja}: 日本語\n{replace:en}: 英語\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "features": {
+                    "title": "機能{lang:separator}{embed:title}",
+                    "description": "{replace:a}: 引用機能の設定\n　 {replace:quote}\n{replace:b}: グローバルBanの設定\n　 {replace:global-ban}\n{replace:c}: レベル機能の設定\n　 {replace:level}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "quote": {
+                    "title": "引用機能{lang:separator}{embed:title}",
+                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 無効にするチャンネルの設定\n　 {replace:disabled-channel}\n{replace:c}: プライバシー設定\n　 {replace:privacy}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "global-ban": {
+                    "title": "グローバルBan機能{lang:separator}{embed:title}",
+                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 参加時の最低評価値の設定\n　 {replace:minimum-evaluate-value}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "usersettings": {
+            "title": "User Settings",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The settings could not be changed.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "We changed the settings.",
+                    "fields": [
+                        {
+                            "title": "Changes",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "We changed the settings. After 3 seconds, the previous screen will reappear.",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "サーバー設定は、`{bot:prefix}{cmd:name} server [引数...]`で、\nユーザー設定は、`{bot:prefix}{cmd:name} user [引数...]`で変更できます。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "home": {
+                    "title": "{embed:title}",
+                    "description": "{replace:a}: Time & Language\n{replace:b}: Design\n\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "date-language": {
+                    "title": "Time & Language{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Setting the time zone\n　 {replace:timezone}\n{replace:b}: Setting display language\n　 {replace:language}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "date": {
+                    "title": "Time Zone{lang:separator}{embed:title}",
+                    "description": "Please enter the time zone ID.\nPlease check [Time Zone ID](https://en.wikipedia.org/wiki/Time_zone) from here.\n\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "language": {
+                    "title": "Language{lang:separator}{embed:title}",
+                    "description": "Select the language you want to set.\n\n{replace:ja}: Japanese\n{replace:en}: English\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "design": {
+                    "title": "Design{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Setting theme color\n　 {replace:color}\n{replace:b}: Display type setting\n　 {replace:type}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "levelmanager": {
+            "title": "Level Manager",
+            "description": "",
+            "definitions": {
+                "level": "Lexel",
+                "xp": "XP"
+            },
+            "dialogs": [
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:type} has been added to **{replace:user}**.",
+                    "fields": [
+                        {
+                            "title": "Current {replace}",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Removed {replace:type} from **{replace:user}**.",
+                    "fields": [
+                        {
+                            "title": "Current {replace}",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:type} of **{replace:user}** has been changed.",
+                    "fields": [
+                        {
+                            "title": "Current {replace}",
+                            "description": "{replace}"
+                        }
+                    ]
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "level": {
+            "title": "Level infomation",
+            "description": "Displaying information of **{replace}**.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait…",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "Level",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "XP (Max)",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Provisional rank",
+                    "description": "{replace}"
+                }
+            ],
+            "hint": {},
+            "args": {}
+        },
+        "leaderboard": {
+            "title": "Leaderboard",
+            "description": "{replace}",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [
+                {
+                    "title": "Leaderboard for Web",
+                    "description": "The web version of the leaderboard shows the level of every user who speaks on the server.\nSee [Here]({replace}) for details."
+                },
+                {
+                    "title": "Level",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "XP (Max)",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Provisional rank",
+                    "description": "{replace}"
+                }
+            ],
+            "hint": {},
+            "args": {}
+        },
+        "uploader": {
+            "title": "ファイル アップローダー",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ダイレクトメッセージ以外では使用できません。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "**{replace}件**のファイルをアップロードしています…しばらくお待ちください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "**{replace}件**のファイルをアップロードしました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "translate": {
+            "title": "Translate",
+            "description": "",
+            "definitions": {
+                "auto-detection": "Automatic detection"
+            },
+            "dialogs": [
+                {
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "Translation in progress ... Please wait for a while.",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "Source of translation: {replace}",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Translation destination: {replace}",
+                    "description": "{replace}"
+                }
+            ],
+            "hint": {
+                "title": "Hint",
+                "description": "It is also possible to specify and translate the source language.\nExample: `{bot:prefix}translate <Language code (according to ISO 639-1)> {replace}`"
+            },
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}translate <Language code (according to ISO 639-1)> <Text>`:\n__Automatically detect the language before translation and translate__\n`{bot:prefix}translate <Translation before the language code (in accordance with ISO 639-1)> <Language code after translation (according to ISO 639-1)> <Text>`:\n__Specify the language before translation and translate__",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "Language list",
+                            "description": "See [here](https://yudzuki.aoichaan0513.jp/page/translate)."
+                        }
+                    ],
+                    "hint": {}
+                }
+            }
+        },
+        "data": {
+            "title": "データベース",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "ヘルプ{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}{cmd:name} add <ID>`: __データの追加__\n`{bot:prefix}{cmd:name} remove <ID>`: __データの削除__\n`{bot:prefix}{cmd:name} update <ID>`: __データの更新__\n`{bot:prefix}{cmd:name} list <ID>`: __データの一覧__\n`{bot:prefix}{cmd:name} clear <ID>`: __データの全削除__ (サーバーオーナー・Bot管理者のみ実行可能)",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "add": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (アイテムの追加){lang:separator}{embed:title}",
+                            "description": "指定したメンバーが見つかりませんでした。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (アイテムの追加){lang:separator}{embed:title}",
+                            "description": "**{replace}** のデータベースにアイテムを追加します。\nアイテムの名前を入力してください。(1 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (アイテムの追加){lang:separator}{embed:title}",
+                            "description": "**{replace}** のデータベースにアイテムを追加します。\nアイテムの値を入力してください。(2 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (アイテムの追加){lang:separator}{embed:title}",
+                            "description": "**{replace}** のデータベースに下記の内容でアイテムを追加します。よろしいですか？ (3 / 3)\n追加する場合は :o: をクリック、キャンセルする場合は :x: をクリックしてください。",
+                            "fields": [
+                                {
+                                    "title": "アイテムの名前",
+                                    "description": "```{replace}```"
+                                },
+                                {
+                                    "title": "アイテムの値",
+                                    "description": "```{replace}```"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "{lang:info} (アイテムの追加){lang:separator}{embed:title}",
+                            "description": "アイテム追加をキャンセルしました。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (アイテムの追加){lang:separator}{embed:title}",
+                            "description": "**{replace}** のデータベースにアイテムを追加しました。",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "remove": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (アイテムの削除){lang:separator}{embed:title}",
+                            "description": "指定したメンバーが見つかりませんでした。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (アイテムの削除){lang:separator}{embed:title}",
+                            "description": "**{replace}** のデータベースからアイテムを追加します。\nアイテムの名前を入力してください。(1 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (アイテムの削除){lang:separator}{embed:title}",
+                            "description": "**{replace}** のデータベースからアイテムを追加します。\nアイテムの値を入力してください。(2 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (アイテムの削除){lang:separator}{embed:title}",
+                            "description": "**{replace}** のデータベースに下記の内容でアイテムを追加します。よろしいですか？ (3 / 3)\n追加する場合は :o: をクリック、キャンセルする場合は :x: をクリックしてください。",
+                            "fields": [
+                                {
+                                    "title": "アイテムの名前",
+                                    "description": "```{replace}```"
+                                },
+                                {
+                                    "title": "アイテムの値",
+                                    "description": "```{replace}```"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "{lang:info} (アイテムの削除){lang:separator}{embed:title}",
+                            "description": "アイテム削除をキャンセルしました。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (アイテムの削除){lang:separator}{embed:title}",
+                            "description": "**{replace}** のデータベースからアイテムを削除しました。",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "pdf": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "video": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "vote": {
+            "title": "Vote",
+            "description": "{replace}",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "kuromoji": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "globalchat": {
+            "title": "Global Chat",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}{cmd:name} start [Category]`: __Connect to global chat__\n`{bot:prefix}{cmd:name} stop`: __Disconnect from global chat__\n`{bot:prefix}{cmd:name} list`: __Display a list of channels connected to global chat__\n`{bot:prefix}{cmd:name} rule`: __View rules for global chat__\n`{bot:prefix}{cmd:name} <ID (8 alphanumeric chars)>`: __Show messages sent in global chat__",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "start": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Connect to global chat){lang:separator}{embed:title}",
+                            "description": "This channel is already connected to global chat.\nDisconnect with `{bot:prefix}{cmd:name} stop` and try again.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Connect to global chat){lang:separator}{embed:title}",
+                            "description": "Connected to global chat.",
+                            "fields": [
+                                {
+                                    "title": "Mode",
+                                    "description": "{replace}"
+                                },
+                                {
+                                    "title": "Connection category",
+                                    "description": "{replace}"
+                                }
+                            ]
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "stop": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Disconnect from global chat){lang:separator}{embed:title}",
+                            "description": "This channel is not connected to global chat.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Disconnect from global chat){lang:separator}{embed:title}",
+                            "description": "Disconnected from global chat.",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "list": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Connected server list){lang:separator}{embed:title}",
+                            "description": "This channel is not connected to global chat.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (Connected server list){lang:separator}{embed:title}",
+                            "description": "{replace:count} servers (channels) connect to {replace:category}.",
+                            "fields": [
+                                {
+                                    "title": "Connected server list",
+                                    "description": "{replace}"
+                                }
+                            ]
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "rule": {
+                    "title": "{lang:info} (Rule){lang:separator}{embed:title}",
+                    "description": "See [here](https://yudzuki.aoichaan0513.jp/page/rule#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E3%83%81%E3%83%A3%E3%83%83%E3%83%88).",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "advertisement": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "music": {
+            "title": "Music",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "Cannot execute because you are not participating in the voice channel.\nPlease join the voice channel and try again.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "You have already voted. (Votes: {replace:count} / {replace:maxCount})",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Voted (Votes: {replace: count} / {replace: maxCount})",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "Users without the `{replace:permission}` permission must get **{replace:maxCount} or more** votes to use this feature.\nTo perform this function, the participant in the call must enter `{bot:prefix}m {replace:arg}`.",
+                    "fields": []
+                },
+                {
+                    "title": "Control Panel{lang:separator}{embed:title}",
+                    "description": "",
+                    "fields": [
+                        {
+                            "title": "Title",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "Contributor",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "Time",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "Additional User",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "Repeat",
+                            "description": "{replace}"
+                        }
+                    ]
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}{cmd:name} play <URL | Search Word>`, `{bot:prefix}{cmd:name} p <URL | Search Word>`:\n・__Play the media at the URL if a URL is specified.__\n`{bot:prefix}{cmd:name} pause`:\n・__Pause playing media__\n`{bot:prefix}{cmd:name} resume`:\n・__Resume playback of paused media__\n`{bot:prefix}{cmd:name} stop`:\n・__Stop playback and delete queue contents__\n`{bot:prefix}{cmd:name} skip`:\n・__Skip to the next media in the queue__\n`{bot:prefix}{cmd:name} volume <Number>`, `{bot:prefix}{cmd:name} vol <Number>`:\n・__Set volume to specified number__ (Warning if the number is 120 or more)\n`{bot:prefix}{cmd:name} queue`, `{bot:prefix}{cmd:name} q`, `{bot:prefix}{cmd:name} list`:\n・__Display queue contents__\n`{bot:prefix}{cmd:name} leave`, `{bot:prefix}{cmd:name} disconnect`, `{bot:prefix}{cmd:name} dis`:\n・__Stop playback, delete cue content and leave voice channel__\n`{bot:prefix}{cmd:name} history ...`, `{bot:prefix}{cmd:name} his ...`:\n・__Display media played so far__",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "play": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Media playback){lang:separator}{embed:title}",
+                            "description": "The argument is invalid. Please specify a search word or URL.\nExample: `{bot:prefix}{cmd:name} play Charles`",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (Media playback){lang:separator}{embed:title}",
+                            "description": "Searching for media. Please wait…",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:error} (Media playback){lang:separator}{embed:title}",
+                            "description": "Media not found.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Media playback){lang:separator}{embed:title}",
+                            "description": "**{replace:mediaName}** ({replace:mediaAuthor} / {replace:mediaDuration}) has been added to the queue.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Media playback){lang:separator}{embed:title}",
+                            "description": "**{replace:mediaListName}** ({replace:mediaListSize} / {replace:mediaListDuration}) was added to the queue.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Media playback){lang:separator}{embed:title}",
+                            "description": "**{replace:searchText}** search found {replace:searchSize} suggestions.\nPlease enter the media number you want to play within **{replace:time} seconds**.\nIf you want to cancel, please click: x: attached to this message.",
+                            "fields": [
+                                {
+                                    "title": "Search suggestions",
+                                    "description": "{replace}"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "{lang:info} (Media playback){lang:separator}{embed:title}",
+                            "description": "The first candidate was selected because no number was entered.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (Media playback){lang:separator}{embed:title}",
+                            "description": "The argument is invalid. The first candidate was selected because **not a number** was specified.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (Media playback){lang:separator}{embed:title}",
+                            "description": "The argument is invalid. The first candidate was selected because you specified a **number not displayed**.",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "pause": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Pause media){lang:separator}{embed:title}",
+                            "description": "Media playback is already paused.\nTo resume playback, run `{bot:prefix}{cmd:name} resume`.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Pause media){lang:separator}{embed:title}",
+                            "description": "Playback paused.",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "resume": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Resume media){lang:separator}{embed:title}",
+                            "description": "Media playback has already resumed.\nTo pause playback, run `{bot:prefix}{cmd:name} pause`.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Resume media){lang:separator}{embed:title}",
+                            "description": "Playback resumed.",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "stop": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Stop media){lang:separator}{embed:title}",
+                            "description": "Playback has already been stopped.\nTo play media, run `{bot:prefix}{cmd:name} play <Search word | URL>`.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Stop media){lang:separator}{embed:title}",
+                            "description": "Playback has stopped. The media that was added to the queue has been deleted.",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "skip": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Skip media){lang:separator}{embed:title}",
+                            "description": "Cannot skip because there is no media in the queue.\nTo add media to the queue, execute `{bot:prefix}{cmd:name} play <Search word | URL>`.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Skip media){lang:separator}{embed:title}",
+                            "description": "Skipped to next media.",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "volume": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Change volume){lang:separator}{embed:title}",
+                            "description": "Argument is invalid. Specify the argument as **half-width number**.\nExample: `{bot:prefix}{cmd:name} volume 50`",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:warning} (Change volume){lang:separator}{embed:title}",
+                            "description": "Do you want to keep increasing the volume above the recommended level? Continuing to listen at higher volumes may impair hearing.\nWe cannot take responsibility for any physical effects on the user using this function. \n\nTo change the volume to **{replace}**, execute the command again.",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (Change volume){lang:separator}{embed:title}",
+                            "description": "Volume has been changed to **{replace}**.",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "queue": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (キュー){lang:separator}{embed:title}",
+                            "description": "キューが空のため表示できません。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (キュー){lang:separator}{embed:title}",
+                            "description": "総再生時間: {replace:queueDurations}, キュー数: {replace:queueSize}",
+                            "fields": [
+                                {
+                                    "title": "現在再生中",
+                                    "description": "{replace}"
+                                },
+                                {
+                                    "title": "キュー",
+                                    "description": "{replace}"
+                                }
+                            ]
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "leave": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (チャンネルから退出){lang:separator}{embed:title}",
+                            "description": "現在ボイスチャンネルに参加していません。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (チャンネルから退出){lang:separator}{embed:title}",
+                            "description": "ボイスチャンネルから退出しました。",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "history": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (再生履歴){lang:separator}{embed:title}",
+                            "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{cmd:name} history play 1`",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:error} (再生履歴){lang:separator}{embed:title}",
+                            "description": "指定したIDの再生履歴は見つかりませんでした。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (再生履歴){lang:separator}{embed:title}",
+                            "description": "・**履歴機能を使用する**: {replace}\n\n履歴からメディアを再生するには `{bot:prefix}{cmd:name} history play <ID>` と実行してください。\n履歴を削除するには `{bot:prefix}{cmd:name} history remove [ID]` と実行してください。",
+                            "fields": [
+                                {
+                                    "title": "履歴",
+                                    "description": "{replace}"
+                                }
+                            ]
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "server": {
+            "title": "Server infomation",
+            "description": "Displaying information of {replace}.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The server with the specified condition could not be found.",
+                    "fields": []
+                },
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for server under specified conditions. Please wait…",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "ID",
+                    "description": "`{replace}`"
+                },
+                {
+                    "title": "Owner",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Create date",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Region",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Server Boost",
+                    "description": "Level.{replace} ({replace:count})"
+                },
+                {
+                    "title": "Verified? (Bot)",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Channel count",
+                    "description": "{replace} ({replace:category}, {replace:text}, {replace:voice})"
+                },
+                {
+                    "title": "User count",
+                    "description": "{replace} ({replace:user}, {replace:bot})"
+                },
+                {
+                    "title": "Emoji count",
+                    "description": "{replace} (Normal: {replace:normal}, GIF: {replace:animated}) / {replace:max}"
+                },
+                {
+                    "title": "Roles ({replace:count})",
+                    "description": "{replace}"
+                }
+            ],
+            "hint": {},
+            "args": {}
+        },
+        "channel": {
+            "title": "Channel infomation",
+            "description": "Displaying information of {replace}.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The channel with the specified condition could not be found.",
+                    "fields": []
+                },
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for channels under specified conditions. Please wait…",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "ID",
+                    "description": "`{replace}`"
+                },
+                {
+                    "title": "Topic",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Parent category",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "NSFW",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Slowmode",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Bitrate",
+                    "description": "{replace} / {replace:max}kbps"
+                },
+                {
+                    "title": "User Count (limit)",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Create date",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Accessible role / member",
+                    "description": "{replace}"
+                }
+            ],
+            "hint": {},
+            "args": {}
+        },
+        "role": {
+            "title": "Role infomation",
+            "description": "Displaying information of {replace}.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The role with the specified condition could not be found.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "Could not display because no role was granted.",
+                    "fields": []
+                },
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for role under specified conditions. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "Role list{lang:separator}{embed:title}",
+                    "description": "{replace}",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "ID",
+                    "description": "`{replace}`"
+                },
+                {
+                    "title": "Mentionable",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Display separately",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Color code",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Grants count",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Create date",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Members ({replace:count})",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Permissions ({replace:raw})",
+                    "description": "{replace}"
+                }
+            ],
+            "hint": {},
+            "args": {}
+        },
+        "emoji": {
+            "title": "Emoji information",
+            "description": "Displaying information of {replace}.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The emoji with the specified condition could not be found.",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for emoji under specified conditions. Please wait…",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "ID",
+                    "description": "`{replace}`"
+                },
+                {
+                    "title": "Server",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Create date",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Animated",
+                    "description": "{replace}"
+                }
+            ],
+            "hint": {},
+            "args": {}
+        },
+        "user": {
+            "title": "User infomation",
+            "description": "Displaying information of {replace}.",
+            "definitions": {
+                "general": "General",
+                "text-channel": "Text Channel",
+                "voice-channel": "Voice Channel"
+            },
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The user with the specified condition could not be found.",
+                    "fields": []
+                },
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for user under specified conditions. Please wait…",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "User Name",
+                    "description": "{replace:name}#{replace:tag}\n({replace:id})"
+                },
+                {
+                    "title": "Status",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Create date",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Join date",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "NickName",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Evaluation value",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Bot?",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Verified? (Bot)",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Permission (Bot)",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Roles ({replace:count})",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Permissions ({replace:raw})",
+                    "description": "{replace}"
+                }
+            ],
+            "hint": {},
+            "args": {}
+        },
+        "invite": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "check": {
+            "title": "Punishments Information",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The punishment information for the specified condition was not found.",
+                    "fields": []
+                },
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for punishment information under specified conditions. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "{replace}{lang:separator}{embed:title}",
+                    "description": "> __**Latest mute information**__\n{replace:mute}\n> __**Latest kick information**__\n{replace:kick}\n> __**Latest Local Ban information**__\n{replace:lban}\n> __**Latest Global Ban Information**__\n{replace:gban}",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "lookup": {
+            "title": "Name change history",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The user with the specified condition could not be found.",
+                    "fields": []
+                },
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for user under specified conditions. Please wait…",
+                    "fields": []
+                },
+                {
+                    "title": "{replace}{lang:separator}{embed:title}",
+                    "description": "{replace}",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "clear": {
+            "title": "Delete message",
+            "description": "Removing {replace} messages...",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "complete": {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace} messages have been deleted."
+                }
+            }
+        },
+        "categorycopy": {
+            "title": "Category copy",
+            "description": "I copied **{replace}**.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The category with the specified condition could not be found.",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "channelcopy": {
+            "title": "Channel copy",
+            "description": "I copied **{replace}**.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The channel with the specified condition could not be found.",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "rolecopy": {
+            "title": "Role copy",
+            "description": "I copied **{replace}**.",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The role with the specified condition could not be found.",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "mute": {
+            "title": "Mute",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "**{replace}** could not be muted.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "**{replace}** has been muted.",
+                    "fields": [
+                        {
+                            "title": "Reason",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Muted members of **{replace} people**.",
+                    "fields": [
+                        {
+                            "title": "Members",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "Reason",
+                            "description": "{replace}"
+                        }
+                    ]
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}mute <Member Mentions | User ID> [Reason]`:\n__Mute specified member__ (Multiple specifications can be specified for mentions)",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "unmute": {
+            "title": "UnMute",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "Could not unmute **{replace}**.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Unmuted **{replace}**.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Unmuted **{replace} people** members.",
+                    "fields": [
+                        {
+                            "title": "Members",
+                            "description": "{replace}"
+                        }
+                    ]
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}unmute <Member Mentions | User ID>`:\n__Unmute specified member__ (Multiple specifications can be specified for mentions)",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "kick": {
+            "title": "Kick",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The **{replace}** could not kick.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "You have kicked **{replace}**.",
+                    "fields": [
+                        {
+                            "title": "Reason",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "The members of the **{replace} people** was kick.",
+                    "fields": [
+                        {
+                            "title": "Members",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "Reason",
+                            "description": "{replace}"
+                        }
+                    ]
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}kick <Member Mentions | User ID> [Reason]`:\n__Kick specified member__ (Multiple specifications can be specified for mentions)",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "ban": {
+            "title": "Local Ban",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The **{replace}** Could not local Ban.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Local ban of **{replace}**.",
+                    "fields": [
+                        {
+                            "title": "Reason",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "Local ban on **{replace} people** members.",
+                    "fields": [
+                        {
+                            "title": "Members",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "Reason",
+                            "description": "{replace}"
+                        }
+                    ]
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}ban <User Mentions | User ID> [Reason]`:\n__Specified member as local Ban__ (Multiple specifications can be specified for mentions)",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "gban": {
+            "title": "グローバルBan",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ユーザーアカウントが作成されてから**60日**以上経過していないため使用できません。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "グローバルBanでは理由の記入が必須となっています。\n引数に理由を指定してから再度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "指定した条件でのユーザーが見つかりませんでした。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "{replace} に対するグローバルBanを申請しています。しばらくお待ちください…",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace} に対するグローバルBanを申請・ローカルBanを実行しました。\nサービス運営から申請者に連絡をする可能性がございます。",
+                    "fields": [
+                        {
+                            "title": "備考",
+                            "description": "Botに権限がないため**直近のメッセージログ**と**サーバーログ**が送信されませんでした。\nサービス運営に直接送信を行ってください。"
+                        },
+                        {
+                            "title": "備考",
+                            "description": "{replace} がこのサーバーに参加していません。証拠を送信していない場合はサービス運営に直接送信を行ってください。"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "本当に {replace:user} に対するグローバルBanを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "{replace} は既にグローバルBanされています。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "{replace} をグローバルBanできませんでした。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace} をグローバルBanしました。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace} に対するグローバルBanをキャンセルしました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "ヘルプ{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}{cmd:name} [-f] <ユーザーID> <理由>`:\n__指定したユーザーのグローバルBanを申請・実行__",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "ungban": {
+            "title": "Un Global Ban",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "**{replace}** のグローバルBanを解除できませんでした。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "**{replace}** のグローバルBanを解除しました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "サーバーが作成されてから**30日**以上経過していないか、ユーザーが作成されてから**60日**以上経過していないため使用できません。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}unmute <User ID>`:\n__Release the global Ban the specified user__ (Punishment is not possible unless you are a punished server and you are not a punished person or a server owner)",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "freechannel": {
+            "title": "フリーチャンネル",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "このサーバーでは__**フリーチャンネル**__機能が有効になっていません。\n`{bot:prefix}settings server premium freechannel` と実行して機能を有効にしてください。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "ヘルプ{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}{cmd:name} <text | voice> [チャンネル名]`:\n__予め設定したカテゴリー内にユーザー用のチャンネルを作成__ (名前を指定しない場合はユーザーIDで作成)",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "text": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (テキストチャンネル){lang:separator}{embed:title}",
+                            "description": "テキストチャンネルをこれ以上作成できません。\nあなたのレベルが一定数上がれば上限が変わります。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (テキストチャンネル){lang:separator}{embed:title}",
+                            "description": "テキストチャンネルを **{replace}** という名前で作成しました。",
+                            "fields": [
+                                {
+                                    "title": "チャンネル",
+                                    "description": "{replace}"
+                                }
+                            ]
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "voice": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (ボイスチャンネル){lang:separator}{embed:title}",
+                            "description": "ボイスチャンネルをこれ以上作成できません。\nあなたのレベルが一定数上がれば上限が変わります。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (ボイスチャンネル){lang:separator}{embed:title}",
+                            "description": "ボイスチャンネルを **{replace}** という名前で作成しました。",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "backup": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "eval": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "system": {
+            "title": "システム",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "管理用コマンドのため公開しておりません。\nサービス運営の場合はサービスオーナーにお問い合わせください。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "db": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:info} (データベースの再読み込み){lang:separator}{embed:title}",
+                            "description": "データベースを再読み込みしています。しばらくお待ちください…",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (データベースの再読み込み){lang:separator}{embed:title}",
+                            "description": "データベースを再読み込みしました。",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "gc": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:info} (ガベージコレクションの実行){lang:separator}{embed:title}",
+                            "description": "ガベージコレクションを実行しています。しばらくお待ちください…",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (ガベージコレクションの実行){lang:separator}{embed:title}",
+                            "description": "ガベージコレクションを実行しました。",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "avatar": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (アバターの変更){lang:separator}{embed:title}",
+                            "description": "コマンドと合わせて画像も送信してください。",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:info} (アバターの変更){lang:separator}{embed:title}",
+                            "description": "アバターを変更しています。しばらくお待ちください…",
+                            "fields": []
+                        },
+                        {
+                            "title": "{lang:success} (アバターの変更){lang:separator}{embed:title}",
+                            "description": "アバターを変更しました。\n適用にはしばらくかかります。",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "reload": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "cmd": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "send": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "sync": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "evaluate": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "debug": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "maintenance": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "dictionary": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        }
+    },
+    "categories": {
+        "bot": {
+            "name": "Bot",
+            "description": "Botの概要やヘルプなどの情報を表示するための機能が入っているカテゴリです。"
+        },
+        "configuration": {
+            "name": "Configuration",
+            "description": "サーバーやユーザーごとのBotの設定を変更するための機能が入っているカテゴリです。"
+        },
+        "fun": {
+            "name": "Fun",
+            "description": "お遊び用機能が入っているカテゴリです。"
+        },
+        "game": {
+            "name": "Game",
+            "description": "ゲーム系の機能が入っているカテゴリです。"
+        },
+        "globalchat": {
+            "name": "Global Chat",
+            "description": "他のサーバーのユーザーとお喋りができる機能が入っているカテゴリです。"
+        },
+        "music": {
+            "name": "Music (Beta)",
+            "description": "音楽が聞けるよ！"
+        },
+        "miscellaneous": {
+            "name": "Miscellaneous",
+            "description": "サーバーやユーザーの情報が見れるコマンドなどが入っているカテゴリです。"
+        },
+        "moderation": {
+            "name": "Moderation",
+            "description": "チャンネルや役職のコピー、メンバーのミュートなどが出来る機能が入っているカテゴリです。"
+        },
+        "premium": {
+            "name": "Premium",
+            "description": "認証済みサーバーやユーザーが利用できる機能が入っているカテゴリです。"
+        },
+        "management": {
+            "name": "Management",
+            "description": "サービス管理者用のコマンドが入っているカテゴリです。権限がないユーザーは利用できません。"
+        }
+    },
+    "listeners": {},
+    "dialogs": {
+        "evaluate-value": {
+            "title": "{lang:error}",
+            "description": "You can not use this bot's features because your rating is below {bot:evalute:before}."
+        },
+        "maintenance-mode": {
+            "title": "{lang:error}",
+            "description": "currently undergoing maintenance.\nThe maintenance end time is scheduled for __**{replace}**__.\nPlease wait for the maintenance to finish."
+        },
+        "command-not-found": {
+            "title": "{lang:error}",
+            "description": "The command you executed could not be found.\nCheck if there is a command with `{bot:prefix}help`.\nMaybe: {replace}"
+        },
+        "user-permission": {
+            "title": "{lang:error}",
+            "description": "You do not have the user's authority."
+        },
+        "bot-permission": {
+            "title": "{lang:error}",
+            "description": "You do not have Bot's permission."
+        },
+        "user-bot-permission": {
+            "title": "{lang:error}",
+            "description": "You do not have user and bot permissions."
+        },
+        "permission": {
+            "title": "{lang:error}",
+            "description": "You do not have permission."
+        },
+        "bot-manager-only": {
+            "title": "{lang:error}",
+            "description": "The executed command cannot be executed except for __**service management user** __."
+        },
+        "server-only": {
+            "title": "{lang:error}",
+            "description": "The command you tried to execute can only be executed from the server."
+        },
+        "premium-only": {
+            "title": "{lang:error}",
+            "description": "The command you tried to execute cannot be executed from other than __**verified server**__."
+        },
+        "private-only": {
+            "title": "{lang:error}",
+            "description": "The command you tried to execute cannot be executed from other than DM or a group."
+        },
+        "not-use": {
+            "title": "{lang:error}",
+            "description": "This feature is not available."
+        },
+        "args": {
+            "title": "{lang:error}",
+            "description": "Invalid argument. Check the usage with `{bot:prefix}help {cmd:name}`."
+        },
+        "exception": {
+            "title": "{lang:error}",
+            "description": "An unexpected error has occurred.\nIt would be helpful if you could report errors to the producer if you like."
+        },
+        "pagination-info": {
+            "title": "{lang:info}{lang:separator}Pagination",
+            "description": "Move to the page of the entered number. Enter from 1 to **{replace:pages}**.\nPlease click :x: attached to this message to cancel.\n\n※ It will be automatically canceled in **{replace:time}** seconds."
+        },
+        "pagination-success": {
+            "title": "{lang:success}{lang:separator}Pagination",
+            "description": "Go to **{replace}** page. Please wait…"
+        },
+        "pagination-error": {
+            "title": "{lang:error}{lang:separator}Pagination",
+            "description": "There was no page with the entered number.\nGo to the first page. Please wait…"
+        }
+    }
+}
