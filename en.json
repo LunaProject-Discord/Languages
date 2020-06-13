@@ -274,7 +274,15 @@
                 },
                 "home": {
                     "title": "{embed:title}",
-                    "description": "{replace:a}: 時刻と言語\n{replace:b}: 機能\n{replace:c}: ログ\n\n{replace:cancel}: キャンセル",
+                    "description": "{replace:a}: 動作\n{replace:b}: 時刻と言語\n{replace:c}: 機能\n{replace:d}: ログ\n\n{replace:cancel}: キャンセル",  
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "action": {
+                    "title": "動作{lang:separator}{embed:title}",
+                    "description": "{replace:a}: プレフィックスの設定\n　 {replace:prefix}\n{replace:b}: ニックネームの設定\n　 {replace:nickname}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル", 
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
