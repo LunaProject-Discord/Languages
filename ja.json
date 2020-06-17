@@ -297,6 +297,14 @@
                     "fields": [],
                     "hint": {}
                 },
+                "prefix": {
+                    "title": "プレフィックス{lang:separator}{embed:title}",
+                    "description": "新しいプレフィックスを入力してください。\n\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
                 "date-language": {
                     "title": "時刻と言語{lang:separator}{embed:title}",
                     "description": "{replace:a}: タイムゾーンの設定\n　 {replace:timezone}\n{replace:b}: 表示言語の設定\n　 {replace:language}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
@@ -321,7 +329,7 @@
                     "fields": [],
                     "hint": {}
                 },
-                "features": {
+                "feature": {
                     "title": "機能{lang:separator}{embed:title}",
                     "description": "{replace:a}: 引用機能の設定\n　 {replace:quote}\n{replace:b}: グローバルBanの設定\n　 {replace:global-ban}\n{replace:c}: レベル機能の設定\n　 {replace:level}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
@@ -340,6 +348,14 @@
                 "global-ban": {
                     "title": "グローバルBan機能{lang:separator}{embed:title}",
                     "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 参加時の最低評価値の設定\n　 {replace:minimum-evaluate-value}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "log": {
+                    "title": "ログ{lang:separator}{embed:title}",
+                    "description": "{replace:a}: 参加・退出ログの設定\n　 {replace:user}\n{replace:b}: モデレーションログの設定\n　 {replace:moderation}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
