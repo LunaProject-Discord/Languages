@@ -155,45 +155,6 @@
                 }
             }
         },
-        "document": {
-            "title": "ドキュメント",
-            "description": "",
-            "definitions": {},
-            "dialogs": [
-                {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件でのドキュメントが見つかりませんでした。",
-                    "fields": []
-                },
-                {
-                    "title": "データ取得中…{lang:separator}{embed:title}",
-                    "description": "データを取得しています。しばらくお待ちください…",
-                    "fields": []
-                },
-                {
-                    "title": "{replace}{lang:separator}{embed:title}",
-                    "description": "{replace}",
-                    "fields": [
-                        {
-                            "title": "更新日時",
-                            "description": "{replace}"
-                        }
-                    ]
-                }
-            ],
-            "fields": [],
-            "hint": {},
-            "args": {
-                "help": {
-                    "title": "ヘルプ{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{cmd:name} <閲覧したい内容>`: __指定した内容のドキュメントを表示__",
-                    "definitions": {},
-                    "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                }
-            }
-        },
         "ping": {
             "title": "Ping",
             "description": "Pingを取得中です…",
@@ -214,6 +175,15 @@
                     ]
                 }
             ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "status": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
             "fields": [],
             "hint": {},
             "args": {}
@@ -347,7 +317,7 @@
                 },
                 "global-ban": {
                     "title": "グローバルBan機能{lang:separator}{embed:title}",
-                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 参加時の最低評価値の設定\n　 {replace:minimum-evaluate-value}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 参加基準値の設定\n　 {replace:minimum-evaluate-value}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -356,6 +326,22 @@
                 "log": {
                     "title": "ログ{lang:separator}{embed:title}",
                     "description": "{replace:a}: 参加・退出ログの設定\n　 {replace:user}\n{replace:b}: モデレーションログの設定\n　 {replace:moderation}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "user-log": {
+                    "title": "参加・退出ログ{lang:separator}{embed:title}",
+                    "description": "ログを送信したいチャンネルのIDかメンションを入力してください。\n\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "moderation-log": {
+                    "title": "モデレーションログ{lang:separator}{embed:title}",
+                    "description": "ログを送信したいチャンネルのIDかメンションを入力してください。\n\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -1291,7 +1277,11 @@
         "role": {
             "title": "役職情報",
             "description": "{replace} の情報を表示しています。",
-            "definitions": {},
+            "definitions": {
+                "general": "サーバー全般",
+                "text-channel": "テキストチャンネル",
+                "voice-channel": "ボイスチャンネル"
+            },
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
@@ -1478,7 +1468,7 @@
         },
         "check": {
             "title": "処罰情報",
-            "description": "",
+            "description": "{replace} の情報を表示しています。",
             "definitions": {},
             "dialogs": [
                 {
@@ -1495,14 +1485,26 @@
                     "title": "検索中…{lang:separator}{embed:title}",
                     "description": "指定した条件での処罰情報を検索しています。しばらくお待ちください…",
                     "fields": []
-                },
-                {
-                    "title": "{replace}{lang:separator}{embed:title}",
-                    "description": "> __**最新のミュート情報**__\n{replace:mute}\n> __**最新のキック情報**__\n{replace:kick}\n> __**最新のローカルBan情報**__\n{replace:lban}\n> __**最新のグローバルBan情報**__\n{replace:gban}",
-                    "fields": []
                 }
             ],
-            "fields": [],
+            "fields": [
+                {
+                    "title": "ミュート",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "キック",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "ローカルBan",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "グローバルBan",
+                    "description": "{replace}"
+                }
+            ],
             "hint": {},
             "args": {}
         },
@@ -1929,6 +1931,15 @@
                 }
             }
         },
+        "regenerate": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
         "freechannel": {
             "title": "フリーチャンネル",
             "description": "",
@@ -2139,15 +2150,6 @@
             "hint": {},
             "args": {}
         },
-        "debug": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
         "maintenance": {
             "title": "",
             "description": "",
@@ -2279,5 +2281,42 @@
             "title": "{lang:error}{lang:separator}ページネーション",
             "description": "入力された番号のページがありませんでした。\n最初のページに移動します。しばらくお待ちください…"
         }
+    },
+    "permissions": {
+        "administrator": "管理者",
+        "view_audit_logs": "サーバーログの表示",
+        "manage_server": "サーバーの管理",
+        "manage_channel": "チャンネルの管理",
+        "manage_roles": "役職の管理",
+        "manage_permissions": "権限の管理",
+        "manage_emotes": "絵文字の管理",
+        "manage_webhooks": "Webhookの管理",
+        "kick_members": "メンバーをキック",
+        "ban_members": "メンバーをBan",
+        "create_instant_invite": "招待リンクを作成",
+        "nickname_change": "ニックネームの変更",
+        "nickname_manage": "ニックネームの管理",
+        "view_guild_insights": "サーバー統計の表示",
+        "view_channel": "チャンネルの表示",
+
+        "message_read": "メッセージの表示",
+        "message_write": "メッセージの送信",
+        "message_tts": "TtSメッセージの送信",
+        "message_manage": "メッセージの管理",
+        "message_embed_links": "埋め込みリンクの送信",
+        "message_attach_files": "ファイルの添付",
+        "message_history": "メッセージ履歴の表示",
+        "message_mention_everyone": "役職・全員宛メンション",
+        "message_ext_emoji": "外部の絵文字の使用",
+        "message_add_reaction": "リアクションの追加",
+        
+        "voice_connect": "接続",
+        "voice_speak": "発言",
+        "voice_stream": "配信",
+        "voice_mute_others": "メンバーをミュート",
+        "voice_deaf_others": "メンバーのスピーカーをミュート",
+        "voice_move_others": "メンバーの移動",
+        "voice_use_vad": "音声検出を使用",
+        "priority_speaker": "優先スピーカー"
     }
 }

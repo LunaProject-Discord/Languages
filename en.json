@@ -155,36 +155,6 @@
                 }
             }
         },
-        "document": {
-            "title": "Document",
-            "description": "",
-            "definitions": {},
-            "dialogs": [
-                {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The document under the specified condition could not be found.",
-                    "fields": []
-                },
-                {
-                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
-                    "description": "Retrieving data. Please wait…",
-                    "fields": []
-                },
-                {
-                    "title": "{replace}{lang:separator}{embed:title}",
-                    "description": "{replace}",
-                    "fields": [
-                        {
-                            "title": "Update date",
-                            "description": "{replace}"
-                        }
-                    ]
-                }
-            ],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
         "ping": {
             "title": "Ping",
             "description": "Getting Ping...",
@@ -205,6 +175,15 @@
                     ]
                 }
             ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "status": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
             "fields": [],
             "hint": {},
             "args": {}
@@ -236,28 +215,28 @@
             }
         },
         "serversettings": {
-            "title": "サーバー設定",
+            "title": "Server Settings",
             "description": "",
             "definitions": {},
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "設定を変更できませんでした。",
+                    "description": "The settings could not be changed.",
                     "fields": []
                 },
                 {
                     "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "設定を変更しました。",
+                    "description": "We changed the settings.",
                     "fields": [
                         {
-                            "title": "変更内容",
+                            "title": "Changes",
                             "description": "{replace}"
                         }
                     ]
                 },
                 {
                     "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "設定を変更しました。3秒後に直前の画面に戻ります。",
+                    "description": "We changed the settings. After 3 seconds, the previous screen will reappear.",
                     "fields": []
                 }
             ],
@@ -274,79 +253,95 @@
                 },
                 "home": {
                     "title": "{embed:title}",
-                    "description": "{replace:a}: 動作\n{replace:b}: 時刻と言語\n{replace:c}: 機能\n{replace:d}: ログ\n\n{replace:cancel}: キャンセル",  
+                    "description": "{replace:a}: Action\n{replace:b}: Time & Language\n{replace:c}: Feature\n{replace:d}: Log\n\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "action": {
-                    "title": "動作{lang:separator}{embed:title}",
-                    "description": "{replace:a}: プレフィックスの設定\n　 {replace:prefix}\n{replace:b}: ニックネームの設定\n　 {replace:nickname}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル", 
+                    "title": "Action{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Setting the prefix\n　 {replace:prefix}\n{replace:b}: Nickname setting\n　 {replace:nickname}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "prefix": {
-                    "title": "プレフィックス{lang:separator}{embed:title}",
-                    "description": "新しいプレフィックスを入力してください。\n\n{replace:cancel}: キャンセル",
+                    "title": "Prefix{lang:separator}{embed:title}",
+                    "description": "Please enter a new prefix.\n\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "date-language": {
-                    "title": "時刻と言語{lang:separator}{embed:title}",
-                    "description": "{replace:a}: タイムゾーンの設定\n　 {replace:timezone}\n{replace:b}: 表示言語の設定\n　 {replace:language}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "title": "Time & Language{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Setting the time zone\n　 {replace:timezone}\n{replace:b}: Setting display language\n　 {replace:language}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "date": {
-                    "title": "タイムゾーン{lang:separator}{embed:title}",
-                    "description": "タイムゾーン IDを入力してください。\n[タイムゾーン ID](https://ja.wikipedia.org/wiki/%E6%99%82%E9%96%93%E5%B8%AF_(%E6%A8%99%E6%BA%96%E6%99%82)) はこちらから確認してください。\n\n{replace:cancel}: キャンセル",
+                    "title": "Time Zone{lang:separator}{embed:title}",
+                    "description": "Please enter the time zone ID.\nPlease check [Time Zone ID](https://en.wikipedia.org/wiki/Time_zone) from here.\n\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "language": {
-                    "title": "言語{lang:separator}{embed:title}",
-                    "description": "設定したい言語を選択してください。\n\n{replace:ja}: 日本語\n{replace:en}: 英語\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "title": "Language{lang:separator}{embed:title}",
+                    "description": "Select the language you want to set.\n\n{replace:ja}: Japanese\n{replace:en}: English\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "feature": {
-                    "title": "機能{lang:separator}{embed:title}",
-                    "description": "{replace:a}: 引用機能の設定\n　 {replace:quote}\n{replace:b}: グローバルBanの設定\n　 {replace:global-ban}\n{replace:c}: レベル機能の設定\n　 {replace:level}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "title": "Feature{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Quote function settings\n　 {replace:quote}\n{replace:b}: Global Ban Settings\n　 {replace:global-ban}\n{replace:c}: Level function settings\n　 {replace:level}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "quote": {
-                    "title": "引用機能{lang:separator}{embed:title}",
-                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 無効にするチャンネルの設定\n　 {replace:disabled-channel}\n{replace:c}: プライバシー設定\n　 {replace:privacy}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "title": "Quote function{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Enable/disable function\n　 {replace:enabled}\n{replace:b}: Channel settings to disable\n　 {replace:disabled-channel}\n{replace:c}: Privacy settings\n　 {replace:privacy}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "global-ban": {
-                    "title": "グローバルBan機能{lang:separator}{embed:title}",
-                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 参加時の最低評価値の設定\n　 {replace:minimum-evaluate-value}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "title": "Global Ban function{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Enable/disable function\n　 {replace:enabled}\n{replace:b}: Participation standard value setting\n　 {replace:minimum-evaluate-value}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
                 "log": {
-                    "title": "ログ{lang:separator}{embed:title}",
-                    "description": "{replace:a}: 参加・退出ログの設定\n　 {replace:user}\n{replace:b}: モデレーションログの設定\n　 {replace:moderation}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "title": "Log{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Join / Leave log settings\n　 {replace:user}\n{replace:b}: Moderation log settings\n　 {replace:moderation}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "user-log": {
+                    "title": "Join / Leave log settings{lang:separator}{embed:title}",
+                    "description": "ログを送信したいチャンネルのIDかメンションを入力してください。\n\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "moderation-log": {
+                    "title": "Moderation log settings{lang:separator}{embed:title}",
+                    "description": "ログを送信したいチャンネルのIDかメンションを入力してください。\n\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -1285,7 +1280,11 @@
         "role": {
             "title": "Role infomation",
             "description": "Displaying information of {replace}.",
-            "definitions": {},
+            "definitions": {
+                "general": "General",
+                "text-channel": "Text Channel",
+                "voice-channel": "Voice Channel"
+            },
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
@@ -1472,7 +1471,7 @@
         },
         "check": {
             "title": "Punishments Information",
-            "description": "",
+            "description": "Displaying information of {replace}.",
             "definitions": {},
             "dialogs": [
                 {
@@ -1489,14 +1488,26 @@
                     "title": "Searching...{lang:separator}{embed:title}",
                     "description": "Searching for punishment information under specified conditions. Please wait…",
                     "fields": []
-                },
-                {
-                    "title": "{replace}{lang:separator}{embed:title}",
-                    "description": "> __**Latest mute information**__\n{replace:mute}\n> __**Latest kick information**__\n{replace:kick}\n> __**Latest Local Ban information**__\n{replace:lban}\n> __**Latest Global Ban Information**__\n{replace:gban}",
-                    "fields": []
                 }
             ],
-            "fields": [],
+            "fields": [
+                {
+                    "title": "Mute information",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Kick information",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Local ban information",
+                    "description": "{replace}"
+                },
+                {
+                    "title": "Global ban information",
+                    "description": "{replace}"
+                }
+            ],
             "hint": {},
             "args": {}
         },
@@ -1894,6 +1905,15 @@
                 }
             }
         },
+        "regenerate": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
         "freechannel": {
             "title": "フリーチャンネル",
             "description": "",
@@ -2104,15 +2124,6 @@
             "hint": {},
             "args": {}
         },
-        "debug": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
         "maintenance": {
             "title": "",
             "description": "",
@@ -2244,5 +2255,42 @@
             "title": "{lang:error}{lang:separator}Pagination",
             "description": "There was no page with the entered number.\nGo to the first page. Please wait…"
         }
+    },
+    "permissions": {
+        "administrator": "Administrator",
+        "view_audit_logs": "View Server Log",
+        "manage_server": "Manage Server",
+        "manage_channel": "Manage Channels",
+        "manage_roles": "Manage Roles",
+        "manage_permissions": "Manage Permissions",
+        "manage_emotes": "Manage Emotes",
+        "manage_webhooks": "Manage Webhooks",
+        "kick_members": "Kick Members",
+        "ban_members": "Ban Members",
+        "create_instant_invite": "Create Invite",
+        "nickname_change": "Change Nickname",
+        "nickname_manage": "Manage Nicknames",
+        "view_guild_insights": "View Server Insights",
+        "view_channel": "View Channels",
+
+        "message_read": "Read Messages",
+        "message_write": "Send Messages",
+        "message_tts": "Send TtS Messages",
+        "message_manage": "Manage Messages",
+        "message_embed_links": "Send Embed Links",
+        "message_attach_files": "Attach Files",
+        "message_history": "Read Message Histories",
+        "message_mention_everyone": "Mention Roles / Everyone",
+        "message_ext_emoji": "Use External Emotes",
+        "message_add_reaction": "Add Reactions",
+        
+        "voice_connect": "Connect",
+        "voice_speak": "Speak",
+        "voice_stream": "Stream",
+        "voice_mute_others": "Mute Members",
+        "voice_deaf_others": "Deafen Members",
+        "voice_move_others": "Move Members",
+        "voice_use_vad": "Use Voice Activity",
+        "priority_speaker": "Priority Speaker"
     }
 }
