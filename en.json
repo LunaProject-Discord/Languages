@@ -2275,7 +2275,7 @@
 
         "message_read": "Read Messages",
         "message_write": "Send Messages",
-        "message_tts": "Send TtS Messages",
+        "message_tts": "Send TTS Messages",
         "message_manage": "Manage Messages",
         "message_embed_links": "Send Embed Links",
         "message_attach_files": "Attach Files",

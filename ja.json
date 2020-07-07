@@ -2301,7 +2301,7 @@
 
         "message_read": "メッセージの表示",
         "message_write": "メッセージの送信",
-        "message_tts": "TtSメッセージの送信",
+        "message_tts": "音声読み上げメッセージの送信",
         "message_manage": "メッセージの管理",
         "message_embed_links": "埋め込みリンクの送信",
         "message_attach_files": "ファイルの添付",
