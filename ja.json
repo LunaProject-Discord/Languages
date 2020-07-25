@@ -309,7 +309,7 @@
                 },
                 "quote": {
                     "title": "引用機能{lang:separator}{embed:title}",
-                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 無効にするチャンネルの設定\n　 {replace:disabled-channel}\n{replace:c}: プライバシー設定\n　 {replace:privacy}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 無効にするチャンネルの設定\n　 {replace:disabled-channels}\n{replace:c}: 公開/非公開の切り替え\n　 {replace:is-public}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -704,15 +704,6 @@
                 }
             }
         },
-        "pdf": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
         "video": {
             "title": "",
             "description": "",
@@ -875,10 +866,6 @@
                     "title": "コントロールパネル{lang:separator}{embed:title}",
                     "description": "",
                     "fields": [
-                        {
-                            "title": "タイトル",
-                            "description": "{replace}"
-                        },
                         {
                             "title": "投稿ユーザー",
                             "description": "{replace}"
@@ -1083,7 +1070,7 @@
                             "description": "総再生時間: {replace:queueDurations}, キュー数: {replace:queueSize}",
                             "fields": [
                                 {
-                                    "title": "現在再生中",
+                                    "title": "再生中",
                                     "description": "{replace}"
                                 },
                                 {
@@ -1761,32 +1748,17 @@
                 }
             }
         },
-        "ban": {
+        "localban": {
             "title": "ローカルBan",
             "description": "",
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "**{replace}** をローカルBanできませんでした。",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "**{replace}** をローカルBanしました。",
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "本当に{replace:count}人のユーザーに対するローカルBanを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
                     "fields": [
                         {
-                            "title": "理由",
-                            "description": "{replace}"
-                        }
-                    ]
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "**{replace}人**のメンバーをローカルBanしました。",
-                    "fields": [
-                        {
-                            "title": "メンバー",
+                            "title": "ユーザー",
                             "description": "{replace}"
                         },
                         {
@@ -1794,6 +1766,70 @@
                             "description": "{replace}"
                         }
                     ]
+                },
+                {
+                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "description": "本当に {replace:user} に対するローカルBanを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーは既にローカルBanされています。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "{replace:user} は既にローカルBanされています。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーをローカルBanしました。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:user} をローカルBanしました。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーに対するローカルBanをキャンセルしました。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:user} に対するローカルBanをキャンセルしました。",
+                    "fields": []
                 }
             ],
             "fields": [],
@@ -1809,7 +1845,7 @@
                 }
             }
         },
-        "gban": {
+        "globalban": {
             "title": "グローバルBan",
             "description": "",
             "definitions": {},
