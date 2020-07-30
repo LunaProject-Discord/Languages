@@ -8,7 +8,7 @@
     "empty": "Empty",
     "help": "Help",
     "loading": "Loading…",
-    "info": "Information",
+    "information": "Information",
     "success": "Success",
     "warning": "Warning",
     "error": "Error",
@@ -73,22 +73,12 @@
             "dialogs": [
                 {
                     "title": "Searching…{lang:separator}{embed:title}",
-                    "description": "Searching for command. Please wait…",
+                    "description": "Searching for a command category. Please wait…",
                     "fields": []
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The specified command could not be found.",
-                    "fields": []
-                },
-                {
-                    "title": "Searching…{lang:separator}{embed:title}",
-                    "description": "Searching for categories. Please wait…",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The specified category could not be found.",
+                    "description": "No command or category was found for the specified criteria.",
                     "fields": []
                 }
             ],
@@ -161,7 +151,7 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "I got a ping.",
                     "fields": [
                         {
@@ -525,31 +515,6 @@
             "hint": {},
             "args": {}
         },
-        "uploader": {
-            "title": "ファイル アップローダー",
-            "description": "",
-            "definitions": {},
-            "dialogs": [
-                {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "ダイレクトメッセージ以外では使用できません。",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
-                    "description": "**{replace}件**のファイルをアップロードしています…しばらくお待ちください。",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "**{replace}件**のファイルをアップロードしました。",
-                    "fields": []
-                }
-            ],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
         "translate": {
             "title": "Translate",
             "description": "",
@@ -558,7 +523,7 @@
             },
             "dialogs": [
                 {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "Translation in progress ... Please wait for a while.",
                     "fields": []
                 }
@@ -620,17 +585,17 @@
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (アイテムの追加){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アイテムの追加){lang:separator}{embed:title}",
                             "description": "**{replace}** のデータベースにアイテムを追加します。\nアイテムの名前を入力してください。(1 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (アイテムの追加){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アイテムの追加){lang:separator}{embed:title}",
                             "description": "**{replace}** のデータベースにアイテムを追加します。\nアイテムの値を入力してください。(2 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (アイテムの追加){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アイテムの追加){lang:separator}{embed:title}",
                             "description": "**{replace}** のデータベースに下記の内容でアイテムを追加します。よろしいですか？ (3 / 3)\n追加する場合は :o: をクリック、キャンセルする場合は :x: をクリックしてください。",
                             "fields": [
                                 {
@@ -644,7 +609,7 @@
                             ]
                         },
                         {
-                            "title": "{lang:info} (アイテムの追加){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アイテムの追加){lang:separator}{embed:title}",
                             "description": "アイテム追加をキャンセルしました。",
                             "fields": []
                         },
@@ -668,17 +633,17 @@
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (アイテムの削除){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アイテムの削除){lang:separator}{embed:title}",
                             "description": "**{replace}** のデータベースからアイテムを追加します。\nアイテムの名前を入力してください。(1 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (アイテムの削除){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アイテムの削除){lang:separator}{embed:title}",
                             "description": "**{replace}** のデータベースからアイテムを追加します。\nアイテムの値を入力してください。(2 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (アイテムの削除){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アイテムの削除){lang:separator}{embed:title}",
                             "description": "**{replace}** のデータベースに下記の内容でアイテムを追加します。よろしいですか？ (3 / 3)\n追加する場合は :o: をクリック、キャンセルする場合は :x: をクリックしてください。",
                             "fields": [
                                 {
@@ -692,7 +657,7 @@
                             ]
                         },
                         {
-                            "title": "{lang:info} (アイテムの削除){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アイテムの削除){lang:separator}{embed:title}",
                             "description": "アイテム削除をキャンセルしました。",
                             "fields": []
                         },
@@ -808,7 +773,7 @@
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (Connected server list){lang:separator}{embed:title}",
+                            "title": "{lang:information} (Connected server list){lang:separator}{embed:title}",
                             "description": "{replace:count} servers (channels) connect to {replace:category}.",
                             "fields": [
                                 {
@@ -822,7 +787,7 @@
                     "hint": {}
                 },
                 "rule": {
-                    "title": "{lang:info} (Rule){lang:separator}{embed:title}",
+                    "title": "{lang:information} (Rule){lang:separator}{embed:title}",
                     "description": "See [here](https://yudzuki.aoichaan0513.jp/page/rule#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E3%83%81%E3%83%A3%E3%83%83%E3%83%88).",
                     "definitions": {},
                     "dialogs": [],
@@ -861,7 +826,7 @@
                     "fields": []
                 },
                 {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "Users without the `{replace:permission}` permission must get **{replace:maxCount} or more** votes to use this feature.\nTo perform this function, the participant in the call must enter `{bot:prefix}m {replace:arg}`.",
                     "fields": []
                 },
@@ -910,7 +875,7 @@
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:information} (Media playback){lang:separator}{embed:title}",
                             "description": "Searching for media. Please wait…",
                             "fields": []
                         },
@@ -940,17 +905,17 @@
                             ]
                         },
                         {
-                            "title": "{lang:info} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:information} (Media playback){lang:separator}{embed:title}",
                             "description": "The first candidate was selected because no number was entered.",
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:information} (Media playback){lang:separator}{embed:title}",
                             "description": "The argument is invalid. The first candidate was selected because **not a number** was specified.",
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:information} (Media playback){lang:separator}{embed:title}",
                             "description": "The argument is invalid. The first candidate was selected because you specified a **number not displayed**.",
                             "fields": []
                         }
@@ -1121,7 +1086,7 @@
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (再生履歴){lang:separator}{embed:title}",
+                            "title": "{lang:information} (再生履歴){lang:separator}{embed:title}",
                             "description": "・**履歴機能を使用する**: {replace}\n\n履歴からメディアを再生するには `{bot:prefix}{cmd:name} history play <ID>` と実行してください。\n履歴を削除するには `{bot:prefix}{cmd:name} history remove [ID]` と実行してください。",
                             "fields": [
                                 {
@@ -1728,7 +1693,7 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "本当に{replace:count}人のユーザーに対するローカルBanを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
                     "fields": [
                         {
@@ -1742,7 +1707,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "本当に {replace:user} に対するローカルBanを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
                     "fields": [
                         {
@@ -1840,7 +1805,7 @@
                     "fields": []
                 },
                 {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace} に対するグローバルBanを申請しています。しばらくお待ちください…",
                     "fields": []
                 },
@@ -1859,7 +1824,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "本当に {replace:user} に対するグローバルBanを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
                     "fields": [
                         {
@@ -2044,7 +2009,7 @@
             "hint": {},
             "args": {
                 "help": {
-                    "title": "{lang:info}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "管理用コマンドのため公開しておりません。\nサービス運営の場合はサービスオーナーにお問い合わせください。",
                     "definitions": {},
                     "dialogs": [],
@@ -2057,7 +2022,7 @@
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:info} (データベースの再読み込み){lang:separator}{embed:title}",
+                            "title": "{lang:information} (データベースの再読み込み){lang:separator}{embed:title}",
                             "description": "データベースを再読み込みしています。しばらくお待ちください…",
                             "fields": []
                         },
@@ -2076,7 +2041,7 @@
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:info} (ガベージコレクションの実行){lang:separator}{embed:title}",
+                            "title": "{lang:information} (ガベージコレクションの実行){lang:separator}{embed:title}",
                             "description": "ガベージコレクションを実行しています。しばらくお待ちください…",
                             "fields": []
                         },
@@ -2100,7 +2065,7 @@
                             "fields": []
                         },
                         {
-                            "title": "{lang:info} (アバターの変更){lang:separator}{embed:title}",
+                            "title": "{lang:information} (アバターの変更){lang:separator}{embed:title}",
                             "description": "アバターを変更しています。しばらくお待ちください…",
                             "fields": []
                         },
@@ -2280,7 +2245,7 @@
             "description": "An unexpected error has occurred.\nIt would be helpful if you could report errors to the producer if you like."
         },
         "pagination-info": {
-            "title": "{lang:info}{lang:separator}Pagination",
+            "title": "{lang:information}{lang:separator}Pagination",
             "description": "Move to the page of the entered number. Enter from 1 to **{replace:pages}**.\nPlease click :x: attached to this message to cancel.\n\n※ It will be automatically canceled in **{replace:time}** seconds."
         },
         "pagination-success": {
