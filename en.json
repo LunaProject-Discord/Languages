@@ -2244,7 +2244,7 @@
             "title": "{lang:error}",
             "description": "An unexpected error has occurred.\nIt would be helpful if you could report errors to the producer if you like."
         },
-        "pagination-info": {
+        "pagination-information": {
             "title": "{lang:information}{lang:separator}Pagination",
             "description": "Move to the page of the entered number. Enter from 1 to **{replace:pages}**.\nPlease click :x: attached to this message to cancel.\n\n※ It will be automatically canceled in **{replace:time}** seconds."
         },
