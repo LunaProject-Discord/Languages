@@ -2283,6 +2283,13 @@
             "description": "入力された番号のページがありませんでした。\n最初のページに移動します。しばらくお待ちください…"
         }
     },
+    "online-statuses": {
+        "online": "オンライン",
+        "idle": "退席中",
+        "do_not_disturb": "取り込み中",
+        "offline": "オフライン",
+        "invisible": "オフライン"
+    },
     "permissions": {
         "administrator": "管理者",
         "view_audit_logs": "サーバーログの表示",

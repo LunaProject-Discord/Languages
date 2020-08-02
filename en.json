@@ -6,6 +6,7 @@
     "disabled": "Disabled",
     "current": "Current",
     "empty": "Empty",
+    "unknown": "Unknown",
     "help": "Help",
     "loading": "Loading…",
     "information": "Information",
@@ -2256,6 +2257,13 @@
             "title": "{lang:error}{lang:separator}Pagination",
             "description": "There was no page with the entered number.\nGo to the first page. Please wait…"
         }
+    },
+    "online-statuses": {
+        "online": "Online",
+        "idle": "Idle",
+        "do_not_disturb": "Do Not Disturb",
+        "offline": "Offline",
+        "invisible": "Offline"
     },
     "permissions": {
         "administrator": "Administrator",
