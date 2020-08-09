@@ -789,7 +789,7 @@
                 },
                 "rule": {
                     "title": "{lang:information} (Rule){lang:separator}{embed:title}",
-                    "description": "See [here](https://yudzuki.aoichaan0513.jp/page/rule#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E3%83%81%E3%83%A3%E3%83%83%E3%83%88).",
+                    "description": "See [here](https://yudzuki.aoichaan0513.jp/page/support/rule).",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
