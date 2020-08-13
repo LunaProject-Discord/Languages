@@ -314,6 +314,38 @@
                     "fields": [],
                     "hint": {}
                 },
+                "level": {
+                    "title": "レベル{lang:separator}{embed:title}",
+                    "description": "{replace:a}: 機能の有効/無効の切り替え\n　 {replace:enabled}\n{replace:b}: 通知の設定\n　 {replace:notification}\n{replace:c}: 役職の設定\n　 {replace:levelup-roles}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "level-notification": {
+                    "title": "通知方法 (レベル){lang:separator}{embed:title}",
+                    "description": "通知する方法を選択してください。\n\n{replace:a}: チャンネル\n{replace:b}: ユーザー\n{replace:c}: 無効\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "level-notification-channel-type": {
+                    "title": "通知方法 (レベル){lang:separator}{embed:title}",
+                    "description": "通知先のチャンネルを選択してください。\n\n{replace:a}: 指定したチャンネル\n{replace:b}: レベルアップ時に送信されたチャンネル\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "level-notification-channel": {
+                    "title": "通知チャンネル (レベル){lang:separator}{embed:title}",
+                    "description": "通知を送信したいチャンネルのIDかメンションを入力してください。\n\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
                 "log": {
                     "title": "Log{lang:separator}{embed:title}",
                     "description": "{replace:a}: Join / Leave log settings\n　 {replace:user}\n{replace:b}: Moderation log settings\n　 {replace:moderation}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
