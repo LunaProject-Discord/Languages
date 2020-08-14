@@ -903,33 +903,33 @@
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:error} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:error} (Media Playback){lang:separator}{embed:title}",
                             "description": "The argument is invalid. Please specify a search word or URL.\nExample: `{bot:prefix}{cmd:name} play Charles`",
                             "fields": []
                         },
                         {
-                            "title": "{lang:information} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:information} (Media Playback){lang:separator}{embed:title}",
                             "description": "Searching for media. Please wait…",
                             "fields": []
                         },
                         {
-                            "title": "{lang:error} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:error} (Media Playback){lang:separator}{embed:title}",
                             "description": "Media not found.",
                             "fields": []
                         },
                         {
-                            "title": "{lang:success} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:success} (Media Playback){lang:separator}{embed:title}",
                             "description": "**{replace:mediaName}** ({replace:mediaAuthor} / {replace:mediaDuration}) has been added to the queue.",
                             "fields": []
                         },
                         {
-                            "title": "{lang:success} (Media playback){lang:separator}{embed:title}",
+                            "title": "{lang:success} (Media Playback){lang:separator}{embed:title}",
                             "description": "**{replace:mediaListName}** ({replace:mediaListSize} / {replace:mediaListDuration}) was added to the queue.",
                             "fields": []
                         },
                         {
-                            "title": "{lang:success} (Media playback){lang:separator}{embed:title}",
-                            "description": "**{replace:searchText}** search found {replace:searchSize} suggestions.\nPlease enter the media number you want to play within **{replace:time} seconds**.\nIf you want to cancel, please click: x: attached to this message.",
+                            "title": "{lang:success} (Media Playback){lang:separator}{embed:title}",
+                            "description": "**{replace:searchText}** で検索した結果、{replace:searchSize} 件の候補が見つかりました。\n再生したいメディアの番号を**{replace:time}秒**以内にクリックしてください。\nまた、キャンセルする場合はこのメッセージについている {replace:cancel} をクリックしてください。",
                             "fields": [
                                 {
                                     "title": "Search suggestions",
@@ -938,18 +938,8 @@
                             ]
                         },
                         {
-                            "title": "{lang:information} (Media playback){lang:separator}{embed:title}",
-                            "description": "The first candidate was selected because no number was entered.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (Media playback){lang:separator}{embed:title}",
-                            "description": "The argument is invalid. The first candidate was selected because **not a number** was specified.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (Media playback){lang:separator}{embed:title}",
-                            "description": "The argument is invalid. The first candidate was selected because you specified a **number not displayed**.",
+                            "title": "{lang:information} (Media Playback){lang:separator}{embed:title}",
+                            "description": "Cancelled.",
                             "fields": []
                         }
                     ],
@@ -1043,8 +1033,13 @@
                             "fields": []
                         },
                         {
+                            "title": "{lang:information} (Change volume){lang:separator}{embed:title}",
+                            "description": "Cancelled.",
+                            "fields": []
+                        },
+                        {
                             "title": "{lang:warning} (Change volume){lang:separator}{embed:title}",
-                            "description": "Do you want to keep increasing the volume above the recommended level? Continuing to listen at higher volumes may impair hearing.\nWe cannot take responsibility for any physical effects on the user using this function. \n\nTo change the volume to **{replace}**, execute the command again.",
+                            "description": "Do you want to keep turning up the volume until it exceeds the recommended level? Continuing to listen to sound at higher volumes can damage your hearing.\nAlso, I cannot be held responsible for any physical consequences to the user of using this feature.\n\nIf you want to change the volume to **{replace:volume}**, click {replace:check} within {replace:time} seconds.",
                             "fields": []
                         },
                         {

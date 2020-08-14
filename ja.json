@@ -283,7 +283,7 @@
                 },
                 "language": {
                     "title": "言語{lang:separator}{embed:title}",
-                    "description": "設定したい言語を選択してください。\n\n{replace:ja}: 日本語\n{replace:en}: 英語\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "description": "設定したい言語をクリックしてください。\n\n{replace:ja}: 日本語\n{replace:en}: 英語\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -323,7 +323,7 @@
                 },
                 "level-notification": {
                     "title": "通知方法 (レベル){lang:separator}{embed:title}",
-                    "description": "通知する方法を選択してください。\n\n{replace:a}: チャンネル\n{replace:b}: ユーザー\n{replace:c}: 無効\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "description": "通知する方法をクリックしてください。\n\n{replace:a}: チャンネル\n{replace:b}: ユーザー\n{replace:c}: 無効\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -331,7 +331,7 @@
                 },
                 "level-notification-channel-type": {
                     "title": "通知方法 (レベル){lang:separator}{embed:title}",
-                    "description": "通知先のチャンネルを選択してください。\n\n{replace:a}: 指定したチャンネル\n{replace:b}: レベルアップ時に送信されたチャンネル\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "description": "通知先のチャンネルをクリックしてください。\n\n{replace:a}: 指定したチャンネル\n{replace:b}: レベルアップ時に送信されたチャンネル\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -434,7 +434,7 @@
                 },
                 "language": {
                     "title": "言語{lang:separator}{embed:title}",
-                    "description": "設定したい言語を選択してください。\n\n{replace:ja}: 日本語\n{replace:en}: 英語\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "description": "設定したい言語をクリックしてください。\n\n{replace:ja}: 日本語\n{replace:en}: 英語\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -925,7 +925,7 @@
                         },
                         {
                             "title": "{lang:success} (メディアの再生){lang:separator}{embed:title}",
-                            "description": "**{replace:searchText}** で検索した結果、{replace:searchSize} 件の候補が見つかりました。\n再生したいメディアの番号を**{replace:time}秒**以内に入力してください。\nまた、キャンセルする場合はこのメッセージについている :x: をクリックしてください。",
+                            "description": "**{replace:searchText}** で検索した結果、{replace:searchSize} 件の候補が見つかりました。\n再生したいメディアの番号を**{replace:time}秒**以内にクリックしてください。\nまた、キャンセルする場合はこのメッセージについている {replace:cancel} をクリックしてください。",
                             "fields": [
                                 {
                                     "title": "検索候補",
@@ -935,17 +935,7 @@
                         },
                         {
                             "title": "{lang:information} (メディアの再生){lang:separator}{embed:title}",
-                            "description": "番号が入力されなかったため最初の候補が選択されました。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (メディアの再生){lang:separator}{embed:title}",
-                            "description": "引数が不正です。**数値以外**を指定したため最初の候補が選択されました。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (メディアの再生){lang:separator}{embed:title}",
-                            "description": "引数が不正です。**表示されていない番号**を指定したため最初の候補が選択されました。",
+                            "description": "キャンセルしました。",
                             "fields": []
                         }
                     ],
@@ -1039,8 +1029,13 @@
                             "fields": []
                         },
                         {
+                            "title": "{lang:information} (音量の変更){lang:separator}{embed:title}",
+                            "description": "キャンセルしました。",
+                            "fields": []
+                        },
+                        {
                             "title": "{lang:warning} (音量の変更){lang:separator}{embed:title}",
-                            "description": "推奨レベルを超えるまで音量を上げ続けますか？これ以上の音量で音を聞き続けると聴力を損なう可能性があります。\nまた、この機能を使用して使用者に何らかの身体的影響を及ぼしても責任を取ることはできません。\n\n音量を**{replace}**に変更する場合はもう一度コマンドを実行してください。",
+                            "description": "推奨レベルを超えるまで音量を上げ続けますか？これ以上の音量で音を聞き続けると聴力を損なう可能性があります。\nまた、この機能を使用して使用者に何らかの身体的影響を及ぼしても責任を取ることはできません。\n\n音量を**{replace:volume}**に変更する場合は{replace:time}秒以内に {replace:check} をクリックしてください。",
                             "fields": []
                         },
                         {
