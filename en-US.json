@@ -284,7 +284,7 @@
                 },
                 "language": {
                     "title": "Language{lang:separator}{embed:title}",
-                    "description": "Select the language you want to set.\n\n{replace:ja}: Japanese\n{replace:en}: English\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "description": "Select the language you want to set.\n\n{replace:languages}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -435,7 +435,7 @@
                 },
                 "language": {
                     "title": "Language{lang:separator}{embed:title}",
-                    "description": "Select the language you want to set.\n\n{replace:ja}: Japanese\n{replace:en}: English\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "description": "Select the language you want to set.\n\n{replace:languages}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],

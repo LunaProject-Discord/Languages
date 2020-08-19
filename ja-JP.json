@@ -283,7 +283,7 @@
                 },
                 "language": {
                     "title": "言語{lang:separator}{embed:title}",
-                    "description": "設定したい言語をクリックしてください。\n\n{replace:ja}: 日本語\n{replace:en}: 英語\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "description": "設定したい言語をクリックしてください。\n\n{replace:languages}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -434,7 +434,7 @@
                 },
                 "language": {
                     "title": "言語{lang:separator}{embed:title}",
-                    "description": "設定したい言語をクリックしてください。\n\n{replace:ja}: 日本語\n{replace:en}: 英語\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
+                    "description": "設定したい言語をクリックしてください。\n\n{replace:languages}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
