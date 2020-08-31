@@ -495,7 +495,7 @@
             "args": {}
         },
         "level": {
-            "title": "Level infomation",
+            "title": "Level information",
             "description": "Displaying information of **{replace}**.",
             "definitions": {},
             "dialogs": [
@@ -1130,7 +1130,7 @@
             }
         },
         "server": {
-            "title": "Server infomation",
+            "title": "Server information",
             "description": "Displaying information of {replace}.",
             "definitions": {},
             "dialogs": [
@@ -1196,7 +1196,7 @@
             "args": {}
         },
         "channel": {
-            "title": "Channel infomation",
+            "title": "Channel information",
             "description": "Displaying information of {replace}.",
             "definitions": {},
             "dialogs": [
@@ -1258,7 +1258,7 @@
             "args": {}
         },
         "role": {
-            "title": "Role infomation",
+            "title": "Role information",
             "description": "Displaying information of {replace}.",
             "definitions": {
                 "general": "General",
@@ -1367,7 +1367,7 @@
             "args": {}
         },
         "user": {
-            "title": "User infomation",
+            "title": "User information",
             "description": "Displaying information of {replace}.",
             "definitions": {
                 "general": "General",
@@ -1586,33 +1586,82 @@
             "definitions": {},
             "dialogs": [
                 {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "本当に{replace:count}人のユーザーに対するミュートを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "本当に {replace:user} に対するミュートを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "**{replace}** could not be muted.",
+                    "description": "{replace:count}人のユーザーは既にミュートされています。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "{replace:user} は既にミュートされています。",
                     "fields": []
                 },
                 {
                     "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "**{replace}** has been muted.",
+                    "description": "{replace:count}人のユーザーをミュートしました。",
                     "fields": [
                         {
-                            "title": "Reason",
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "理由",
                             "description": "{replace}"
                         }
                     ]
                 },
                 {
                     "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "Muted members of **{replace} people**.",
+                    "description": "{replace:user} をミュートしました。",
                     "fields": [
                         {
-                            "title": "Members",
-                            "description": "{replace}"
-                        },
-                        {
-                            "title": "Reason",
+                            "title": "理由",
                             "description": "{replace}"
                         }
                     ]
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーに対するミュートをキャンセルしました。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "{replace:user} に対するミュートをキャンセルしました。",
+                    "fields": []
                 }
             ],
             "fields": [],

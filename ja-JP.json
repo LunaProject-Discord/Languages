@@ -251,7 +251,7 @@
                 },
                 "action": {
                     "title": "動作{lang:separator}{embed:title}",
-                    "description": "{replace:a}: プレフィックスの設定\n　 {replace:prefix}\n{replace:b}: ニックネームの設定\n　 {replace:nickname}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル", 
+                    "description": "{replace:a}: プレフィックスの設定\n　 {replace:prefix}\n{replace:b}: ニックネームの設定\n　 {replace:nickname}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -585,7 +585,7 @@
                     "fields": [
                         {
                             "title": "言語リスト",
-                            "description": "[こちら](https://yudzuki.aoichaan0513.jp/page/translate)を参照してください。" 
+                            "description": "[こちら](https://yudzuki.aoichaan0513.jp/page/translate)を参照してください。"
                         }
                     ],
                     "hint": {}
@@ -1611,26 +1611,11 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "**{replace}** をミュートできませんでした。",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "**{replace}** をミュートしました。",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "本当に{replace:count}人のユーザーに対するミュートを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
                     "fields": [
                         {
-                            "title": "理由",
-                            "description": "{replace}"
-                        }
-                    ]
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "**{replace}人**のメンバーをミュートしました。",
-                    "fields": [
-                        {
-                            "title": "メンバー",
+                            "title": "ユーザー",
                             "description": "{replace}"
                         },
                         {
@@ -1638,6 +1623,70 @@
                             "description": "{replace}"
                         }
                     ]
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "本当に {replace:user} に対するミュートを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーは既にミュートされています。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "{replace:user} は既にミュートされています。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーをミュートしました。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:user} をミュートしました。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーに対するミュートをキャンセルしました。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "{replace:user} に対するミュートをキャンセルしました。",
+                    "fields": []
                 }
             ],
             "fields": [],
@@ -2333,7 +2382,6 @@
         "nickname_manage": "ニックネームの管理",
         "view_guild_insights": "サーバー統計の表示",
         "view_channel": "チャンネルの表示",
-
         "message_read": "メッセージの表示",
         "message_write": "メッセージの送信",
         "message_tts": "音声読み上げメッセージの送信",
@@ -2344,7 +2392,6 @@
         "message_mention_everyone": "役職・全員宛メンション",
         "message_ext_emoji": "外部の絵文字の使用",
         "message_add_reaction": "リアクションの追加",
-        
         "voice_connect": "接続",
         "voice_speak": "発言",
         "voice_stream": "配信",
