@@ -1160,7 +1160,7 @@
                     "description": "{replace}"
                 },
                 {
-                    "title": "Create date",
+                    "title": "Created At",
                     "description": "{replace}"
                 },
                 {
@@ -1246,7 +1246,7 @@
                     "description": "{replace}"
                 },
                 {
-                    "title": "Create date",
+                    "title": "Created At",
                     "description": "{replace}"
                 },
                 {
@@ -1314,7 +1314,7 @@
                     "description": "{replace}"
                 },
                 {
-                    "title": "Create date",
+                    "title": "Created At",
                     "description": "{replace}"
                 },
                 {
@@ -1355,11 +1355,11 @@
                     "description": "{replace}"
                 },
                 {
-                    "title": "Create date",
+                    "title": "Created At",
                     "description": "{replace}"
                 },
                 {
-                    "title": "Animated",
+                    "title": "Animated?",
                     "description": "{replace}"
                 }
             ],
@@ -1401,11 +1401,11 @@
                     "description": "{replace}"
                 },
                 {
-                    "title": "Create date",
+                    "title": "Created At",
                     "description": "{replace}"
                 },
                 {
-                    "title": "Join date",
+                    "title": "Joined At",
                     "description": "{replace}"
                 },
                 {
@@ -2238,7 +2238,7 @@
             "name": "Game",
             "description": "ゲーム系の機能が入っているカテゴリです。"
         },
-        "globalchat": {
+        "global-chat": {
             "name": "Global Chat",
             "description": "他のサーバーのユーザーとお喋りができる機能が入っているカテゴリです。"
         },

@@ -744,6 +744,20 @@
                     "fields": [],
                     "hint": {}
                 },
+                "create": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "グループの作成{lang:separator}{embed:title}",
+                            "description": "{replace:a}: 名前の設定\n　 {replace:name}\n{replace:b}: 説明の設定\n{replace:c}: クールタイムの設定\n　 {replace:cooltime}\n{replace:d}: パスワードの設定\n　 {replace:password}\n{replace:e}: 最大行数の設定\n　 {replace:max-lines-count}\n{replace:f}: 最大絵文字数の設定\n　 {replace:max-emotes-count}\n{replace:g}: 最低サーバー作成日数の設定\n　 {replace:minimum-server-created-at}\n{replace:h}: 最低ユーザー作成日数の設定\n　 {replace:minimum-user-created-at}",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
                 "start": {
                     "title": "",
                     "description": "",
@@ -2263,7 +2277,7 @@
             "name": "Game",
             "description": "ゲーム系の機能が入っているカテゴリです。"
         },
-        "globalchat": {
+        "global-chat": {
             "name": "Global Chat",
             "description": "他のサーバーのユーザーとお喋りができる機能が入っているカテゴリです。"
         },
