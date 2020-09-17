@@ -1139,6 +1139,200 @@
                 }
             }
         },
+        "search": {
+            "title": "インテリジェント・サーチ",
+            "description": "",
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "指定した条件に合うオブジェクトが見つかりませんでした。",
+                    "fields": []
+                },
+                {
+                    "title": "検索中…{lang:separator}{embed:title}",
+                    "description": "指定した条件に合うオブジェクトを検索しています。しばらくお待ちください…",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "about": {
+                    "title": "概要{lang:separator}{embed:title}",
+                    "description": "指定した条件に合うオブジェクトが**{replace}件**見つかりました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "カテゴリ・チャンネル",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "役職",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "メンバー",
+                            "description": "{replace}"
+                        }
+                    ],
+                    "hint": {},
+                    "args": {}
+                },
+                "channel": {
+                    "title": "チャンネル情報{lang:separator}{embed:title}",
+                    "description": "{replace} の情報を表示しています。",
+                    "definitions": {
+                        "role": "役職",
+                        "member": "メンバー"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ID",
+                            "description": "`{replace}`"
+                        },
+                        {
+                            "title": "トピック",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "カテゴリ",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "NSFW",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "スローモード (秒)",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "ビットレート",
+                            "description": "{replace} / {replace:max}kbps"
+                        },
+                        {
+                            "title": "ユーザー人数 (上限)",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "作成日時",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "アクセス可能役職・メンバー",
+                            "description": "{replace}"
+                        }
+                    ],
+                    "hint": {},
+                    "args": {}
+                },
+                "role": {
+                    "title": "役職情報{lang:separator}{embed:title}",
+                    "description": "{replace} の情報を表示しています。",
+                    "definitions": {
+                        "general": "サーバー全般",
+                        "text-channel": "テキストチャンネル",
+                        "voice-channel": "ボイスチャンネル"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ID",
+                            "description": "`{replace}`"
+                        },
+                        {
+                            "title": "メンション可能",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "別表示",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "カラーコード",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "付与数",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "作成日時",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "メンバー ({replace:count})",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "権限 ({replace:raw})",
+                            "description": "{replace}"
+                        }
+                    ],
+                    "hint": {},
+                    "args": {}
+                },
+                "member": {
+                    "title": "メンバー情報{lang:separator}{embed:title}",
+                    "description": "{replace} の情報を表示しています。",
+                    "definitions": {
+                        "general": "サーバー全般",
+                        "text-channel": "テキストチャンネル",
+                        "voice-channel": "ボイスチャンネル"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": "{replace:tag}\n({replace:id})"
+                        },
+                        {
+                            "title": "ステータス",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "作成日時",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "参加日時",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "ニックネーム",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "評価値",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "Bot",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "認証済み (Bot上)",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "権限 (Bot上)",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "役職 ({replace:count})",
+                            "description": "{replace}"
+                        },
+                        {
+                            "title": "権限 ({replace:raw})",
+                            "description": "{replace}"
+                        }
+                    ],
+                    "hint": {}
+                }
+            }
+        },
         "server": {
             "title": "サーバー情報",
             "description": "{replace} の情報を表示しています。",
@@ -1208,7 +1402,10 @@
         "channel": {
             "title": "チャンネル情報",
             "description": "{replace} の情報を表示しています。",
-            "definitions": {},
+            "definitions": {
+                "role": "役職",
+                "member": "メンバー"
+            },
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
@@ -1244,7 +1441,7 @@
                     "description": "{replace}"
                 },
                 {
-                    "title": "Slowmode",
+                    "title": "スローモード (秒)",
                     "description": "{replace}"
                 },
                 {
@@ -1404,7 +1601,7 @@
             "fields": [
                 {
                     "title": "ユーザー名",
-                    "description": "{replace:name}#{replace:tag}\n({replace:id})"
+                    "description": "{replace:tag}\n({replace:id})"
                 },
                 {
                     "title": "ステータス",
@@ -2306,71 +2503,130 @@
     "dialogs": {
         "evaluate-value": {
             "title": "{lang:error}",
-            "description": "あなたの評価値が{bot:evalute:before}以下のため、このBotの機能を使用することはできません。"
+            "description": "あなたの評価値が{bot:evalute:before}以下のため、このBotの機能を使用することはできません。",
+            "fields": []
         },
         "maintenance-mode": {
             "title": "{lang:error}",
-            "description": "現在メンテナンス中です。\nメンテナンスの終了時間は__**{replace}**__を予定しております。\nメンテナンスが終了するまでしばらくお待ちください。"
+            "description": "現在メンテナンス中です。\nメンテナンスの終了時間は__**{replace}**__を予定しております。\nメンテナンスが終了するまでしばらくお待ちください。",
+            "fields": []
         },
         "command-not-found": {
             "title": "{lang:error}",
-            "description": "実行したコマンドが見つかりませんでした。\n`{bot:prefix}help` でコマンドがあるかを確認してください。\nもしかして: {replace}"
+            "description": "実行したコマンドが見つかりませんでした。\n`{bot:prefix}help` でコマンドがあるかを確認してください。\nもしかして: {replace}",
+            "fields": []
         },
         "user-permission": {
             "title": "{lang:error}",
-            "description": "ユーザーの権限がありません。"
+            "description": "ユーザーの権限がありません。\n不足している権限を付与してから再度実行してください。",
+            "fields": [
+                {
+                    "title": "実行に必要な権限",
+                    "description": ""
+                },
+                {
+                    "title": "不足している権限",
+                    "description": ""
+                }
+            ]
         },
         "bot-permission": {
             "title": "{lang:error}",
-            "description": "Botの権限がありません。"
+            "description": "Botの権限がありません。\n不足している権限を付与してから再度実行してください。",
+            "fields": [
+                {
+                    "title": "実行に必要な権限",
+                    "description": ""
+                },
+                {
+                    "title": "不足している権限",
+                    "description": ""
+                }
+            ]
         },
         "user-bot-permission": {
             "title": "{lang:error}",
-            "description": "ユーザーとBotの権限がありません。"
+            "description": "ユーザーとBotの権限がありません。\n不足している権限を付与してから再度実行してください。",
+            "fields": [
+                {
+                    "title": "実行に必要な権限",
+                    "description": ""
+                },
+                {
+                    "title": "不足している権限",
+                    "description": ""
+                }
+            ]
         },
         "permission": {
             "title": "{lang:error}",
-            "description": "権限がありません。"
+            "description": "権限がありません。",
+            "fields": []
         },
         "bot-manager-only": {
             "title": "{lang:error}",
-            "description": "実行したコマンドは__**サービス運営以外**__は実行できません。"
+            "description": "実行したコマンドは__**サービス運営以外**__は実行できません。",
+            "fields": []
         },
         "server-only": {
             "title": "{lang:error}",
-            "description": "実行しようとしたコマンドは__**サーバー以外**__からは実行できません。"
+            "description": "実行しようとしたコマンドは__**サーバー以外**__からは実行できません。",
+            "fields": []
         },
         "premium-only": {
             "title": "{lang:error}",
-            "description": "実行しようとしたコマンドは__**認証済みサーバー以外**__からは実行できません。"
+            "description": "実行しようとしたコマンドは__**認証済みサーバー以外**__からは実行できません。",
+            "fields": []
         },
         "private-only": {
             "title": "{lang:error}",
-            "description": "実行しようとしたコマンドは__**DMもしくはグループ以外**__からは実行できません。"
+            "description": "実行しようとしたコマンドは__**DMもしくはグループ以外**__からは実行できません。",
+            "fields": []
         },
         "not-use": {
             "title": "{lang:error}",
-            "description": "この機能は利用できません。"
+            "description": "この機能は利用できません。",
+            "fields": []
+        },
+        "not-use-stable": {
+            "title": "{lang:error}",
+            "description": "この機能はこのBotでは利用できません。\n利用するには安定版のBotを利用してください。",
+            "fields": []
+        },
+        "not-use-beta": {
+            "title": "{lang:error}",
+            "description": "この機能はこのBotでは利用できません。\n利用するにはベータ版のBotを利用してください。",
+            "fields": []
+        },
+        "not-use-dev": {
+            "title": "{lang:error}",
+            "description": "この機能はこのBotでは利用できません。\n利用するには開発版のBotを利用してください。",
+            "fields": []
         },
         "args": {
             "title": "{lang:error}",
-            "description": "引数が不正です。使い方は `{bot:prefix}help {cmd:name}` で確認してください。"
+            "description": "引数が不正です。使い方は `{bot:prefix}help {cmd:name}` で確認してください。",
+            "fields": []
         },
         "exception": {
             "title": "{lang:error}",
-            "description": "予期しないエラーが発生しました。\nもしよろしければ製作者にエラー報告をしていただければ助かります。"
+            "description": "予期しないエラーが発生しました。\nもしよろしければ製作者にエラー報告をしていただければ助かります。",
+            "fields": []
         },
         "pagination-information": {
             "title": "{lang:information}{lang:separator}ページネーション",
-            "description": "入力した番号のページに移動します。1から**{replace:pages}**の中で入力してください。\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。"
+            "description": "入力した番号のページに移動します。1から**{replace:pages}**の中で入力してください。\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
+            "fields": []
         },
         "pagination-success": {
             "title": "{lang:success}{lang:separator}ページネーション",
-            "description": "**{replace}**ページに移動します。しばらくお待ちください…"
+            "description": "**{replace}**ページに移動します。しばらくお待ちください…",
+            "fields": []
         },
         "pagination-error": {
             "title": "{lang:error}{lang:separator}ページネーション",
-            "description": "入力された番号のページがありませんでした。\n最初のページに移動します。しばらくお待ちください…"
+            "description": "入力された番号のページがありませんでした。\n最初のページに移動します。しばらくお待ちください…",
+            "fields": []
         }
     },
     "online-statuses": {
