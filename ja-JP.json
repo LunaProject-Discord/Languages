@@ -1221,7 +1221,7 @@
                             "description": "{replace}"
                         },
                         {
-                            "title": "アクセス可能役職・メンバー",
+                            "title": "アクセス可能な役職・メンバー",
                             "description": "{replace}"
                         }
                     ],
@@ -1457,7 +1457,7 @@
                     "description": "{replace}"
                 },
                 {
-                    "title": "アクセス可能役職・メンバー",
+                    "title": "アクセス可能な役職・メンバー",
                     "description": "{replace}"
                 }
             ],
