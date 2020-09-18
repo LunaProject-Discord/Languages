@@ -266,6 +266,19 @@
                     "fields": [],
                     "hint": {}
                 },
+                "nickname": {
+                    "title": "Nickname{lang:separator}{embed:title}",
+                    "description": "Please enter a new nickname.\n\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "Replace",
+                            "description": "You can automatically replace it by typing the following characters in the nickname.\n`%p`: Prefix\n`%n`: Bot name\n\nDefault: {replace}"
+                        }
+                    ],
+                    "hint": {}
+                },
                 "date-language": {
                     "title": "Time & Language{lang:separator}{embed:title}",
                     "description": "{replace:a}: Setting the time zone\n　 {replace:timezone}\n{replace:b}: Setting display language\n　 {replace:language}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",

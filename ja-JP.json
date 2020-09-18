@@ -265,6 +265,19 @@
                     "fields": [],
                     "hint": {}
                 },
+                "nickname": {
+                    "title": "ニックネーム{lang:separator}{embed:title}",
+                    "description": "新しいニックネームを入力してください。\n\n{replace:cancel}: キャンセル",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "置き換え",
+                            "description": "下記の文字をニックネームに入力することで自動で置き換えることができます。\n`%p`: プレフィックス\n`%n`: Botの名前\n\nデフォルト: {replace}"
+                        }
+                    ],
+                    "hint": {}
+                },
                 "date-language": {
                     "title": "時刻と言語{lang:separator}{embed:title}",
                     "description": "{replace:a}: タイムゾーンの設定\n　 {replace:timezone}\n{replace:b}: 表示言語の設定\n　 {replace:language}\n\n{replace:home}: ホーム\n{replace:back}: 戻る\n{replace:cancel}: キャンセル",
