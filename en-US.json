@@ -224,7 +224,7 @@
             "args": {
                 "help": {
                     "title": "Help{lang:separator}{embed:title}",
-                    "description": "サーバー設定は、`{bot:prefix}{cmd:name} server [引数...]`で、\nユーザー設定は、`{bot:prefix}{cmd:name} user [引数...]`で変更できます。",
+                    "description": "サーバー設定は、`{bot:prefix}{command:label} server [引数...]`で、\nユーザー設定は、`{bot:prefix}{command:label} user [引数...]`で変更できます。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -318,7 +318,7 @@
             "args": {
                 "help": {
                     "title": "ヘルプ{lang:separator}{embed:title}",
-                    "description": "サーバー設定は、`{bot:prefix}{cmd:name} server [引数...]`で、\nユーザー設定は、`{bot:prefix}{cmd:name} user [引数...]`で変更できます。",
+                    "description": "サーバー設定は、`{bot:prefix}{command:label} server [引数...]`で、\nユーザー設定は、`{bot:prefix}{command:label} user [引数...]`で変更できます。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -617,7 +617,7 @@
             "args": {
                 "help": {
                     "title": "ヘルプ{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{cmd:name} add <ID>`: __データの追加__\n`{bot:prefix}{cmd:name} remove <ID>`: __データの削除__\n`{bot:prefix}{cmd:name} update <ID>`: __データの更新__\n`{bot:prefix}{cmd:name} list <ID>`: __データの一覧__\n`{bot:prefix}{cmd:name} clear <ID>`: __データの全削除__ (サーバーオーナー・Bot管理者のみ実行可能)",
+                    "description": "`{bot:prefix}{command:label} add <ID>`: __データの追加__\n`{bot:prefix}{command:label} remove <ID>`: __データの削除__\n`{bot:prefix}{command:label} update <ID>`: __データの更新__\n`{bot:prefix}{command:label} list <ID>`: __データの一覧__\n`{bot:prefix}{command:label} clear <ID>`: __データの全削除__ (サーバーオーナー・Bot管理者のみ実行可能)",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -749,7 +749,7 @@
             "args": {
                 "help": {
                     "title": "Help{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{cmd:name} start [Category]`: __Connect to global chat__\n`{bot:prefix}{cmd:name} stop`: __Disconnect from global chat__\n`{bot:prefix}{cmd:name} list`: __Display a list of channels connected to global chat__\n`{bot:prefix}{cmd:name} rule`: __View rules for global chat__\n`{bot:prefix}{cmd:name} <ID (8 alphanumeric chars)>`: __Show messages sent in global chat__",
+                    "description": "`{bot:prefix}{command:label} start [Category]`: __Connect to global chat__\n`{bot:prefix}{command:label} stop`: __Disconnect from global chat__\n`{bot:prefix}{command:label} list`: __Display a list of channels connected to global chat__\n`{bot:prefix}{command:label} rule`: __View rules for global chat__\n`{bot:prefix}{command:label} <ID (8 alphanumeric chars)>`: __Show messages sent in global chat__",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -762,7 +762,7 @@
                     "dialogs": [
                         {
                             "title": "{lang:error} (Connect to global chat){lang:separator}{embed:title}",
-                            "description": "This channel is already connected to global chat.\nDisconnect with `{bot:prefix}{cmd:name} stop` and try again.",
+                            "description": "This channel is already connected to global chat.\nDisconnect with `{bot:prefix}{command:label} stop` and try again.",
                             "fields": []
                         },
                         {
@@ -898,7 +898,7 @@
             "args": {
                 "help": {
                     "title": "Help{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{cmd:name} play <URL | Search Word>`, `{bot:prefix}{cmd:name} p <URL | Search Word>`:\n・__Play the media at the URL if a URL is specified.__\n`{bot:prefix}{cmd:name} pause`:\n・__Pause playing media__\n`{bot:prefix}{cmd:name} resume`:\n・__Resume playback of paused media__\n`{bot:prefix}{cmd:name} stop`:\n・__Stop playback and delete queue contents__\n`{bot:prefix}{cmd:name} skip`:\n・__Skip to the next media in the queue__\n`{bot:prefix}{cmd:name} volume <Number>`, `{bot:prefix}{cmd:name} vol <Number>`:\n・__Set volume to specified number__ (Warning if the number is 120 or more)\n`{bot:prefix}{cmd:name} queue`, `{bot:prefix}{cmd:name} q`, `{bot:prefix}{cmd:name} list`:\n・__Display queue contents__\n`{bot:prefix}{cmd:name} leave`, `{bot:prefix}{cmd:name} disconnect`, `{bot:prefix}{cmd:name} dis`:\n・__Stop playback, delete cue content and leave voice channel__\n`{bot:prefix}{cmd:name} history ...`, `{bot:prefix}{cmd:name} his ...`:\n・__Display media played so far__",
+                    "description": "`{bot:prefix}{command:label} play <URL | Search Word>`, `{bot:prefix}{command:label} p <URL | Search Word>`:\n・__Play the media at the URL if a URL is specified.__\n`{bot:prefix}{command:label} pause`:\n・__Pause playing media__\n`{bot:prefix}{command:label} resume`:\n・__Resume playback of paused media__\n`{bot:prefix}{command:label} stop`:\n・__Stop playback and delete queue contents__\n`{bot:prefix}{command:label} skip`:\n・__Skip to the next media in the queue__\n`{bot:prefix}{command:label} volume <Number>`, `{bot:prefix}{command:label} vol <Number>`:\n・__Set volume to specified number__ (Warning if the number is 120 or more)\n`{bot:prefix}{command:label} queue`, `{bot:prefix}{command:label} q`, `{bot:prefix}{command:label} list`:\n・__Display queue contents__\n`{bot:prefix}{command:label} leave`, `{bot:prefix}{command:label} disconnect`, `{bot:prefix}{command:label} dis`:\n・__Stop playback, delete cue content and leave voice channel__\n`{bot:prefix}{command:label} history ...`, `{bot:prefix}{command:label} his ...`:\n・__Display media played so far__",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -911,7 +911,7 @@
                     "dialogs": [
                         {
                             "title": "{lang:error} (Media Playback){lang:separator}{embed:title}",
-                            "description": "The argument is invalid. Please specify a search word or URL.\nExample: `{bot:prefix}{cmd:name} play Charles`",
+                            "description": "The argument is invalid. Please specify a search word or URL.\nExample: `{bot:prefix}{command:label} play Charles`",
                             "fields": []
                         },
                         {
@@ -960,7 +960,7 @@
                     "dialogs": [
                         {
                             "title": "{lang:error} (Pause media){lang:separator}{embed:title}",
-                            "description": "Media playback is already paused.\nTo resume playback, run `{bot:prefix}{cmd:name} resume`.",
+                            "description": "Media playback is already paused.\nTo resume playback, run `{bot:prefix}{command:label} resume`.",
                             "fields": []
                         },
                         {
@@ -979,7 +979,7 @@
                     "dialogs": [
                         {
                             "title": "{lang:error} (Resume media){lang:separator}{embed:title}",
-                            "description": "Media playback has already resumed.\nTo pause playback, run `{bot:prefix}{cmd:name} pause`.",
+                            "description": "Media playback has already resumed.\nTo pause playback, run `{bot:prefix}{command:label} pause`.",
                             "fields": []
                         },
                         {
@@ -998,7 +998,7 @@
                     "dialogs": [
                         {
                             "title": "{lang:error} (Stop media){lang:separator}{embed:title}",
-                            "description": "Playback has already been stopped.\nTo play media, run `{bot:prefix}{cmd:name} play <Search word | URL>`.",
+                            "description": "Playback has already been stopped.\nTo play media, run `{bot:prefix}{command:label} play <Search word | URL>`.",
                             "fields": []
                         },
                         {
@@ -1017,7 +1017,7 @@
                     "dialogs": [
                         {
                             "title": "{lang:error} (Skip media){lang:separator}{embed:title}",
-                            "description": "Cannot skip because there is no media in the queue.\nTo add media to the queue, execute `{bot:prefix}{cmd:name} play <Search word | URL>`.",
+                            "description": "Cannot skip because there is no media in the queue.\nTo add media to the queue, execute `{bot:prefix}{command:label} play <Search word | URL>`.",
                             "fields": []
                         },
                         {
@@ -1036,7 +1036,7 @@
                     "dialogs": [
                         {
                             "title": "{lang:error} (Change volume){lang:separator}{embed:title}",
-                            "description": "Argument is invalid. Specify the argument as **half-width number**.\nExample: `{bot:prefix}{cmd:name} volume 50`",
+                            "description": "Argument is invalid. Specify the argument as **half-width number**.\nExample: `{bot:prefix}{command:label} volume 50`",
                             "fields": []
                         },
                         {
@@ -1112,7 +1112,7 @@
                     "dialogs": [
                         {
                             "title": "{lang:error} (再生履歴){lang:separator}{embed:title}",
-                            "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{cmd:name} history play 1`",
+                            "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{command:label} history play 1`",
                             "fields": []
                         },
                         {
@@ -1122,7 +1122,7 @@
                         },
                         {
                             "title": "{lang:information} (再生履歴){lang:separator}{embed:title}",
-                            "description": "・**履歴機能を使用する**: {replace}\n\n履歴からメディアを再生するには `{bot:prefix}{cmd:name} history play <ID>` と実行してください。\n履歴を削除するには `{bot:prefix}{cmd:name} history remove [ID]` と実行してください。",
+                            "description": "・**履歴機能を使用する**: {replace}\n\n履歴からメディアを再生するには `{bot:prefix}{command:label} history play <ID>` と実行してください。\n履歴を削除するには `{bot:prefix}{command:label} history remove [ID]` と実行してください。",
                             "fields": [
                                 {
                                     "title": "履歴",
@@ -1148,7 +1148,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアの再生){lang:separator}{embed:title}",
-                    "description": "引数が不正です。検索ワードかURLを指定してください。\n例: `{bot:prefix}{cmd:name} play シャルル`",
+                    "description": "引数が不正です。検索ワードかURLを指定してください。\n例: `{bot:prefix}{command:label} play シャルル`",
                     "fields": []
                 },
                 {
@@ -1203,7 +1203,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアの一時停止){lang:separator}{embed:title}",
-                    "description": "再生がすでに一時停止されています。\n再生を再開するには `{bot:prefix}{cmd:name} resume` と実行してください。",
+                    "description": "再生がすでに一時停止されています。\n再生を再開するには `{bot:prefix}{command:label} resume` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1228,7 +1228,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアの再開){lang:separator}{embed:title}",
-                    "description": "再生がすでに再開されています。\n再生を一時停止するには `{bot:prefix}{cmd:name} pause` と実行してください。",
+                    "description": "再生がすでに再開されています。\n再生を一時停止するには `{bot:prefix}{command:label} pause` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1253,7 +1253,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアの停止){lang:separator}{embed:title}",
-                    "description": "再生がすでに停止されています。\nメディアを再生するには `{bot:prefix}{cmd:name} play <検索ワード | URL>` と実行してください。",
+                    "description": "再生がすでに停止されています。\nメディアを再生するには `{bot:prefix}{command:label} play <検索ワード | URL>` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1293,7 +1293,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアのスキップ){lang:separator}{embed:title}",
-                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}{cmd:name} play <検索ワード | URL>` と実行してください。",
+                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}{command:label} play <検索ワード | URL>` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1333,7 +1333,7 @@
                 },
                 {
                     "title": "{lang:error} (音量の変更){lang:separator}{embed:title}",
-                    "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{cmd:name} volume 50`",
+                    "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{command:label} volume 50`",
                     "fields": []
                 },
                 {
@@ -2400,7 +2400,7 @@
             "args": {
                 "help": {
                     "title": "ヘルプ{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{cmd:name} [-f] <ユーザーID> <理由>`:\n__指定したユーザーのグローバルBanを申請・実行__",
+                    "description": "`{bot:prefix}{command:label} [-f] <ユーザーID> <理由>`:\n__指定したユーザーのグローバルBanを申請・実行__",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -2467,7 +2467,7 @@
             "args": {
                 "help": {
                     "title": "ヘルプ{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{cmd:name} <text | voice> [チャンネル名]`:\n__予め設定したカテゴリー内にユーザー用のチャンネルを作成__ (名前を指定しない場合はユーザーIDで作成)",
+                    "description": "`{bot:prefix}{command:label} <text | voice> [チャンネル名]`:\n__予め設定したカテゴリー内にユーザー用のチャンネルを作成__ (名前を指定しない場合はユーザーIDで作成)",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -2726,7 +2726,7 @@
     "dialogs": {
         "evaluate-value": {
             "title": "{lang:error}",
-            "description": "You can not use this bot's features because your rating is below {bot:evalute:before}.",
+            "description": "You can not use this bot's features because your rating is below {bot:evaluate:minimum}.",
             "fields": []
         },
         "maintenance-mode": {
@@ -2828,7 +2828,7 @@
         },
         "args": {
             "title": "{lang:error}",
-            "description": "Invalid argument. Check the usage with `{bot:prefix}help {cmd:name}`.",
+            "description": "Invalid argument. Check the usage with `{bot:prefix}help {command:label}`.",
             "fields": []
         },
         "exception": {
