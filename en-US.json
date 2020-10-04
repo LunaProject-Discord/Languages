@@ -25,40 +25,28 @@
                     "description": "{bot:version} (Build {bot:build})"
                 },
                 {
-                    "title": "Update Info",
-                    "description": "{bot:update}"
-                },
-                {
-                    "title": "Creator",
-                    "description": "{bot:authors}"
-                },
-                {
-                    "title": "Library",
-                    "description": "{bot:librarys}"
-                },
-                {
                     "title": "Server count",
-                    "description": "{bot:servers}"
+                    "description": ""
                 },
                 {
                     "title": "Channel count",
-                    "description": "{bot:channels} (TC: {bot:channels:text}, VC: {bot:channels:voice})"
+                    "description": "{replace:total} (Text: {replace:texts}, Voice: {replace:voices})"
                 },
                 {
                     "title": "User count",
-                    "description": "{bot:users} (User: {bot:users:user}, Bot: {bot:users:bot})"
+                    "description": "{replace:total} (User: {replace:users}, Bot: {replace:bots})"
                 },
                 {
                     "title": "Invite bot",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Support server",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Administrators",
-                    "description": "{bot:admins}"
+                    "description": ""
                 }
             ],
             "hint": {
@@ -99,34 +87,34 @@
             },
             "args": {
                 "search-command": {
-                    "title": "Command: `{cmd:name}`{lang:separator}{embed:title}",
-                    "description": "{cmd:description}",
+                    "title": "Command: `{replace:name}`{lang:separator}{embed:title}",
+                    "description": "{replace:description}",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
                             "title": "Usages",
-                            "description": "{cmd:usages}"
+                            "description": "{replace:usages}"
                         },
                         {
                             "title": "Aliases",
-                            "description": "{cmd:aliases}"
+                            "description": "{replace:aliases}"
                         },
                         {
                             "title": "Category",
-                            "description": "{cmd:category}"
+                            "description": "{replace:category}"
                         },
                         {
                             "title": "Types that can be executed",
-                            "description": "{cmd:type}"
+                            "description": "{replace:type}"
                         },
                         {
                             "title": "Authority required for user",
-                            "description": "{cmd:users}"
+                            "description": "{replace:users}"
                         },
                         {
                             "title": "Authority required for Bot",
-                            "description": "{cmd:bots}"
+                            "description": "{replace:bots}"
                         }
                     ],
                     "hint": {}
@@ -199,6 +187,100 @@
                     "title": "{lang:success}{lang:separator}{embed:title}",
                     "description": "Service development status is now sent to this channel.",
                     "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
+        },
+        "usersettings": {
+            "title": "User Settings",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "The settings could not be changed.",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "We changed the settings.",
+                    "fields": [
+                        {
+                            "title": "Changes",
+                            "description": "{replace}"
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "We changed the settings. After 3 seconds, the previous screen will reappear.",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {
+                "help": {
+                    "title": "Help{lang:separator}{embed:title}",
+                    "description": "サーバー設定は、`{bot:prefix}{cmd:name} server [引数...]`で、\nユーザー設定は、`{bot:prefix}{cmd:name} user [引数...]`で変更できます。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "home": {
+                    "title": "{embed:title}",
+                    "description": "{replace:a}: Time & Language\n{replace:b}: Design\n\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "date-language": {
+                    "title": "Time & Language{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Setting the time zone\n　 {replace:timezone}\n{replace:b}: Setting display language\n　 {replace:language}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "date": {
+                    "title": "Time Zone{lang:separator}{embed:title}",
+                    "description": "Please enter the time zone ID.\nPlease check [Time Zone ID](https://en.wikipedia.org/wiki/Time_zone) from here.\n\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "language": {
+                    "title": "Language{lang:separator}{embed:title}",
+                    "description": "Select the language you want to set.\n\n{replace:languages}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "design": {
+                    "title": "Design{lang:separator}{embed:title}",
+                    "description": "{replace:a}: Setting accent color\n　 {replace:color}\n{replace:b}: Display type setting\n　 {replace:type}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "accent-color": {
+                    "title": "Accent color{lang:separator}{embed:title}",
+                    "description": "設定したい色をクリックするか、HTML カラーコードを入力してください。\n\n{replace:colors}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
+                    "definitions": {
+                        "yudzuki": "{}のテーマカラー",
+                        "discord": "Discord Theme Colors",
+                        "red": "Red",
+                        "blue": "Blue",
+                        "yellow": "Yellow",
+                        "green": "Green"
+                    },
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
@@ -385,90 +467,11 @@
                 }
             }
         },
-        "usersettings": {
-            "title": "User Settings",
-            "description": "",
-            "definitions": {},
-            "dialogs": [
-                {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The settings could not be changed.",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "We changed the settings.",
-                    "fields": [
-                        {
-                            "title": "Changes",
-                            "description": "{replace}"
-                        }
-                    ]
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "We changed the settings. After 3 seconds, the previous screen will reappear.",
-                    "fields": []
-                }
-            ],
-            "fields": [],
-            "hint": {},
-            "args": {
-                "help": {
-                    "title": "Help{lang:separator}{embed:title}",
-                    "description": "サーバー設定は、`{bot:prefix}{cmd:name} server [引数...]`で、\nユーザー設定は、`{bot:prefix}{cmd:name} user [引数...]`で変更できます。",
-                    "definitions": {},
-                    "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                },
-                "home": {
-                    "title": "{embed:title}",
-                    "description": "{replace:a}: Time & Language\n{replace:b}: Design\n\n{replace:cancel}: Cancel",
-                    "definitions": {},
-                    "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                },
-                "date-language": {
-                    "title": "Time & Language{lang:separator}{embed:title}",
-                    "description": "{replace:a}: Setting the time zone\n　 {replace:timezone}\n{replace:b}: Setting display language\n　 {replace:language}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
-                    "definitions": {},
-                    "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                },
-                "date": {
-                    "title": "Time Zone{lang:separator}{embed:title}",
-                    "description": "Please enter the time zone ID.\nPlease check [Time Zone ID](https://en.wikipedia.org/wiki/Time_zone) from here.\n\n{replace:cancel}: Cancel",
-                    "definitions": {},
-                    "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                },
-                "language": {
-                    "title": "Language{lang:separator}{embed:title}",
-                    "description": "Select the language you want to set.\n\n{replace:languages}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
-                    "definitions": {},
-                    "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                },
-                "design": {
-                    "title": "Design{lang:separator}{embed:title}",
-                    "description": "{replace:a}: Setting theme color\n　 {replace:color}\n{replace:b}: Display type setting\n　 {replace:type}\n\n{replace:home}: Home\n{replace:back}: Back\n{replace:cancel}: Cancel",
-                    "definitions": {},
-                    "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                }
-            }
-        },
         "levelmanager": {
             "title": "Level Manager",
             "description": "",
             "definitions": {
-                "level": "Lexel",
+                "level": "Level",
                 "xp": "XP"
             },
             "dialogs": [
@@ -478,7 +481,7 @@
                     "fields": [
                         {
                             "title": "Current {replace}",
-                            "description": "{replace}"
+                            "description": "{}"
                         }
                     ]
                 },
@@ -488,7 +491,7 @@
                     "fields": [
                         {
                             "title": "Current {replace}",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
@@ -498,7 +501,7 @@
                     "fields": [
                         {
                             "title": "Current {replace}",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 }
@@ -521,15 +524,15 @@
             "fields": [
                 {
                     "title": "Level",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "XP (Max)",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Provisional rank",
-                    "description": "{replace}"
+                    "description": ""
                 }
             ],
             "hint": {},
@@ -547,15 +550,15 @@
                 },
                 {
                     "title": "Level",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "XP (Max)",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Provisional rank",
-                    "description": "{replace}"
+                    "description": ""
                 }
             ],
             "hint": {},
@@ -577,11 +580,11 @@
             "fields": [
                 {
                     "title": "Source of translation: {replace}",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Translation destination: {replace}",
-                    "description": "{replace}"
+                    "description": ""
                 }
             ],
             "hint": {
@@ -717,15 +720,6 @@
                     "hint": {}
                 }
             }
-        },
-        "video": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
         },
         "vote": {
             "title": "Vote",
@@ -1142,6 +1136,226 @@
                 }
             }
         },
+        "play": {
+            "title": "音楽",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの再生){lang:separator}{embed:title}",
+                    "description": "引数が不正です。検索ワードかURLを指定してください。\n例: `{bot:prefix}{cmd:name} play シャルル`",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information} (メディアの再生){lang:separator}{embed:title}",
+                    "description": "メディアを検索しています。しばらくお待ちください…",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの再生){lang:separator}{embed:title}",
+                    "description": "メディアが見つかりませんでした。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアの再生){lang:separator}{embed:title}",
+                    "description": "**{replace:mediaName}** ({replace:mediaAuthor} / {replace:mediaDuration}) をキューに追加しました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアの再生){lang:separator}{embed:title}",
+                    "description": "**{replace:mediaListName}** ({replace:mediaListSize} / {replace:mediaListDuration}) をキューに追加しました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアの再生){lang:separator}{embed:title}",
+                    "description": "**{replace:searchText}** で検索した結果、{replace:searchSize} 件の候補が見つかりました。\n再生したいメディアの番号を**{replace:time}秒**以内にクリックしてください。\nまた、キャンセルする場合はこのメッセージについている {replace:cancel} をクリックしてください。",
+                    "fields": [
+                        {
+                            "title": "検索候補",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:information} (メディアの再生){lang:separator}{embed:title}",
+                    "description": "キャンセルしました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "pause": {
+            "title": "音楽",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの一時停止){lang:separator}{embed:title}",
+                    "description": "再生がすでに一時停止されています。\n再生を再開するには `{bot:prefix}{cmd:name} resume` と実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアの一時停止){lang:separator}{embed:title}",
+                    "description": "再生を一時停止しました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "resume": {
+            "title": "音楽",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの再開){lang:separator}{embed:title}",
+                    "description": "再生がすでに再開されています。\n再生を一時停止するには `{bot:prefix}{cmd:name} pause` と実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアの再開){lang:separator}{embed:title}",
+                    "description": "再生を再開しました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "stop": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの停止){lang:separator}{embed:title}",
+                    "description": "再生がすでに停止されています。\nメディアを再生するには `{bot:prefix}{cmd:name} play <検索ワード | URL>` と実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアの停止){lang:separator}{embed:title}",
+                    "description": "再生を停止しました。キューに追加されていたメディアが削除されました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "あなたはすでに投票しています。(投票数: {replace:count} / {replace:maxCount})",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "投票しました。(投票数: {replace:count} / {replace:maxCount})",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "`{replace:permission}` 権限が付与されていないユーザーがこの機能を利用するには、投票で**{replace:maxCount}人以上**の票を得る必要があります。\nこの機能を実行するには通話に参加している方が `{bot:prefix}m {replace:arg}` と入力してください。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "seek": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアのスキップ){lang:separator}{embed:title}",
+                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}{cmd:name} play <検索ワード | URL>` と実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアのスキップ){lang:separator}{embed:title}",
+                    "description": "次のメディアにスキップしました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "あなたはすでに投票しています。(投票数: {replace:count} / {replace:maxCount})",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "投票しました。(投票数: {replace:count} / {replace:maxCount})",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "`{replace:permission}` 権限が付与されていないユーザーがこの機能を利用するには、投票で**{replace:maxCount}人以上**の票を得る必要があります。\nこの機能を実行するには通話に参加している方が `{bot:prefix}m {replace:arg}` と入力してください。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "volume": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (音量の変更){lang:separator}{embed:title}",
+                    "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{cmd:name} volume 50`",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information} (音量の変更){lang:separator}{embed:title}",
+                    "description": "キャンセルしました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:warning} (音量の変更){lang:separator}{embed:title}",
+                    "description": "推奨レベルを超えるまで音量を上げ続けますか？これ以上の音量で音を聞き続けると聴力を損なう可能性があります。\nまた、この機能を使用して使用者に何らかの身体的影響を及ぼしても責任を取ることはできません。\n\n音量を**{replace:volume}**に変更する場合は{replace:time}秒以内に {replace:check} をクリックしてください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (音量の変更){lang:separator}{embed:title}",
+                    "description": "音量を**{replace}**に変更しました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
         "search": {
             "title": "インテリジェント・サーチ",
             "description": "",
@@ -1168,15 +1382,15 @@
                     "fields": [
                         {
                             "title": "カテゴリ・チャンネル",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "役職",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "メンバー",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ],
                     "hint": {},
@@ -1193,23 +1407,23 @@
                     "fields": [
                         {
                             "title": "ID",
-                            "description": "`{replace}`"
+                            "description": ""
                         },
                         {
                             "title": "トピック",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "カテゴリ",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "NSFW",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "スローモード (秒)",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "ビットレート",
@@ -1217,15 +1431,15 @@
                         },
                         {
                             "title": "ユーザー人数 (上限)",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "作成日時",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "アクセス可能役職・メンバー",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ],
                     "hint": {},
@@ -1243,35 +1457,35 @@
                     "fields": [
                         {
                             "title": "ID",
-                            "description": "`{replace}`"
+                            "description": ""
                         },
                         {
                             "title": "メンション可能",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "別表示",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "カラーコード",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "付与数",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "作成日時",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "メンバー ({replace:count})",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "権限 ({replace:raw})",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ],
                     "hint": {},
@@ -1293,43 +1507,43 @@
                         },
                         {
                             "title": "ステータス",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "作成日時",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "参加日時",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "ニックネーム",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "評価値",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "Bot",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "認証済み (Bot上)",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "権限 (Bot上)",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "役職 ({replace:count})",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "権限 ({replace:raw})",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ],
                     "hint": {}
@@ -1360,19 +1574,19 @@
             "fields": [
                 {
                     "title": "ID",
-                    "description": "`{replace}`"
+                    "description": ""
                 },
                 {
                     "title": "Owner",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Created At",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Region",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Server Boost",
@@ -1380,7 +1594,7 @@
                 },
                 {
                     "title": "Verified? (Bot)",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Channel count",
@@ -1396,7 +1610,7 @@
                 },
                 {
                     "title": "Roles ({replace:count})",
-                    "description": "{replace}"
+                    "description": ""
                 }
             ],
             "hint": {},
@@ -1505,35 +1719,35 @@
             "fields": [
                 {
                     "title": "ID",
-                    "description": "`{replace}`"
+                    "description": ""
                 },
                 {
                     "title": "Mentionable",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Display separately",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Color code",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Grants count",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Created At",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Members ({replace:count})",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Permissions ({replace:raw})",
-                    "description": "{replace}"
+                    "description": ""
                 }
             ],
             "hint": {},
@@ -1558,19 +1772,19 @@
             "fields": [
                 {
                     "title": "ID",
-                    "description": "`{replace}`"
+                    "description": ""
                 },
                 {
                     "title": "Server",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Created At",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Animated?",
-                    "description": "{replace}"
+                    "description": ""
                 }
             ],
             "hint": {},
@@ -1608,43 +1822,43 @@
                 },
                 {
                     "title": "Status",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Created At",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Joined At",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "NickName",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Evaluation value",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Bot?",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Verified? (Bot)",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Permission (Bot)",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Roles ({replace:count})",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Permissions ({replace:raw})",
-                    "description": "{replace}"
+                    "description": ""
                 }
             ],
             "hint": {},
@@ -1683,19 +1897,19 @@
             "fields": [
                 {
                     "title": "Mute information",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Kick information",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Local ban information",
-                    "description": "{replace}"
+                    "description": ""
                 },
                 {
                     "title": "Global ban information",
-                    "description": "{replace}"
+                    "description": ""
                 }
             ],
             "hint": {},
@@ -1723,7 +1937,7 @@
                 },
                 {
                     "title": "{replace}{lang:separator}{embed:title}",
-                    "description": "{replace}",
+                    "description": "",
                     "fields": []
                 }
             ],
@@ -1931,34 +2145,69 @@
             "description": "",
             "definitions": {},
             "dialogs": [
+                
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The **{replace}** could not kick.",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "You have kicked **{replace}**.",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "本当に{replace:count}人のユーザーへのキックを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
                     "fields": [
                         {
-                            "title": "Reason",
-                            "description": "{replace}"
-                        }
-                    ]
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "The members of the **{replace} people** was kick.",
-                    "fields": [
-                        {
-                            "title": "Members",
-                            "description": "{replace}"
+                            "title": "ユーザー",
+                            "description": ""
                         },
                         {
-                            "title": "Reason",
-                            "description": "{replace}"
+                            "title": "理由",
+                            "description": ""
                         }
                     ]
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "本当に {replace:user} へのキックを下記の理由で実行してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n**{replace:time}**秒で自動キャンセルされます。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーをキックしました。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": ""
+                        },
+                        {
+                            "title": "理由",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:user} をキックしました。",
+                    "fields": [
+                        {
+                            "title": "理由",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:count}人のユーザーへのキックをキャンセルしました。",
+                    "fields": [
+                        {
+                            "title": "ユーザー",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace:user} へのキックをキャンセルしました。",
+                    "fields": []
                 }
             ],
             "fields": [],
@@ -1985,11 +2234,11 @@
                     "fields": [
                         {
                             "title": "ユーザー",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "理由",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
@@ -1999,7 +2248,7 @@
                     "fields": [
                         {
                             "title": "理由",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
@@ -2009,7 +2258,7 @@
                     "fields": [
                         {
                             "title": "ユーザー",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
@@ -2024,11 +2273,11 @@
                     "fields": [
                         {
                             "title": "ユーザー",
-                            "description": "{replace}"
+                            "description": ""
                         },
                         {
                             "title": "理由",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
@@ -2038,7 +2287,7 @@
                     "fields": [
                         {
                             "title": "理由",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
@@ -2048,7 +2297,7 @@
                     "fields": [
                         {
                             "title": "ユーザー",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
@@ -2116,7 +2365,7 @@
                     "fields": [
                         {
                             "title": "理由",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
@@ -2136,7 +2385,7 @@
                     "fields": [
                         {
                             "title": "理由",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ]
                 },
