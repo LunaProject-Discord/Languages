@@ -1281,6 +1281,45 @@
             "hint": {},
             "args": {}
         },
+        "skip": {
+            "title": "音楽",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアのスキップ){lang:separator}{embed:title}",
+                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}{command:label} play <検索ワード | URL>` と実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアのスキップ){lang:separator}{embed:title}",
+                    "description": "次のメディアにスキップしました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "あなたはすでに投票しています。(投票数: {replace:count} / {replace:maxCount})",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "投票しました。(投票数: {replace:count} / {replace:maxCount})",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "`{replace:permission}` 権限が付与されていないユーザーがこの機能を利用するには、投票で**{replace:maxCount}人以上**の票を得る必要があります。\nこの機能を実行するには通話に参加している方が `{bot:prefix}m {replace:arg}` と入力してください。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {}
+        },
         "seek": {
             "title": "",
             "description": "",
