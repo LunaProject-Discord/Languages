@@ -1148,7 +1148,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアの再生){lang:separator}{embed:title}",
-                    "description": "引数が不正です。検索ワードかURLを指定してください。\n例: `{bot:prefix}{command:label} play シャルル`",
+                    "description": "引数が不正です。検索ワードかURLを指定してください。\n例: `{bot:prefix}{command:label} セカイ`, `{bot:prefix}{command:label} https://www.youtube.com/watch?v=9vyIPWBeRes`",
                     "fields": []
                 },
                 {
@@ -1203,7 +1203,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアの一時停止){lang:separator}{embed:title}",
-                    "description": "再生がすでに一時停止されています。\n再生を再開するには `{bot:prefix}{command:label} resume` と実行してください。",
+                    "description": "再生がすでに一時停止されています。\n再生を再開するには `{bot:prefix}resume` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1228,7 +1228,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアの再開){lang:separator}{embed:title}",
-                    "description": "再生がすでに再開されています。\n再生を一時停止するには `{bot:prefix}{command:label} pause` と実行してください。",
+                    "description": "再生がすでに再開されています。\n再生を一時停止するには `{bot:prefix}pause` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1242,7 +1242,7 @@
             "args": {}
         },
         "stop": {
-            "title": "",
+            "title": "音楽",
             "description": "",
             "definitions": {},
             "dialogs": [
@@ -1253,7 +1253,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアの停止){lang:separator}{embed:title}",
-                    "description": "再生がすでに停止されています。\nメディアを再生するには `{bot:prefix}{command:label} play <検索ワード | URL>` と実行してください。",
+                    "description": "再生がすでに停止されています。\nメディアを再生するには `{bot:prefix}play <検索ワード | URL>` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1293,7 +1293,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアのスキップ){lang:separator}{embed:title}",
-                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}{command:label} play <検索ワード | URL>` と実行してください。",
+                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}play <検索ワード | URL>` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1321,7 +1321,7 @@
             "hint": {}
         },
         "seek": {
-            "title": "",
+            "title": "音楽",
             "description": "",
             "definitions": {},
             "dialogs": [
@@ -1332,7 +1332,7 @@
                 },
                 {
                     "title": "{lang:error} (メディアのスキップ){lang:separator}{embed:title}",
-                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}{command:label} play <検索ワード | URL>` と実行してください。",
+                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}play <検索ワード | URL>` と実行してください。",
                     "fields": []
                 },
                 {
@@ -1361,7 +1361,7 @@
             "args": {}
         },
         "volume": {
-            "title": "",
+            "title": "音楽",
             "description": "",
             "definitions": {},
             "dialogs": [
@@ -1372,7 +1372,7 @@
                 },
                 {
                     "title": "{lang:error} (音量の変更){lang:separator}{embed:title}",
-                    "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{command:label} volume 50`",
+                    "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{command:label} 50`",
                     "fields": []
                 },
                 {
@@ -1385,10 +1385,57 @@
                     "description": "推奨レベルを超えるまで音量を上げ続けますか？これ以上の音量で音を聞き続けると聴力を損なう可能性があります。\nまた、この機能を使用して使用者に何らかの身体的影響を及ぼしても責任を取ることはできません。\n\n音量を**{replace:volume}**に変更する場合は{replace:time}秒以内に {replace:check} をクリックしてください。",
                     "fields": []
                 },
-                {
+                {   
                     "title": "{lang:success} (音量の変更){lang:separator}{embed:title}",
                     "description": "音量を**{replace}**に変更しました。",
                     "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "nowplaying": {
+            "title": "音楽",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "現在何も再生していません。\n`{bot:prefix}play <曲名かURL>` で再生することができます。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "",
+                    "fields": [
+                        {
+                            "title": "次の曲",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "コントロールパネル{lang:separator}{embed:title}",
+                    "description": "",
+                    "fields": [
+                        {
+                            "title": "投稿ユーザー",
+                            "description": ""
+                        },
+                        {
+                            "title": "追加ユーザー",
+                            "description": ""
+                        },
+                        {
+                            "title": "繰り返し",
+                            "description": ""
+                        },
+                        {
+                            "title": "次の曲",
+                            "description": ""
+                        }
+                    ]
                 }
             ],
             "fields": [],
