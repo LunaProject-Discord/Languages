@@ -971,7 +971,7 @@
                     "fields": []
                 },
                 {
-                    "title": "{lang:success} (メディアの再生){lang:separator}{embed:title}",
+                    "title": "{lang:information} (メディアの再生){lang:separator}{embed:title}",
                     "description": "**{replace:searchText}** で検索した結果、{replace:searchSize} 件の候補が見つかりました。\n再生したいメディアの番号を**{replace:time}秒**以内にクリックしてください。\nまた、キャンセルする場合はこのメッセージについている {replace:cancel} をクリックしてください。",
                     "fields": [
                         {
