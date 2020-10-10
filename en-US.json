@@ -87,47 +87,47 @@
             },
             "args": {
                 "search-command": {
-                    "title": "Command: `{replace:name}`{lang:separator}{embed:title}",
-                    "description": "{replace:description}",
+                    "title": "Command: {replace}{lang:separator}{embed:title}",
+                    "description": "",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
                             "title": "Usages",
-                            "description": "{replace:usages}"
+                            "description": ""
                         },
                         {
                             "title": "Aliases",
-                            "description": "{replace:aliases}"
+                            "description": ""
                         },
                         {
                             "title": "Category",
-                            "description": "{replace:category}"
+                            "description": ""
                         },
                         {
                             "title": "Types that can be executed",
-                            "description": "{replace:type}"
+                            "description": ""
                         },
                         {
                             "title": "Authority required for user",
-                            "description": "{replace:users}"
+                            "description": ""
                         },
                         {
                             "title": "Authority required for Bot",
-                            "description": "{replace:bots}"
+                            "description": ""
                         }
                     ],
                     "hint": {}
                 },
                 "search-category": {
-                    "title": "Category: `{replace}`{lang:separator}{embed:title}",
-                    "description": "{replace}",
+                    "title": "Category: {replace}{lang:separator}{embed:title}",
+                    "description": "",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
                             "title": "Commands",
-                            "description": "{replace}"
+                            "description": ""
                         }
                     ],
                     "hint": {}
@@ -846,48 +846,48 @@
             "args": {}
         },
         "music": {
-            "title": "Music",
+            "title": "音楽",
             "description": "",
             "definitions": {},
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "Cannot execute because you are not participating in the voice channel.\nPlease join the voice channel and try again.",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
                     "fields": []
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "You have already voted. (Votes: {replace:count} / {replace:maxCount})",
+                    "description": "あなたはすでに投票しています。(投票数: {replace:count} / {replace:maxCount})",
                     "fields": []
                 },
                 {
                     "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "Voted (Votes: {replace: count} / {replace: maxCount})",
+                    "description": "投票しました。(投票数: {replace:count} / {replace:maxCount})",
                     "fields": []
                 },
                 {
                     "title": "{lang:information}{lang:separator}{embed:title}",
-                    "description": "Users without the `{replace:permission}` permission must get **{replace:maxCount} or more** votes to use this feature.\nTo perform this function, the participant in the call must enter `{bot:prefix}m {replace:arg}`.",
+                    "description": "`{replace:permission}` 権限が付与されていないユーザーがこの機能を利用するには、投票で**{replace:maxCount}人以上**の票を得る必要があります。\nこの機能を実行するには通話に参加している方が `{bot:prefix}m {replace:arg}` と入力してください。",
                     "fields": []
                 },
                 {
-                    "title": "Control Panel{lang:separator}{embed:title}",
+                    "title": "コントロールパネル{lang:separator}{embed:title}",
                     "description": "",
                     "fields": [
                         {
-                            "title": "Contributor",
+                            "title": "投稿ユーザー",
                             "description": "{replace}"
                         },
                         {
-                            "title": "Time",
+                            "title": "時間",
                             "description": "{replace}"
                         },
                         {
-                            "title": "Additional User",
+                            "title": "追加ユーザー",
                             "description": "{replace}"
                         },
                         {
-                            "title": "Repeat",
+                            "title": "繰り返し",
                             "description": "{replace}"
                         }
                     ]
@@ -897,211 +897,10 @@
             "hint": {},
             "args": {
                 "help": {
-                    "title": "Help{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{command:label} play <URL | Search Word>`, `{bot:prefix}{command:label} p <URL | Search Word>`:\n・__Play the media at the URL if a URL is specified.__\n`{bot:prefix}{command:label} pause`:\n・__Pause playing media__\n`{bot:prefix}{command:label} resume`:\n・__Resume playback of paused media__\n`{bot:prefix}{command:label} stop`:\n・__Stop playback and delete queue contents__\n`{bot:prefix}{command:label} skip`:\n・__Skip to the next media in the queue__\n`{bot:prefix}{command:label} volume <Number>`, `{bot:prefix}{command:label} vol <Number>`:\n・__Set volume to specified number__ (Warning if the number is 120 or more)\n`{bot:prefix}{command:label} queue`, `{bot:prefix}{command:label} q`, `{bot:prefix}{command:label} list`:\n・__Display queue contents__\n`{bot:prefix}{command:label} leave`, `{bot:prefix}{command:label} disconnect`, `{bot:prefix}{command:label} dis`:\n・__Stop playback, delete cue content and leave voice channel__\n`{bot:prefix}{command:label} history ...`, `{bot:prefix}{command:label} his ...`:\n・__Display media played so far__",
+                    "title": "ヘルプ{lang:separator}{embed:title}",
+                    "description": "`{bot:prefix}{command:label} play <URL | 検索ワード>`, `{bot:prefix}{command:label} p <URL | 検索ワード>`:\n・__URLが指定されていればURL先のメディアを再生・URL以外ならYoutube上を検索__\n`{bot:prefix}{command:label} pause`:\n・__再生中のメディアを一時停止__\n`{bot:prefix}{command:label} resume`:\n・__一時停止中のメディアの再生を再開__\n`{bot:prefix}{command:label} stop`:\n・__再生を停止・キューの内容を削除__\n`{bot:prefix}{command:label} skip`:\n・__キューに入っている次のメディアにスキップ__\n`{bot:prefix}{command:label} volume <数値>`, `{bot:prefix}{command:label} vol <数値>`:\n・__指定した数値に音量を設定__ (数値が120以上の場合は警告)\n`{bot:prefix}{command:label} queue`, `{bot:prefix}{command:label} q`, `{bot:prefix}{command:label} list`:\n・__キューの内容を表示__\n`{bot:prefix}{command:label} leave`, `{bot:prefix}{command:label} disconnect`, `{bot:prefix}{command:label} dis`:\n・__再生を停止・キューの内容を削除してボイスチャンネルから退出__\n`{bot:prefix}{command:label} history ...`, `{bot:prefix}{command:label} his ...`:\n・__これまでに再生したメディアを表示__",
                     "definitions": {},
                     "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                },
-                "play": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (Media Playback){lang:separator}{embed:title}",
-                            "description": "The argument is invalid. Please specify a search word or URL.\nExample: `{bot:prefix}{command:label} play Charles`",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (Media Playback){lang:separator}{embed:title}",
-                            "description": "Searching for media. Please wait…",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:error} (Media Playback){lang:separator}{embed:title}",
-                            "description": "Media not found.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (Media Playback){lang:separator}{embed:title}",
-                            "description": "**{replace:mediaName}** ({replace:mediaAuthor} / {replace:mediaDuration}) has been added to the queue.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (Media Playback){lang:separator}{embed:title}",
-                            "description": "**{replace:mediaListName}** ({replace:mediaListSize} / {replace:mediaListDuration}) was added to the queue.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (Media Playback){lang:separator}{embed:title}",
-                            "description": "**{replace:searchText}** で検索した結果、{replace:searchSize} 件の候補が見つかりました。\n再生したいメディアの番号を**{replace:time}秒**以内にクリックしてください。\nまた、キャンセルする場合はこのメッセージについている {replace:cancel} をクリックしてください。",
-                            "fields": [
-                                {
-                                    "title": "Search suggestions",
-                                    "description": "{replace}"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "{lang:information} (Media Playback){lang:separator}{embed:title}",
-                            "description": "Cancelled.",
-                            "fields": []
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                },
-                "pause": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (Pause media){lang:separator}{embed:title}",
-                            "description": "Media playback is already paused.\nTo resume playback, run `{bot:prefix}{command:label} resume`.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (Pause media){lang:separator}{embed:title}",
-                            "description": "Playback paused.",
-                            "fields": []
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                },
-                "resume": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (Resume media){lang:separator}{embed:title}",
-                            "description": "Media playback has already resumed.\nTo pause playback, run `{bot:prefix}{command:label} pause`.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (Resume media){lang:separator}{embed:title}",
-                            "description": "Playback resumed.",
-                            "fields": []
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                },
-                "stop": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (Stop media){lang:separator}{embed:title}",
-                            "description": "Playback has already been stopped.\nTo play media, run `{bot:prefix}{command:label} play <Search word | URL>`.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (Stop media){lang:separator}{embed:title}",
-                            "description": "Playback has stopped. The media that was added to the queue has been deleted.",
-                            "fields": []
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                },
-                "skip": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (Skip media){lang:separator}{embed:title}",
-                            "description": "Cannot skip because there is no media in the queue.\nTo add media to the queue, execute `{bot:prefix}{command:label} play <Search word | URL>`.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (Skip media){lang:separator}{embed:title}",
-                            "description": "Skipped to next media.",
-                            "fields": []
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                },
-                "volume": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (Change volume){lang:separator}{embed:title}",
-                            "description": "Argument is invalid. Specify the argument as **half-width number**.\nExample: `{bot:prefix}{command:label} volume 50`",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (Change volume){lang:separator}{embed:title}",
-                            "description": "Cancelled.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:warning} (Change volume){lang:separator}{embed:title}",
-                            "description": "Do you want to keep turning up the volume until it exceeds the recommended level? Continuing to listen to sound at higher volumes can damage your hearing.\nAlso, I cannot be held responsible for any physical consequences to the user of using this feature.\n\nIf you want to change the volume to **{replace:volume}**, click {replace:check} within {replace:time} seconds.",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (Change volume){lang:separator}{embed:title}",
-                            "description": "Volume has been changed to **{replace}**.",
-                            "fields": []
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                },
-                "queue": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (キュー){lang:separator}{embed:title}",
-                            "description": "キューが空のため表示できません。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (キュー){lang:separator}{embed:title}",
-                            "description": "総再生時間: {replace:queueDurations}, キュー数: {replace:queueSize}",
-                            "fields": [
-                                {
-                                    "title": "現在再生中",
-                                    "description": "{replace}"
-                                },
-                                {
-                                    "title": "キュー",
-                                    "description": "{replace}"
-                                }
-                            ]
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                },
-                "leave": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (チャンネルから退出){lang:separator}{embed:title}",
-                            "description": "現在ボイスチャンネルに参加していません。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (チャンネルから退出){lang:separator}{embed:title}",
-                            "description": "ボイスチャンネルから退出しました。",
-                            "fields": []
-                        }
-                    ],
                     "fields": [],
                     "hint": {}
                 },
@@ -1142,7 +941,7 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (メディアの再生){lang:separator}{embed:title}",
                     "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
                     "fields": []
                 },
@@ -1197,8 +996,13 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (メディアの一時停止){lang:separator}{embed:title}",
                     "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの一時停止){lang:separator}{embed:title}",
+                    "description": "現在、何も再生していません。\n`{bot:prefix}play <曲名かURL>` で再生することができます。",
                     "fields": []
                 },
                 {
@@ -1222,8 +1026,13 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (メディアの再開){lang:separator}{embed:title}",
                     "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの再開){lang:separator}{embed:title}",
+                    "description": "現在、何も再生していません。\n`{bot:prefix}play <曲名かURL>` で再生することができます。",
                     "fields": []
                 },
                 {
@@ -1247,7 +1056,7 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (メディアの停止){lang:separator}{embed:title}",
                     "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
                     "fields": []
                 },
@@ -1258,16 +1067,16 @@
                 },
                 {
                     "title": "{lang:success} (メディアの停止){lang:separator}{embed:title}",
-                    "description": "再生を停止しました。キューに追加されていたメディアが削除されました。",
+                    "description": "再生を停止しました。",
                     "fields": []
                 },
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (メディアの停止){lang:separator}{embed:title}",
                     "description": "あなたはすでに投票しています。(投票数: {replace:count} / {replace:maxCount})",
                     "fields": []
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:success} (メディアの停止){lang:separator}{embed:title}",
                     "description": "投票しました。(投票数: {replace:count} / {replace:maxCount})",
                     "fields": []
                 }
@@ -1282,7 +1091,7 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (メディアのスキップ){lang:separator}{embed:title}",
                     "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
                     "fields": []
                 },
@@ -1302,12 +1111,12 @@
                     "fields": []
                 },
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (メディアのスキップ){lang:separator}{embed:title}",
                     "description": "あなたはすでに投票しています。(投票数: {replace:count} / {replace:maxCount})",
                     "fields": []
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:success} (メディアのスキップ){lang:separator}{embed:title}",
                     "description": "投票しました。(投票数: {replace:count} / {replace:maxCount})",
                     "fields": []
                 }
@@ -1315,39 +1124,38 @@
             "fields": [],
             "hint": {}
         },
-        "seek": {
+        "loop": {
             "title": "音楽",
             "description": "",
-            "definitions": {},
+            "definitions": {
+                "all": "すべてループ",
+                "single": "一曲だけループ",
+                "none": "ループなし"
+            },
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (メディアのループ){lang:separator}{embed:title}",
                     "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
                     "fields": []
                 },
                 {
-                    "title": "{lang:error} (メディアのスキップ){lang:separator}{embed:title}",
-                    "description": "キューにメディアが入っていないためスキップできません。\nキューにメディアを追加するには `{bot:prefix}play <検索ワード | URL>` と実行してください。",
+                    "title": "{lang:error} (メディアのループ){lang:separator}{embed:title}",
+                    "description": "現在、何も再生していません。\n`{bot:prefix}play <曲名かURL>` で再生することができます。",
                     "fields": []
                 },
                 {
-                    "title": "{lang:success} (メディアのスキップ){lang:separator}{embed:title}",
-                    "description": "次のメディアにスキップしました。",
-                    "fields": []
+                    "title": "{lang:error} (メディアのループ){lang:separator}{embed:title}",
+                    "description": "引数が不正です。下記のオプションのどれかを指定してください。",
+                    "fields": [
+                        {
+                            "title": "",
+                            "description": "`{bot:prefix}{command:label} all`\n　__ キューに入っているメディアをすべてループする__\n`{bot:prefix}{command:label} single`\n　__ 再生しているメディアをループする__\n`{bot:prefix}{command:label} none`\n　__ループ再生を無効にする__"
+                        }
+                    ]
                 },
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "あなたはすでに投票しています。(投票数: {replace:count} / {replace:maxCount})",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "投票しました。(投票数: {replace:count} / {replace:maxCount})",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:information}{lang:separator}{embed:title}",
-                    "description": "`{replace:permission}` 権限が付与されていないユーザーがこの機能を利用するには、投票で**{replace:maxCount}人以上**の票を得る必要があります。\nこの機能を実行するには通話に参加している方が `{bot:prefix}m {replace:arg}` と入力してください。",
+                    "title": "{lang:success} (メディアのループ){lang:separator}{embed:title}",
+                    "description": "ループを{replace}に設定しました。",
                     "fields": []
                 }
             ],
@@ -1355,35 +1163,34 @@
             "hint": {},
             "args": {}
         },
-        "volume": {
+        "queue": {
             "title": "音楽",
             "description": "",
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "title": "{lang:error} (キュー){lang:separator}{embed:title}",
                     "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
                     "fields": []
                 },
                 {
-                    "title": "{lang:error} (音量の変更){lang:separator}{embed:title}",
-                    "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{command:label} 50`",
+                    "title": "{lang:error} (キュー){lang:separator}{embed:title}",
+                    "description": "現在何も再生していません。\n`{bot:prefix}play <曲名かURL>` で再生することができます。",
                     "fields": []
                 },
                 {
-                    "title": "{lang:information} (音量の変更){lang:separator}{embed:title}",
-                    "description": "キャンセルしました。",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:warning} (音量の変更){lang:separator}{embed:title}",
-                    "description": "推奨レベルを超えるまで音量を上げ続けますか？これ以上の音量で音を聞き続けると聴力を損なう可能性があります。\nまた、この機能を使用して使用者に何らかの身体的影響を及ぼしても責任を取ることはできません。\n\n音量を**{replace:volume}**に変更する場合は{replace:time}秒以内に {replace:check} をクリックしてください。",
-                    "fields": []
-                },
-                {   
-                    "title": "{lang:success} (音量の変更){lang:separator}{embed:title}",
-                    "description": "音量を**{replace}**に変更しました。",
-                    "fields": []
+                    "title": "キュー{lang:separator}{embed:title}",
+                    "description": "総再生時間: {replace:totalDuration}, キュー数: {replace:queueSize}",
+                    "fields": [
+                        {
+                            "title": "再生中のメディア",
+                            "description": ""
+                        },
+                        {
+                            "title": "次のメディア",
+                            "description": ""
+                        }
+                    ]
                 }
             ],
             "fields": [],
@@ -1393,7 +1200,11 @@
         "nowplaying": {
             "title": "音楽",
             "description": "",
-            "definitions": {},
+            "definitions": {
+                "all": "すべてループ",
+                "single": "一曲だけループ",
+                "none": "ループなし"
+            },
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
@@ -1436,6 +1247,65 @@
             "fields": [],
             "hint": {},
             "args": {}
+        },
+        "volume": {
+            "title": "音楽",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (音量の変更){lang:separator}{embed:title}",
+                    "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{command:label} 50`",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information} (音量の変更){lang:separator}{embed:title}",
+                    "description": "キャンセルしました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:warning} (音量の変更){lang:separator}{embed:title}",
+                    "description": "推奨レベルを超えるまで音量を上げ続けますか？これ以上の音量で音を聞き続けると聴力を損なう可能性があります。\nまた、この機能を使用して使用者に何らかの身体的影響を及ぼしても責任を取ることはできません。\n\n音量を**{replace:volume}**に変更する場合は{replace:time}秒以内に {replace:check} をクリックしてください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (音量の変更){lang:separator}{embed:title}",
+                    "description": "音量を**{replace}**に変更しました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "disconnect": {
+            "title": "音楽",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error} (チャンネルから退出){lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの停止){lang:separator}{embed:title}",
+                    "description": "すでにボイスチャンネルから切断されています。\nメディアを再生するには `{bot:prefix}play <検索ワード | URL>` と実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (メディアの停止){lang:separator}{embed:title}",
+                    "description": "再生を停止し、ボイスチャンネルから切断しました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {}
         },
         "search": {
             "title": "インテリジェント・サーチ",
