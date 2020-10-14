@@ -957,6 +957,11 @@
                 },
                 {
                     "title": "{lang:error} (メディアの再生){lang:separator}{embed:title}",
+                    "description": "読み上げ機能を利用しているため実行できません。\n`{bot:prefix}bye` で読み上げ機能を終了してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (メディアの再生){lang:separator}{embed:title}",
                     "description": "引数が不正です。検索ワードかURLを指定してください。\n例: `{bot:prefix}{command:label} セカイ`, `{bot:prefix}{command:label} https://www.youtube.com/watch?v=9vyIPWBeRes`",
                     "fields": []
                 },
@@ -1299,23 +1304,118 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "{lang:error} (チャンネルから退出){lang:separator}{embed:title}",
+                    "title": "{lang:error} (再生の終了){lang:separator}{embed:title}",
                     "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
                     "fields": []
                 },
                 {
-                    "title": "{lang:error} (メディアの停止){lang:separator}{embed:title}",
+                    "title": "{lang:error} (再生の終了){lang:separator}{embed:title}",
                     "description": "すでにボイスチャンネルから切断されています。\nメディアを再生するには `{bot:prefix}play <検索ワード | URL>` と実行してください。",
                     "fields": []
                 },
                 {
-                    "title": "{lang:success} (メディアの停止){lang:separator}{embed:title}",
+                    "title": "{lang:success} (再生の終了){lang:separator}{embed:title}",
                     "description": "再生を停止し、ボイスチャンネルから切断しました。",
                     "fields": []
                 }
             ],
             "fields": [],
             "hint": {}
+        },
+        "summon": {
+            "title": "読み上げ",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error} (読み上げの開始){lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (読み上げの開始){lang:separator}{embed:title}",
+                    "description": "音楽機能を利用しているため実行できません。\n`{bot:prefix}disconnect` で音楽機能を終了してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (読み上げの開始){lang:separator}{embed:title}",
+                    "description": "すでに読み上げ機能を利用しています。\n読み上げを終了するには `{bot:prefix}bye` と実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (読み上げの開始){lang:separator}{embed:title}",
+                    "description": "このチャンネルのメッセージの読み上げを開始します。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "svolume": {
+            "title": "読み上げ",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error} (音量の変更){lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (音量の変更){lang:separator}{embed:title}",
+                    "description": "現在読み上げ機能を利用していません。\n`{bot:prefix}summon` でBotをボイスチャンネルに参加させてから実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (音量の変更){lang:separator}{embed:title}",
+                    "description": "引数が不正です。引数は**半角数字**で指定してください。\n例: `{bot:prefix}{command:label} 50`",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information} (音量の変更){lang:separator}{embed:title}",
+                    "description": "キャンセルしました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:warning} (音量の変更){lang:separator}{embed:title}",
+                    "description": "推奨レベルを超えるまで音量を上げ続けますか？これ以上の音量で音を聞き続けると聴力を損なう可能性があります。\nまた、この機能を使用して使用者に何らかの身体的影響を及ぼしても責任を取ることはできません。\n\n音量を**{replace:volume}**に変更する場合は{replace:time}秒以内に {replace:check} をクリックしてください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (音量の変更){lang:separator}{embed:title}",
+                    "description": "音量を**{replace}**に変更しました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
+        },
+        "bye": {
+            "title": "読み上げ",
+            "description": "",
+            "definitions": {},
+            "dialogs": [
+                {
+                    "title": "{lang:error} (読み上げの終了){lang:separator}{embed:title}",
+                    "description": "ボイスチャンネルに参加していないため実行できません。\nボイスチャンネルに参加してからもう一度実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:error} (読み上げの終了){lang:separator}{embed:title}",
+                    "description": "すでに読み上げ機能を利用していません。\n読み上げを開始するには `{bot:prefix}summon` と実行してください。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success} (読み上げの終了){lang:separator}{embed:title}",
+                    "description": "読み上げ機能を終了し、ボイスチャンネルから切断しました。",
+                    "fields": []
+                }
+            ],
+            "fields": [],
+            "hint": {},
+            "args": {}
         },
         "search": {
             "title": "インテリジェント・サーチ",
@@ -2694,6 +2794,10 @@
             "name": "Music (Beta)",
             "description": "音楽が聞けるよ！"
         },
+        "speak": {
+            "name": "Speak (Beta)",
+            "description": "チャット読み上げ機能が入っているカテゴリです。"
+        },
         "miscellaneous": {
             "name": "Miscellaneous",
             "description": "サーバーやユーザーの情報が見れるコマンドなどが入っているカテゴリです。"
@@ -2712,27 +2816,44 @@
         }
     },
     "listeners": {
+        "audio": {
+            "title": "",
+            "description": "",
+            "definitions": {},
+            "dialogs": [],
+            "fields": [],
+            "listeners": {
+                "music": {
+                    "title": "{lang:information}{lang:separator}音楽",
+                    "description": "キューが空になったため再生を終了し、ボイスチャンネルから切断しました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": []
+                },
+                "speak": {
+                    "title": "{lang:information}{lang:separator}読み上げ",
+                    "description": "ボイスチャンネルに参加する人がいないため読み上げを終了し、ボイスチャンネルから切断しました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": []
+                }
+            }
+        },
         "nickname": {
             "title": "ニックネームの変更",
             "description": "ほかのユーザーがBotのニックネームを変更しました。このニックネームを永続的に適用するように設定を変更しますか？",
-            "fields": [],
             "definitions": {},
+            "dialogs": [],
+            "fields": [],
             "listeners": {}
         },
         "logs": {
             "title": "ログ",
             "description": "",
-            "fields": [],
             "definitions": {},
-            "listeners": {
-                "kick": {
-                    "title": "キック - ログ",
-                    "description": "",
-                    "fields": [],
-                    "definitions": {},
-                    "listeners": {}
-                }
-            }
+            "dialogs": [],
+            "fields": [],
+            "listeners": {}
         }
     },
     "dialogs": {
