@@ -89,7 +89,21 @@
                 "search-command": {
                     "title": "Command: {replace}{lang:separator}{embed:title}",
                     "description": "",
-                    "definitions": {},
+                    "definitions": {
+                        "bot-channel-all": "All Channels",
+                        "bot-channel-stable": "Stable channel",
+                        "bot-channel-beta": "Beta channel",
+                        "bot-channel-dev": "Dev channel",
+                        "permission-all": "All Permissions",
+                        "permission-owner": "Owner and above",
+                        "permission-subowner": "Sub-owner and above",
+                        "permission-admin": "Administrator and above",
+                        "permission-staff": "Staff and above",
+                        "channel-all": "All Locations",
+                        "channel-guild": "Server",
+                        "channel-private": "DM / Group",
+                        "custom": "Custom ({replace})"
+                    },
                     "dialogs": [],
                     "fields": [
                         {
@@ -101,11 +115,19 @@
                             "description": ""
                         },
                         {
-                            "title": "Category",
+                            "title": "Executable channels",
                             "description": ""
                         },
                         {
-                            "title": "Types that can be executed",
+                            "title": "Permission to execute (on Bot)",
+                            "description": ""
+                        },
+                        {
+                            "title": "Executable locations",
+                            "description": ""
+                        },
+                        {
+                            "title": "Category",
                             "description": ""
                         },
                         {
@@ -2086,7 +2108,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace:count}人のユーザーは既にミュートされています。",
+                    "description": "{replace:count}人のユーザーはすでにミュートされています。",
                     "fields": [
                         {
                             "title": "ユーザー",
@@ -2096,7 +2118,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace:user} は既にミュートされています。",
+                    "description": "{replace:user} はすでにミュートされています。",
                     "fields": []
                 },
                 {
@@ -2246,7 +2268,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace:count}人のユーザーへのキックをキャンセルしました。",
                     "fields": [
                         {
@@ -2256,7 +2278,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace:user} へのキックをキャンセルしました。",
                     "fields": []
                 }
@@ -2305,7 +2327,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace:count}人のユーザーは既にローカルBanされています。",
+                    "description": "{replace:count}人のユーザーはすでにローカルBanされています。",
                     "fields": [
                         {
                             "title": "ユーザー",
@@ -2315,7 +2337,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace:user} は既にローカルBanされています。",
+                    "description": "{replace:user} はすでにローカルBanされています。",
                     "fields": []
                 },
                 {
@@ -2343,7 +2365,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace:count}人のユーザーに対するローカルBanをキャンセルしました。",
                     "fields": [
                         {
@@ -2353,7 +2375,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace:user} に対するローカルBanをキャンセルしました。",
                     "fields": []
                 }
@@ -2398,7 +2420,7 @@
                 },
                 {
                     "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "{replace} に対するグローバルBanを申請・ローカルBanを実行しました。\nサービス運営から申請者に連絡をする可能性がございます。",
+                    "description": "{replace} に対するグローバルBanを申請・ローカルBanを実行しました。\n証拠の提出を行っていない場合は申請が却下されます。\nサービス運営から申請者に連絡をする可能性がございます。",
                     "fields": [
                         {
                             "title": "備考",
@@ -2422,7 +2444,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace} は既にグローバルBanされています。",
+                    "description": "{replace} はすでにグローバルBanされています。",
                     "fields": []
                 },
                 {
@@ -2441,7 +2463,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace} に対するグローバルBanをキャンセルしました。",
                     "fields": []
                 }
@@ -2881,6 +2903,26 @@
             "description": "You do not have permission.",
             "fields": []
         },
+        "owner-permission": {
+            "title": "{lang:error}",
+            "description": "Not authorized.\nTo use it, you must have __**owner or higher privileges**__.",
+            "fields": []
+        },
+        "subowner-permission": {
+            "title": "{lang:error}",
+            "description": "Not authorized.\nTo use it, you must have __**sub-owner or higher privileges**__ to use it.",
+            "fields": []
+        },
+        "admin-permission": {
+            "title": "{lang:error}",
+            "description": "Not authorized.\nTo use it, you must have __**administrator level or higher**__ privileges.",
+            "fields": []
+        },
+        "staff-permission": {
+            "title": "{lang:error}",
+            "description": "Not authorized.\nTo use it, you must have __**staff or higher privileges**__ to use it.",
+            "fields": []
+        },
         "bot-manager-only": {
             "title": "{lang:error}",
             "description": "The executed command cannot be executed except for __**service management user** __.",
@@ -2908,17 +2950,17 @@
         },
         "not-use-stable": {
             "title": "{lang:error}",
-            "description": "This feature is not available in this Bot.\nIf you want to use it, please use the stable version of the Bot.",
+            "description": "This feature is not available in this Bot.\nIf you want to use it, please use the __**stable version of the Bot**__.",
             "fields": []
         },
         "not-use-beta": {
             "title": "{lang:error}",
-            "description": "This feature is not available in this Bot.\nIf you want to use it, please use the beta version of the Bot.",
+            "description": "This feature is not available in this Bot.\nIf you want to use it, please use the __**beta version of the Bot**__.",
             "fields": []
         },
         "not-use-dev": {
             "title": "{lang:error}",
-            "description": "This feature is not available in this Bot.\nIf you want to use it, please use the development version of the Bot.",
+            "description": "This feature is not available in this Bot.\nIf you want to use it, please use the __**development version of the Bot**__.",
             "fields": []
         },
         "args": {

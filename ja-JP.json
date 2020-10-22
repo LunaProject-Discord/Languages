@@ -88,7 +88,21 @@
                 "search-command": {
                     "title": "コマンド: {replace}{lang:separator}{embed:title}",
                     "description": "",
-                    "definitions": {},
+                    "definitions": {
+                        "bot-channel-all": "すべてのチャンネル",
+                        "bot-channel-stable": "安定版",
+                        "bot-channel-beta": "ベータ版",
+                        "bot-channel-dev": "開発版",
+                        "permission-all": "すべての権限",
+                        "permission-owner": "オーナー以上",
+                        "permission-subowner": "サブオーナー以上",
+                        "permission-admin": "管理者以上",
+                        "permission-staff": "スタッフ以上",
+                        "channel-all": "すべての場所",
+                        "channel-guild": "サーバー",
+                        "channel-private": "DM・グループ",
+                        "custom": "カスタム ({replace})"
+                    },
                     "dialogs": [],
                     "fields": [
                         {
@@ -100,11 +114,19 @@
                             "description": ""
                         },
                         {
-                            "title": "カテゴリ",
+                            "title": "実行できるチャンネル",
                             "description": ""
                         },
                         {
-                            "title": "実行できる種類",
+                            "title": "実行できる権限 (Bot上)",
+                            "description": ""
+                        },
+                        {
+                            "title": "実行できる場所",
+                            "description": ""
+                        },
+                        {
+                            "title": "カテゴリ",
                             "description": ""
                         },
                         {
@@ -2125,7 +2147,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace:count}人のユーザーは既にミュートされています。",
+                    "description": "{replace:count}人のユーザーはすでにミュートされています。",
                     "fields": [
                         {
                             "title": "ユーザー",
@@ -2135,7 +2157,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace:user} は既にミュートされています。",
+                    "description": "{replace:user} はすでにミュートされています。",
                     "fields": []
                 },
                 {
@@ -2284,7 +2306,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace:count}人のユーザーへのキックをキャンセルしました。",
                     "fields": [
                         {
@@ -2294,7 +2316,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace:user} へのキックをキャンセルしました。",
                     "fields": []
                 }
@@ -2343,7 +2365,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace:count}人のユーザーは既にローカルBanされています。",
+                    "description": "{replace:count}人のユーザーはすでにローカルBanされています。",
                     "fields": [
                         {
                             "title": "ユーザー",
@@ -2353,7 +2375,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace:user} は既にローカルBanされています。",
+                    "description": "{replace:user} はすでにローカルBanされています。",
                     "fields": []
                 },
                 {
@@ -2381,7 +2403,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace:count}人のユーザーに対するローカルBanをキャンセルしました。",
                     "fields": [
                         {
@@ -2391,7 +2413,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace:user} に対するローカルBanをキャンセルしました。",
                     "fields": []
                 }
@@ -2436,7 +2458,7 @@
                 },
                 {
                     "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "{replace} に対するグローバルBanを申請・ローカルBanを実行しました。\nサービス運営から申請者に連絡をする可能性がございます。",
+                    "description": "{replace} に対するグローバルBanを申請・ローカルBanを実行しました。\n証拠の提出を行っていない場合は申請が却下されます。\nサービス運営から申請者に連絡をする可能性がございます。",
                     "fields": [
                         {
                             "title": "備考",
@@ -2460,7 +2482,7 @@
                 },
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "{replace} は既にグローバルBanされています。",
+                    "description": "{replace} はすでにグローバルBanされています。",
                     "fields": []
                 },
                 {
@@ -2479,7 +2501,7 @@
                     ]
                 },
                 {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "title": "{lang:information}{lang:separator}{embed:title}",
                     "description": "{replace} に対するグローバルBanをキャンセルしました。",
                     "fields": []
                 }
@@ -2919,6 +2941,26 @@
             "description": "権限がありません。",
             "fields": []
         },
+        "owner-permission": {
+            "title": "{lang:error}",
+            "description": "権限がありません。\n利用するには__**オーナー以上の権限**__が付与されている必要があります。",
+            "fields": []
+        },
+        "subowner-permission": {
+            "title": "{lang:error}",
+            "description": "権限がありません。\n利用するには__**サブオーナー以上の権限**__が付与されている必要があります。",
+            "fields": []
+        },
+        "admin-permission": {
+            "title": "{lang:error}",
+            "description": "権限がありません。\n利用するには__**管理者以上の権限**__が付与されている必要があります。",
+            "fields": []
+        },
+        "staff-permission": {
+            "title": "{lang:error}",
+            "description": "権限がありません。\n利用するには__**スタッフ以上の権限**__が付与されている必要があります。",
+            "fields": []
+        },
         "bot-manager-only": {
             "title": "{lang:error}",
             "description": "実行したコマンドは__**サービス運営以外**__は実行できません。",
@@ -2946,17 +2988,17 @@
         },
         "not-use-stable": {
             "title": "{lang:error}",
-            "description": "この機能はこのBotでは利用できません。\n利用するには安定版のBotを利用してください。",
+            "description": "この機能はこのBotでは利用できません。\n利用するには__**安定版のBot**__を利用してください。",
             "fields": []
         },
         "not-use-beta": {
             "title": "{lang:error}",
-            "description": "この機能はこのBotでは利用できません。\n利用するにはベータ版のBotを利用してください。",
+            "description": "この機能はこのBotでは利用できません。\n利用するには__**ベータ版のBot**__を利用してください。",
             "fields": []
         },
         "not-use-dev": {
             "title": "{lang:error}",
-            "description": "この機能はこのBotでは利用できません。\n利用するには開発版のBotを利用してください。",
+            "description": "この機能はこのBotでは利用できません。\n利用するには__**開発版のBot**__を利用してください。",
             "fields": []
         },
         "args": {
