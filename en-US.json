@@ -1890,7 +1890,7 @@
             ],
             "fields": [
                 {
-                    "title": "User Name",
+                    "title": "Username",
                     "description": "{replace:tag}\n({replace:id})"
                 },
                 {
@@ -1906,7 +1906,7 @@
                     "description": ""
                 },
                 {
-                    "title": "NickName",
+                    "title": "Nickname",
                     "description": ""
                 },
                 {
@@ -2808,15 +2808,15 @@
             "fields": [],
             "listeners": {
                 "music": {
-                    "title": "{lang:information}{lang:separator}音楽",
-                    "description": "キューが空になったため再生を終了し、ボイスチャンネルから切断しました。",
+                    "title": "{lang:information}{lang:separator}Music",
+                    "description": "The queue was empty, so we ended the playback and disconnected from the voice channel.",
                     "definitions": {},
                     "dialogs": [],
                     "fields": []
                 },
                 "speak": {
-                    "title": "{lang:information}{lang:separator}読み上げ",
-                    "description": "ボイスチャンネルに参加する人がいないため読み上げを終了し、ボイスチャンネルから切断しました。",
+                    "title": "{lang:information}{lang:separator}Speak",
+                    "description": "The reading was terminated and disconnected from the voice channel because no one else was participating in the voice channel.",
                     "definitions": {},
                     "dialogs": [],
                     "fields": []
@@ -2831,13 +2831,122 @@
             "fields": [],
             "listeners": {}
         },
-        "logs": {
-            "title": "ログ",
+        "log": {
+            "title": "Server log",
             "description": "",
             "definitions": {},
             "dialogs": [],
             "fields": [],
-            "listeners": {}
+            "listeners": {
+                "member-join": {
+                    "title": "Join{lang:separator}{embed:title}",
+                    "description": "{replace} has joined the server.",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "Username",
+                            "description": ""
+                        },
+                        {
+                            "title": "名称未定",
+                            "description": ""
+                        },
+                        {
+                            "title": "Created At",
+                            "description": ""
+                        },
+                        {
+                            "title": "Bot?",
+                            "description": ""
+                        },
+                        {
+                            "title": "Evaluation value",
+                            "description": ""
+                        },
+                        {
+                            "title": "Verified? (on Bot)",
+                            "description": ""
+                        },
+                        {
+                            "title": "Permission (on Bot)",
+                            "description": ""
+                        }
+                    ]
+                },
+                "member-leave": {
+                    "title": "Leave{lang:separator}{embed:title}",
+                    "description": "{replace} has left the server.",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "Username",
+                            "description": ""
+                        },
+                        {
+                            "title": "Created At",
+                            "description": ""
+                        },
+                        {
+                            "title": "Bot?",
+                            "description": ""
+                        },
+                        {
+                            "title": "Evaluation value",
+                            "description": ""
+                        },
+                        {
+                            "title": "Verified? (on Bot)",
+                            "description": ""
+                        },
+                        {
+                            "title": "Permission (on Bot)",
+                            "description": ""
+                        }
+                    ]
+                },
+                "member-role_add": {
+                    "title": "Add roles{lang:separator}{embed:title}",
+                    "description": "{replace:member} now has the role {replace:roles}.",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "Username",
+                            "description": ""
+                        },
+                        {
+                            "title": "Added roles",
+                            "description": ""
+                        },
+                        {
+                            "title": "Executor",
+                            "description": ""
+                        }
+                    ]
+                },
+                "member-role_remove": {
+                    "title": "Remove roles{lang:separator}{embed:title}",
+                    "description": "Stripped {replace:member} of its roles in {replace:roles}.",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "Username",
+                            "description": ""
+                        },
+                        {
+                            "title": "Removed roles",
+                            "description": ""
+                        },
+                        {
+                            "title": "Executor",
+                            "description": ""
+                        }
+                    ]
+                }
+            }
         }
     },
     "dialogs": {

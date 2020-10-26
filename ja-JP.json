@@ -2869,13 +2869,122 @@
             "fields": [],
             "listeners": {}
         },
-        "logs": {
-            "title": "ログ",
+        "log": {
+            "title": "サーバーログ",
             "description": "",
             "definitions": {},
             "dialogs": [],
             "fields": [],
-            "listeners": {}
+            "listeners": {
+                "member-join": {
+                    "title": "参加{lang:separator}{embed:title}",
+                    "description": "{replace} がサーバーに参加しました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "名称未定",
+                            "description": ""
+                        },
+                        {
+                            "title": "作成日時",
+                            "description": ""
+                        },
+                        {
+                            "title": "Bot",
+                            "description": ""
+                        },
+                        {
+                            "title": "評価値",
+                            "description": ""
+                        },
+                        {
+                            "title": "認証済み (Bot上)",
+                            "description": ""
+                        },
+                        {
+                            "title": "権限 (Bot上)",
+                            "description": ""
+                        }
+                    ]
+                },
+                "member-leave": {
+                    "title": "退出{lang:separator}{embed:title}",
+                    "description": "{replace} がサーバーから退出しました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "作成日時",
+                            "description": ""
+                        },
+                        {
+                            "title": "Bot",
+                            "description": ""
+                        },
+                        {
+                            "title": "評価値",
+                            "description": ""
+                        },
+                        {
+                            "title": "認証済み (Bot上)",
+                            "description": ""
+                        },
+                        {
+                            "title": "権限 (Bot上)",
+                            "description": ""
+                        }
+                    ]
+                },
+                "member-role_add": {
+                    "title": "役職の付与{lang:separator}{embed:title}",
+                    "description": "{replace:member} に {replace:roles} の役職を付与しました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "付与した役職",
+                            "description": ""
+                        },
+                        {
+                            "title": "実行者",
+                            "description": ""
+                        }
+                    ]
+                },
+                "member-role_remove": {
+                    "title": "役職の剥奪{lang:separator}{embed:title}",
+                    "description": "{replace:member} から {replace:roles} の役職を剥奪しました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "剥奪した役職",
+                            "description": ""
+                        },
+                        {
+                            "title": "実行者",
+                            "description": ""
+                        }
+                    ]
+                }
+            }
         }
     },
     "dialogs": {
