@@ -162,15 +162,15 @@
             "dialogs": [
                 {
                     "title": "{lang:information}{lang:separator}{embed:title}",
-                    "description": "Pingを取得しました。",
+                    "description": "Pong! :ping_pong:",
                     "fields": [
                         {
-                            "title": "Ping",
-                            "description": "{replace}ms"
+                            "title": "Bot (Gateway)",
+                            "description": ""
                         },
                         {
                             "title": "WebSocket",
-                            "description": "{replace}ms"
+                            "description": ""
                         }
                     ]
                 }
@@ -2876,6 +2876,18 @@
             "dialogs": [],
             "fields": [],
             "listeners": {
+                "guild-update": {
+                    "title": "サーバー設定の変更{lang:separator}{embed:title}",
+                    "description": "サーバー設定が変更されました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        }
+                    ]
+                },
                 "member-join": {
                     "title": "参加{lang:separator}{embed:title}",
                     "description": "{replace} がサーバーに参加しました。",
@@ -2966,6 +2978,26 @@
                 },
                 "member-role_remove": {
                     "title": "役職の剥奪{lang:separator}{embed:title}",
+                    "description": "{replace:member} から {replace:roles} の役職を剥奪しました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "剥奪した役職",
+                            "description": ""
+                        },
+                        {
+                            "title": "実行者",
+                            "description": ""
+                        }
+                    ]
+                },
+                "voice-join": {
+                    "title": "ボイスチャンネルへの参加{lang:separator}{embed:title}",
                     "description": "{replace:member} から {replace:roles} の役職を剥奪しました。",
                     "definitions": {},
                     "dialogs": [],

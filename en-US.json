@@ -163,15 +163,15 @@
             "dialogs": [
                 {
                     "title": "{lang:information}{lang:separator}{embed:title}",
-                    "description": "I got a ping.",
+                    "description": "Pong! :ping_pong:",
                     "fields": [
                         {
-                            "title": "Ping",
-                            "description": "{replace}ms"
+                            "title": "Bot (Gateway)",
+                            "description": ""
                         },
                         {
                             "title": "WebSocket",
-                            "description": "{replace}ms"
+                            "description": ""
                         }
                     ]
                 }
