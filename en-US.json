@@ -601,17 +601,13 @@
             ],
             "fields": [
                 {
-                    "title": "Source of translation: {replace}",
-                    "description": ""
-                },
-                {
-                    "title": "Translation destination: {replace}",
-                    "description": ""
+                    "title": "Language information",
+                    "description": "Source language: {replace:source} → Target language: {replace:target}"
                 }
             ],
             "hint": {
                 "title": "Hint",
-                "description": "It is also possible to specify and translate the source language.\nExample: `{bot:prefix}translate <Language code (according to ISO 639-1)> {replace}`"
+                "description": "It is also possible to specify and translate the source language.\nExample: `{bot:prefix}translate en ja Hello!`"
             },
             "args": {
                 "help": {
@@ -2836,20 +2832,37 @@
             "listeners": {}
         },
         "log": {
-            "title": "Server log",
+            "title": "サーバーログ",
             "description": "",
             "definitions": {},
             "dialogs": [],
-            "fields": [],
+            "fields": [
+                {
+                    "title": "実行したユーザー",
+                    "description": ""
+                }
+            ],
             "listeners": {
-                "member-join": {
-                    "title": "Join{lang:separator}{embed:title}",
-                    "description": "{replace} has joined the server.",
+                "guild-update": {
+                    "title": "サーバー設定の変更{lang:separator}{embed:title}",
+                    "description": "サーバー設定が変更されました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
-                            "title": "Username",
+                            "title": "ユーザー名",
+                            "description": ""
+                        }
+                    ]
+                },
+                "member-join": {
+                    "title": "参加{lang:separator}{embed:title}",
+                    "description": "{replace} がサーバーに参加しました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
                             "description": ""
                         },
                         {
@@ -2857,95 +2870,87 @@
                             "description": ""
                         },
                         {
-                            "title": "Created At",
+                            "title": "作成日時",
                             "description": ""
                         },
                         {
-                            "title": "Bot?",
+                            "title": "Bot",
                             "description": ""
                         },
                         {
-                            "title": "Evaluation value",
+                            "title": "評価値",
                             "description": ""
                         },
                         {
-                            "title": "Verified? (on Bot)",
+                            "title": "認証済み (Bot上)",
                             "description": ""
                         },
                         {
-                            "title": "Permission (on Bot)",
+                            "title": "権限 (Bot上)",
                             "description": ""
                         }
                     ]
                 },
                 "member-leave": {
-                    "title": "Leave{lang:separator}{embed:title}",
-                    "description": "{replace} has left the server.",
+                    "title": "退出{lang:separator}{embed:title}",
+                    "description": "{replace} がサーバーから退出しました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
-                            "title": "Username",
+                            "title": "ユーザー名",
                             "description": ""
                         },
                         {
-                            "title": "Created At",
+                            "title": "作成日時",
                             "description": ""
                         },
                         {
-                            "title": "Bot?",
+                            "title": "Bot",
                             "description": ""
                         },
                         {
-                            "title": "Evaluation value",
+                            "title": "評価値",
                             "description": ""
                         },
                         {
-                            "title": "Verified? (on Bot)",
+                            "title": "認証済み (Bot上)",
                             "description": ""
                         },
                         {
-                            "title": "Permission (on Bot)",
+                            "title": "権限 (Bot上)",
                             "description": ""
                         }
                     ]
                 },
                 "member-role_add": {
-                    "title": "Add roles{lang:separator}{embed:title}",
-                    "description": "{replace:member} now has the role {replace:roles}.",
+                    "title": "役職の付与{lang:separator}{embed:title}",
+                    "description": "{replace:member} に {replace:roles} の役職が付与されました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
-                            "title": "Username",
+                            "title": "ユーザー名",
                             "description": ""
                         },
                         {
-                            "title": "Added roles",
-                            "description": ""
-                        },
-                        {
-                            "title": "Executor",
+                            "title": "付与した役職",
                             "description": ""
                         }
                     ]
                 },
                 "member-role_remove": {
-                    "title": "Remove roles{lang:separator}{embed:title}",
-                    "description": "Stripped {replace:member} of its roles in {replace:roles}.",
+                    "title": "役職の剥奪{lang:separator}{embed:title}",
+                    "description": "{replace:member} から {replace:roles} の役職が剥奪されました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
-                            "title": "Username",
+                            "title": "ユーザー名",
                             "description": ""
                         },
                         {
-                            "title": "Removed roles",
-                            "description": ""
-                        },
-                        {
-                            "title": "Executor",
+                            "title": "剥奪した役職",
                             "description": ""
                         }
                     ]
@@ -3028,76 +3033,65 @@
                 },
                 "voice-mute": {
                     "title": "メンバーのミュート{lang:separator}{embed:title}",
-                    "description": "{replace:member} のサーバーミュートを設定しました。",
+                    "description": "{replace} のサーバーミュートが設定されました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
                             "title": "ユーザー名",
-                            "description": ""
-                        },
-                        {
-                            "title": "実行者",
                             "description": ""
                         }
                     ]
                 },
                 "voice-unmute": {
                     "title": "メンバーのミュート解除{lang:separator}{embed:title}",
-                    "description": "{replace:member} のサーバーミュートを解除しました。",
+                    "description": "{replace} のサーバーミュートが解除されました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
                             "title": "ユーザー名",
-                            "description": ""
-                        },
-                        {
-                            "title": "実行者",
                             "description": ""
                         }
                     ]
                 },
                 "voice-deafen": {
                     "title": "メンバーのスピーカーミュート{lang:separator}{embed:title}",
-                    "description": "{replace:member} のサーバースピーカーミュートを設定しました。",
+                    "description": "{replace} のサーバースピーカーミュートが設定されました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
                             "title": "ユーザー名",
-                            "description": ""
-                        },
-                        {
-                            "title": "実行者",
                             "description": ""
                         }
                     ]
                 },
                 "voice-undeafen": {
                     "title": "メンバーのスピーカーミュート解除{lang:separator}{embed:title}",
-                    "description": "{replace:member} のサーバースピーカーミュートを解除しました。",
+                    "description": "{replace} のサーバースピーカーミュートが解除されました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
                             "title": "ユーザー名",
                             "description": ""
-                        },
-                        {
-                            "title": "実行者",
-                            "description": ""
                         }
                     ]
                 },
-                "category-create": {
-                    "title": "カテゴリの作成{lang:separator}{embed:title}",
-                    "description": "サーバーに {replace} カテゴリを作成しました。",
-                    "definitions": {},
+                "channel-create": {
+                    "title": "{replace}の作成{lang:separator}{embed:title}",
+                    "description": "サーバーに {replace} が作成されました。",
+                    "definitions": {
+                        "category": "カテゴリ",
+                        "channel": "チャンネル",
+                        "textchannel": "テキストチャンネル",
+                        "voicechannel": "ボイスチャンネル"
+                    },
                     "dialogs": [],
                     "fields": [
                         {
-                            "title": "カテゴリ名",
+                            "title": "{replace}名",
                             "description": ""
                         },
                         {
@@ -3107,9 +3101,97 @@
                         {
                             "title": "アクセス可能なメンバー ({replace:count})",
                             "description": ""
+                        }
+                    ]
+                },
+                "channel-delete": {
+                    "title": "{replace}の削除{lang:separator}{embed:title}",
+                    "description": "サーバーから {replace} が削除されました。",
+                    "definitions": {
+                        "category": "カテゴリ",
+                        "channel": "チャンネル",
+                        "textchannel": "テキストチャンネル",
+                        "voicechannel": "ボイスチャンネル"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "{replace}名",
+                            "description": ""
                         },
                         {
-                            "title": "実行者",
+                            "title": "アクセス可能な役職 ({replace:count})",
+                            "description": ""
+                        },
+                        {
+                            "title": "アクセス可能なメンバー ({replace:count})",
+                            "description": ""
+                        }
+                    ]
+                },
+                "channel-update": {
+                    "title": "{replace}の編集{lang:separator}{embed:title}",
+                    "description": "{replace:channel} の {replace:property} が変更されました。",
+                    "definitions": {
+                        "category": "カテゴリ",
+                        "channel": "チャンネル",
+                        "textchannel": "テキストチャンネル",
+                        "voicechannel": "ボイスチャンネル",
+
+                        "name": "名前",
+                        "position": "位置",
+                        "parent": "親カテゴリ",
+
+                        "topic": "説明",
+                        "nsfw": "NSFW",
+                        "slowmode": "スローモード",
+                        "news": "アナウンス",
+
+                        "bitrate": "ビットレート",
+                        "userlimit": "ユーザー上限"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "{replace}名",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更前の{replace}",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更後の{replace}",
+                            "description": ""
+                        }
+                    ]
+                },
+                "channel-permissions_update": {
+                    "title": "{replace}の権限設定の編集{lang:separator}{embed:title}",
+                    "description": "{replace:channel} の {replace:property} に対する権限設定が変更されました。",
+                    "definitions": {
+                        "category": "カテゴリ",
+                        "channel": "チャンネル",
+                        "textchannel": "テキストチャンネル",
+                        "voicechannel": "ボイスチャンネル",
+
+                        "role": "役職",
+                        "member": "メンバー",
+                        
+                        "general": "サーバー全般"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "{replace}名",
+                            "description": ""
+                        },
+                        {
+                            "title": "対象の{replace}",
+                            "description": ""
+                        },
+                        {
+                            "title": "権限設定",
                             "description": ""
                         }
                     ]
