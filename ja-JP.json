@@ -3158,6 +3158,29 @@
                         }
                     ]
                 },
+                "member-update": {
+                    "title": "メンバーの編集{lang:separator}{embed:title}",
+                    "description": "{replace:member} の {replace:property} が変更されました。",
+                    "definitions": {
+                        "boost_time": "ブースト時間",
+                        "nick": "ニックネーム"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更前の{replace}",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更後の{replace}",
+                            "description": ""
+                        }
+                    ]
+                },
                 "member-role_add": {
                     "title": "役職の付与{lang:separator}{embed:title}",
                     "description": "{replace:member} に {replace:roles} の役職が付与されました。",

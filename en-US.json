@@ -3120,6 +3120,29 @@
                         }
                     ]
                 },
+                "member-update": {
+                    "title": "Edit member{lang:separator}{embed:title}",
+                    "description": "The {replace:property} of {replace:member} has been changed.",
+                    "definitions": {
+                        "boost_time": "Boost time",
+                        "nick": "Nickname"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "User name",
+                            "description": ""
+                        },
+                        {
+                            "title": "Before the change {replace}",
+                            "description": ""
+                        },
+                        {
+                            "title": "After the change {replace}",
+                            "description": ""
+                        }
+                    ]
+                },
                 "member-role_add": {
                     "title": "Added roles{lang:separator}{embed:title}",
                     "description": "{replace:member} has been assigned the roles of {replace:roles}.",
