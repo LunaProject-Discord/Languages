@@ -1008,7 +1008,11 @@
                     "description": "**{replace:searchText}** で検索した結果、{replace:searchSize} 件の候補が見つかりました。\n再生したいメディアの番号を**{replace:time}秒**以内にクリックしてください。\nまた、キャンセルする場合はこのメッセージについている {replace:cancel} をクリックしてください。",
                     "fields": [
                         {
-                            "title": "検索候補",
+                            "title": "{replace} YouTube の検索候補",
+                            "description": ""
+                        },
+                        {
+                            "title": "{replace} ニコニコ動画 の検索候補",
                             "description": ""
                         }
                     ]
@@ -2030,17 +2034,43 @@
         },
         "clear": {
             "title": "メッセージ削除",
-            "description": "{replace}個のメッセージを削除しています…",
+            "description": "",
             "definitions": {},
-            "dialogs": [],
+            "dialogs": [
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "本当に{replace:members}人のメンバーを対象とした{replace:count}個のメッセージを削除してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n\n※ **{replace:time}**秒で自動キャンセルされます。",
+                    "fields": [
+                        {
+                            "title": "メンバー",
+                            "description": ""
+                        }
+                    ]
+                },  
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "本当に{replace:count}個のメッセージを削除してもよろしいですか？\n実行する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。\n\n※ **{replace:time}**秒で自動キャンセルされます。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "メッセージを削除しています。しばらくお待ちください…",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:success}{lang:separator}{embed:title}",
+                    "description": "{replace}個のメッセージを削除しました。",
+                    "fields": []
+                },
+                {
+                    "title": "{lang:information}{lang:separator}{embed:title}",
+                    "description": "{replace}個のメッセージの削除をキャンセルしました。",
+                    "fields": []
+                }
+            ],
             "fields": [],
             "hint": {},
-            "args": {
-                "complete": {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "{replace}個のメッセージを削除しました。"
-                }
-            }
+            "args": {}
         },
         "categorycopy": {
             "title": "カテゴリコピー",
@@ -2881,14 +2911,167 @@
                 }
             ],
             "listeners": {
-                "guild-update": {
+                "moderation-update": {
                     "title": "サーバー設定の変更{lang:separator}{embed:title}",
-                    "description": "サーバー設定が変更されました。",
+                    "description": "サーバーの {replace} が変更されました。",
+                    "definitions": {
+                        "name": "名前",
+                        "description": "説明",
+                        "icon": "アイコン",
+                        "splash": "スプラッシュ",
+                        "banner": "バナー",
+                        "region": "地域",
+                        "system_channel": "システムチャンネル",
+                        "owner": "オーナー",
+                        "locale": "優先言語",
+                        "features": "機能",
+                        "boost_count": "ブースト数",
+                        "boost_tier": "ブーストレベル",
+                        "mfa_level": "2要素認証",
+                        "max_members": "最大メンバー数",
+                        "max_presences": "最大プレセンス数",
+                        "vanity_code": "カスタム招待リンク",
+                        
+                        "afk_channel": "AFKチャンネル",
+                        "afk_timeout": "AFKタイムアウト",
+                        "afk_timeout-seconds_60": "1分",
+                        "afk_timeout-seconds_300": "5分",
+                        "afk_timeout-seconds_900": "15分",
+                        "afk_timeout-seconds_1800": "30分",
+                        "afk_timeout-seconds_3600": "1時間",
+                        
+                        "notification_level": "メッセージの通知レベル",
+                        "notification_level-all_messages": "すべて通知",
+                        "notification_level-mentions_only": "メンションのみ",
+                        
+                        "verification_level": "認証レベル",
+                        "verification_level-none": "無効",
+                        "verification_level-low": "低 (メール認証)",
+                        "verification_level-medium": "中 (登録して5分以上経過)",
+                        "verification_level-high": "高 (参加して10分以上経過)",
+                        "verification_level-very_high": "最高 (電話認証)",
+                        
+                        "explicit_content_filter": "不適切なコンテンツフィルターレベル",
+                        "explicit_content_filter-off": "スキャンしない",
+                        "explicit_content_filter-no_role": "役職がないユーザーのみ",
+                        "explicit_content_filter-all": "すべてスキャン"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "変更前の{replace}",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更後の{replace}",
+                            "description": ""
+                        }
+                    ]
+                },
+                "moderation-kick": {
+                    "title": "キック{lang:separator}{embed:title}",
+                    "description": "{replace} がサーバーからキックされました。",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
                             "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "処罰理由",
+                            "description": ""
+                        },
+                        {
+                            "title": "参加日時",
+                            "description": ""
+                        },
+                        {
+                            "title": "作成日時",
+                            "description": ""
+                        },
+                        {
+                            "title": "Bot",
+                            "description": ""
+                        },
+                        {
+                            "title": "評価値",
+                            "description": ""
+                        },
+                        {
+                            "title": "認証済み (Bot上)",
+                            "description": ""
+                        },
+                        {
+                            "title": "権限 (Bot上)",
+                            "description": ""
+                        }
+                    ]
+                },
+                "moderation-ban": {
+                    "title": "Ban{lang:separator}{embed:title}",
+                    "description": "{replace} がBanされました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "処罰理由",
+                            "description": ""
+                        },
+                        {
+                            "title": "作成日時",
+                            "description": ""
+                        },
+                        {
+                            "title": "Bot",
+                            "description": ""
+                        },
+                        {
+                            "title": "評価値",
+                            "description": ""
+                        },
+                        {
+                            "title": "認証済み (Bot上)",
+                            "description": ""
+                        },
+                        {
+                            "title": "権限 (Bot上)",
+                            "description": ""
+                        }
+                    ]
+                },
+                "moderation-unban": {
+                    "title": "Ban解除{lang:separator}{embed:title}",
+                    "description": "{replace} のBanが解除されました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "作成日時",
+                            "description": ""
+                        },
+                        {
+                            "title": "Bot",
+                            "description": ""
+                        },
+                        {
+                            "title": "評価値",
+                            "description": ""
+                        },
+                        {
+                            "title": "認証済み (Bot上)",
+                            "description": ""
+                        },
+                        {
+                            "title": "権限 (Bot上)",
                             "description": ""
                         }
                     ]
@@ -2896,7 +3079,9 @@
                 "member-join": {
                     "title": "参加{lang:separator}{embed:title}",
                     "description": "{replace} がサーバーに参加しました。",
-                    "definitions": {},
+                    "definitions": {
+                        "nolimit": "無制限"
+                    },
                     "dialogs": [],
                     "fields": [
                         {
@@ -2904,12 +3089,20 @@
                             "description": ""
                         },
                         {
-                            "title": "名称未定",
+                            "title": "招待リンク",
+                            "description": ""
+                        },
+                        {
+                            "title": "前のユーザーとの時間差",
                             "description": ""
                         },
                         {
                             "title": "作成日時",
                             "description": ""
+                        },
+                        {
+                            "title": "ユーザー数",
+                            "description": "{replace:total} ({replace:user}, {replace:bot})"
                         },
                         {
                             "title": "Bot",
@@ -2937,6 +3130,10 @@
                     "fields": [
                         {
                             "title": "ユーザー名",
+                            "description": ""
+                        },
+                        {
+                            "title": "参加日時",
                             "description": ""
                         },
                         {
@@ -3204,9 +3401,9 @@
                         }
                     ]
                 },
-                "channel-permissions_update": {
-                    "title": "{replace}の権限設定の編集{lang:separator}{embed:title}",
-                    "description": "{replace:channel} の {replace:property} に対する権限設定が変更されました。",
+                "channel-permissions_create": {
+                    "title": "{replace}の権限設定の作成{lang:separator}{embed:title}",
+                    "description": "{replace:channel} の {replace:property} に対する権限設定が作成されました。",
                     "definitions": {
                         "category": "カテゴリ",
                         "channel": "チャンネル",
@@ -3230,6 +3427,354 @@
                         },
                         {
                             "title": "権限設定",
+                            "description": ""
+                        }
+                    ]
+                },
+                "channel-permissions_delete": {
+                    "title": "{replace}の権限設定の削除{lang:separator}{embed:title}",
+                    "description": "{replace:channel} の {replace:property} に対する権限設定が削除されました。",
+                    "definitions": {
+                        "category": "カテゴリ",
+                        "channel": "チャンネル",
+                        "textchannel": "テキストチャンネル",
+                        "voicechannel": "ボイスチャンネル",
+
+                        "role": "役職",
+                        "member": "メンバー",
+                        
+                        "general": "サーバー全般"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "{replace}名",
+                            "description": ""
+                        },
+                        {
+                            "title": "対象の{replace}",
+                            "description": ""
+                        }
+                    ]
+                },
+                "channel-permissions_update": {
+                    "title": "{replace}の権限設定の更新{lang:separator}{embed:title}",
+                    "description": "{replace:channel} の {replace:property} に対する権限設定が更新されました。",
+                    "definitions": {
+                        "category": "カテゴリ",
+                        "channel": "チャンネル",
+                        "textchannel": "テキストチャンネル",
+                        "voicechannel": "ボイスチャンネル",
+
+                        "role": "役職",
+                        "member": "メンバー",
+                        
+                        "general": "サーバー全般"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "{replace}名",
+                            "description": ""
+                        },
+                        {
+                            "title": "対象の{replace}",
+                            "description": ""
+                        },
+                        {
+                            "title": "権限設定",
+                            "description": ""
+                        }
+                    ]
+                },
+                "role-create": {
+                    "title": "役職の作成{lang:separator}{embed:title}",
+                    "description": "サーバーに {replace} が作成されました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "役職名",
+                            "description": ""
+                        }
+                    ]
+                },
+                "role-delete": {
+                    "title": "役職の削除{lang:separator}{embed:title}",
+                    "description": "サーバーから {replace} が削除されました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "役職名",
+                            "description": ""
+                        }
+                    ]
+                },
+                "role-update": {
+                    "title": "役職の編集{lang:separator}{embed:title}",
+                    "description": "{replace:role} の {replace:property} が変更されました。",
+                    "definitions": {
+                        "general": "サーバー全般",
+                        "textchannel": "テキストチャンネル",
+                        "voicechannel": "ボイスチャンネル",
+
+                        "name": "名前",
+                        "position": "位置",
+                        "color": "色",
+                        "mentionable": "メンション可能",
+                        "hoist": "別表示",
+                        "permission": "権限"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "役職名",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更前の{replace}",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更後の{replace}",
+                            "description": ""
+                        }
+                    ]
+                },
+                "emote-create": {
+                    "title": "絵文字の追加{lang:separator}{embed:title}",
+                    "description": "サーバーに {replace} が追加されました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "絵文字名",
+                            "description": ""
+                        }
+                    ]
+                },
+                "emote-delete": {
+                    "title": "絵文字の削除{lang:separator}{embed:title}",
+                    "description": "サーバーから {replace} が削除されました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "絵文字名",
+                            "description": ""
+                        }
+                    ]
+                },
+                "emote-update": {
+                    "title": "絵文字の編集{lang:separator}{embed:title}",
+                    "description": "{replace:emote} の {replace:property} が変更されました。",
+                    "definitions": {
+                        "general": "サーバー全般",
+                        "textchannel": "テキストチャンネル",
+                        "voicechannel": "ボイスチャンネル",
+
+                        "name": "名前",
+                        "roles": "役職"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "絵文字名",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更前の{replace}",
+                            "description": ""
+                        },
+                        {
+                            "title": "変更後の{replace}",
+                            "description": ""
+                        }
+                    ]
+                },
+                "invite-create": {
+                    "title": "招待の作成{lang:separator}{embed:title}",
+                    "description": "サーバーに招待リンクが追加されました。",
+                    "definitions": {
+                        "nolimit": "無制限"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "招待コード",
+                            "description": ""
+                        },
+                        {
+                            "title": "チャンネル名",
+                            "description": ""
+                        },
+                        {
+                            "title": "有効期限",
+                            "description": ""
+                        },
+                        {
+                            "title": "最大使用回数",
+                            "description": ""
+                        },
+                        {
+                            "title": "一時的",
+                            "description": ""
+                        }
+                    ]
+                },
+                "invite-delete": {
+                    "title": "招待の削除{lang:separator}{embed:title}",
+                    "description": "サーバーから招待リンクが削除されました。",
+                    "definitions": {
+                        "nolimit": "無制限"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "招待コード",
+                            "description": ""
+                        },
+                        {
+                            "title": "チャンネル名",
+                            "description": ""
+                        },
+                        {
+                            "title": "有効期限",
+                            "description": ""
+                        },
+                        {
+                            "title": "使用回数 (最大)",
+                            "description": ""
+                        },
+                        {
+                            "title": "一時的",
+                            "description": ""
+                        }
+                    ]
+                },
+                "message-delete": {
+                    "title": "メッセージの削除{lang:separator}{embed:title}",
+                    "description": "{replace} からメッセージが削除されました。",
+                    "definitions": {},
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "メッセージID",
+                            "description": ""
+                        },
+                        {
+                            "title": "コンテンツ",
+                            "description": ""
+                        },
+                        {
+                            "title": "添付ファイル",
+                            "description": ""
+                        },
+                        {
+                            "title": "リアクション",
+                            "description": ""
+                        },
+                        {
+                            "title": "チャンネル名",
+                            "description": ""
+                        },
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        }
+                    ]
+                },
+                "message-edit": {
+                    "title": "メッセージの編集{lang:separator}{embed:title}",
+                    "description": "{replace:user} の {replace:message} が編集されました。",
+                    "definitions": {
+                        "message": "メッセージ"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "編集前のコンテンツ",
+                            "description": ""
+                        },
+                        {
+                            "title": "編集後のコンテンツ",
+                            "description": ""
+                        },
+                        {
+                            "title": "添付ファイル",
+                            "description": ""
+                        },
+                        {
+                            "title": "リアクション",
+                            "description": ""
+                        },
+                        {
+                            "title": "チャンネル名",
+                            "description": ""
+                        },
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        }
+                    ]
+                },
+                "message-pin": {
+                    "title": "メッセージのピン留め{lang:separator}{embed:title}",
+                    "description": "{replace:user} の {replace:message} がピン留めされました。",
+                    "definitions": {
+                        "message": "メッセージ"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "コンテンツ",
+                            "description": ""
+                        },
+                        {
+                            "title": "添付ファイル",
+                            "description": ""
+                        },
+                        {
+                            "title": "リアクション",
+                            "description": ""
+                        },
+                        {
+                            "title": "チャンネル名",
+                            "description": ""
+                        },
+                        {
+                            "title": "ユーザー名",
+                            "description": ""
+                        }
+                    ]
+                },
+                "message-unpin": {
+                    "title": "メッセージのピン留め解除{lang:separator}{embed:title}",
+                    "description": "{replace:user} の {replace:message} がピン留め解除されました。",
+                    "definitions": {
+                        "message": "メッセージ"
+                    },
+                    "dialogs": [],
+                    "fields": [
+                        {
+                            "title": "コンテンツ",
+                            "description": ""
+                        },
+                        {
+                            "title": "添付ファイル",
+                            "description": ""
+                        },
+                        {
+                            "title": "リアクション",
+                            "description": ""
+                        },
+                        {
+                            "title": "チャンネル名",
+                            "description": ""
+                        },
+                        {
+                            "title": "ユーザー名",
                             "description": ""
                         }
                     ]
