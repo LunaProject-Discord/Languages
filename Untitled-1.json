@@ -1,0 +1,42 @@
+{
+    "args-boolean": {
+        "title": "{lang:error}",
+        "description": "引数が不正です。{replace} を解析できません。\nその部分には**真偽値**を指定してください。\n使い方は `{bot:prefix}help {command:label}` で確認してください。",
+        "fields": [
+            {
+                "title": "指定できる引数 (例)",
+                "description": "`true`, `false`"
+            }
+        ]
+    },
+    "args-integer": {
+        "title": "{lang:error}",
+        "description": "引数が不正です。{replace} を解析できません。\nその部分には**整数**を指定してください。\n使い方は `{bot:prefix}help {command:label}` で確認してください。",
+        "fields": [
+            {
+                "title": "指定できる引数 (例)",
+                "description": "`1`, `23`, `456`"
+            }
+        ]
+    },
+    "args-decimal": {
+        "title": "{lang:error}",
+        "description": "引数が不正です。{replace} を解析できません。\nその部分には**小数**を指定してください。\n使い方は `{bot:prefix}help {command:label}` で確認してください。",
+        "fields": [
+            {
+                "title": "指定できる引数 (例)",
+                "description": "`1.0`, `2.3`, `4.56`"
+            }
+        ]
+    },
+    "args-string": {
+        "title": "{lang:error}",
+        "description": "引数が不正です。{replace} を解析できません。\nその部分には**文字列**を指定してください。\n使い方は `{bot:prefix}help {command:label}` で確認してください。",
+        "fields": [
+            {
+                "title": "指定できる引数 (例)",
+                "description": "`hoge`, `fuga`"
+            }
+        ]
+    }
+}

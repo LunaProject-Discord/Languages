@@ -347,7 +347,7 @@
                 },
                 "home": {
                     "title": "{embed:title}",
-                    "description": "{replace:a}: 動作\n{replace:b}: 時刻と言語\n{replace:c}: 機能\n{replace:d}: ログ\n\n{replace:cancel}: キャンセル",
+                    "description": "{replace:a}: 動作\n{replace:b}: 時刻と言語\n{replace:c}: 機能\n\n{replace:cancel}: キャンセル",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],

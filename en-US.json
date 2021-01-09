@@ -348,7 +348,7 @@
                 },
                 "home": {
                     "title": "{embed:title}",
-                    "description": "{replace:a}: Action\n{replace:b}: Time & Language\n{replace:c}: Feature\n{replace:d}: Log\n\n{replace:cancel}: Cancel",
+                    "description": "{replace:a}: Action\n{replace:b}: Time & Language\n{replace:c}: Feature\n\n{replace:cancel}: Cancel",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
