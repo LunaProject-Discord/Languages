@@ -626,115 +626,6 @@
                 }
             }
         },
-        "data": {
-            "title": "データベース",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {
-                "help": {
-                    "title": "ヘルプ{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{command:label} add <ID>`: __データの追加__\n`{bot:prefix}{command:label} remove <ID>`: __データの削除__\n`{bot:prefix}{command:label} update <ID>`: __データの更新__\n`{bot:prefix}{command:label} list <ID>`: __データのリスト__\n`{bot:prefix}{command:label} clear <ID>`: __データの全削除__ (サーバーオーナー・Bot管理者のみ実行可能)",
-                    "definitions": {},
-                    "dialogs": [],
-                    "fields": [],
-                    "hint": {}
-                },
-                "add": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (アイテムの追加){lang:separator}{embed:title}",
-                            "description": "指定したメンバーが見つかりませんでした。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (アイテムの追加){lang:separator}{embed:title}",
-                            "description": "**{replace}** のデータベースにアイテムを追加します。\nアイテムの名前を入力してください。(1 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (アイテムの追加){lang:separator}{embed:title}",
-                            "description": "**{replace}** のデータベースにアイテムを追加します。\nアイテムの値を入力してください。(2 / 3)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (アイテムの追加){lang:separator}{embed:title}",
-                            "description": "**{replace}** のデータベースに下記の内容でアイテムを追加します。よろしいですか？ (3 / 3)\n追加する場合は {replace:yes} をクリック、キャンセルする場合は {replace:no} をクリックしてください。",
-                            "fields": [
-                                {
-                                    "title": "アイテムの名前",
-                                    "description": "```{replace}```"
-                                },
-                                {
-                                    "title": "アイテムの値",
-                                    "description": "```{replace}```"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "{lang:information} (アイテムの追加){lang:separator}{embed:title}",
-                            "description": "アイテム追加をキャンセルしました。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (アイテムの追加){lang:separator}{embed:title}",
-                            "description": "**{replace}** のデータベースにアイテムを追加しました。",
-                            "fields": []
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                },
-                "remove": {
-                    "title": "",
-                    "description": "",
-                    "definitions": {},
-                    "dialogs": [
-                        {
-                            "title": "{lang:error} (アイテムの削除){lang:separator}{embed:title}",
-                            "description": "指定したメンバーが見つかりませんでした。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (アイテムの削除){lang:separator}{embed:title}",
-                            "description": "**{replace}** のデータベースからアイテムを削除します。\nアイテムの名前を入力してください。(1 / 2)\nキャンセルする場合はこのメッセージについている :x: をクリックしてください。\n\n※**{replace:time}**秒で自動キャンセルされます。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:information} (アイテムの削除){lang:separator}{embed:title}",
-                            "description": "**{replace}** のデータベースからアイテムを削除します。よろしいですか？ (2 / 2)\n削除する場合は :o: をクリック、キャンセルする場合は :x: をクリックしてください。",
-                            "fields": [
-                                {
-                                    "title": "アイテムの名前",
-                                    "description": "```{replace}```"
-                                },
-                                {
-                                    "title": "アイテムの値",
-                                    "description": "```{replace}```"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "{lang:information} (アイテムの削除){lang:separator}{embed:title}",
-                            "description": "アイテム削除をキャンセルしました。",
-                            "fields": []
-                        },
-                        {
-                            "title": "{lang:success} (アイテムの削除){lang:separator}{embed:title}",
-                            "description": "**{replace}** のデータベースからアイテムを削除しました。",
-                            "fields": []
-                        }
-                    ],
-                    "fields": [],
-                    "hint": {}
-                }
-            }
-        },
         "vote": {
             "title": "投票",
             "description": "{replace}",
@@ -744,14 +635,75 @@
             "hint": {},
             "args": {}
         },
-        "kuromoji": {
-            "title": "",
+        "covid19": {
+            "title": "新型コロナウイルス",
             "description": "",
             "definitions": {},
-            "dialogs": [],
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "指定した条件に当てはまるデータが見つかりませんでした。",
+                    "fields": []
+                },
+                {
+                    "title": "データ取得中…{lang:separator}{embed:title}",
+                    "description": "データを取得しています。しばらくお待ちください…",
+                    "fields": []
+                },
+                {
+                    "title": "検索中…{lang:separator}{embed:title}",
+                    "description": "指定した条件に当てはまるデータを検索しています。しばらくお待ちください…",
+                    "fields": []
+                }
+            ],
             "fields": [],
             "hint": {},
-            "args": {}
+            "args": {
+                "about": {
+                    "title": "概要{lang:separator}{embed:title}",
+                    "description": "{replace} 日本国内のデータを表示しています。",
+                    "definitions": {
+                        "pcr": "検査実施数",
+                        "positive": "陽性者数",
+                        "hospitalize": "入院者数",
+                        "severe": "重傷者数",
+                        "symptom_confirming": "症状確認者数",
+                        "discharge": "退院者数",
+                        "death": "死亡者数"
+                    },
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                },
+                "detail": {
+                    "title": "{embed:title}",
+                    "description": "{replace} のデータを表示しています。",
+                    "definitions": {
+                        "hokkaido": "北海道地方",
+                        "tohoku": "東北地方",
+                        "kanto": "関東地方",
+                        "chubu": "中部地方",
+                        "kinki": "近畿地方",
+                        "chugoku": "中国地方",
+                        "shikoku": "四国地方",
+                        "kyushu": "九州地方",
+
+                        "population": "人口",
+                        "pcr": "検査実施数",
+                        "cases": "陽性者数",
+                        "hospitalize": "入院者数",
+                        "severe": "重傷者数",
+                        "symptom_confirming": "症状確認者数",
+                        "discharge": "退院者数",
+                        "deaths": "死亡者数",
+
+                        "percent": "人口の{replace}"
+                    },
+                    "dialogs": [],
+                    "fields": [],
+                    "hint": {}
+                }
+            }
         },
         "globalchat": {
             "title": "グローバルチャット",
@@ -2117,35 +2069,6 @@
             "hint": {},
             "args": {}
         },
-        "rolemanager": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
-        "report": {
-            "title": "レポート",
-            "description": "",
-            "definitions": {},
-            "dialogs": [
-                {
-                    "title": "{lang:information}{lang:separator}{embed:title}",
-                    "description": "レポートを送信しています。しばらくお待ちください…",
-                    "fields": []
-                },
-                {
-                    "title": "{lang:success}{lang:separator}{embed:title}",
-                    "description": "**{replace}** のレポートを送信しました。",
-                    "fields": []
-                }
-            ],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
         "mute": {
             "title": "ミュート",
             "description": "",
@@ -2757,24 +2680,6 @@
                 }
             }
         },
-        "reload": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
-        "cmd": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
         "send": {
             "title": "",
             "description": "",
@@ -2784,34 +2689,7 @@
             "hint": {},
             "args": {}
         },
-        "sync": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
         "evaluate": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
-        "maintenance": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
-            "hint": {},
-            "args": {}
-        },
-        "dictionary": {
             "title": "",
             "description": "",
             "definitions": {},
