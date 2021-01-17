@@ -715,7 +715,7 @@
             "args": {
                 "help": {
                     "title": "ヘルプ{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{command:label} start [カテゴリ]`: __グローバルチャットに接続__\n`{bot:prefix}{command:label} stop`: __グローバルチャットから切断__\n`{bot:prefix}{command:label} list`: __グローバルチャットに接続しているチャンネルリストを表示__\n`{bot:prefix}{command:label} rule`: __グローバルチャットでのルールを表示__\n`{bot:prefix}{command:label} <ID (8桁の英数字)>`: __グローバルチャットで送信されたメッセージを表示__",
+                    "description": "> __**グローバルチャットへの接続**__\n　`{bot:prefix}{command:label} connect [ID]`, `{bot:prefix}{command:label} join [ID]`\n> __**グローバルチャットから切断**__\n　`{bot:prefix}{command:label} disconnect`, `{bot:prefix}{command:label} leave`\n> __**接続中のチャンネルを表示**__\n　`{bot:prefix}{command:label} list`\n> __**送信されたメッセージを確認**__\n　`{bot:prefix}{command:label} <ID>`",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
@@ -735,26 +735,26 @@
                     "fields": [],
                     "hint": {}
                 },
-                "start": {
+                "connect": {
                     "title": "",
                     "description": "",
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:error} (グローバルチャットに接続){lang:separator}{embed:title}",
-                            "description": "このチャンネルはすでにグローバルチャットに接続しています。\n`{bot:prefix}{command:label} stop` で切断をしてから再度実行してください。",
+                            "title": "{lang:error} (接続){lang:separator}{embed:title}",
+                            "description": "このチャンネルはすでにグローバルチャットに接続しています。\n`{bot:prefix}{command:label} disconnect` で切断をしてから再度実行してください。",
                             "fields": []
                         },
                         {
-                            "title": "{lang:success} (グローバルチャットに接続){lang:separator}{embed:title}",
-                            "description": "グローバルチャットへの接続をしました。",
+                            "title": "{lang:success} (接続){lang:separator}{embed:title}",
+                            "description": "グローバルチャットへの接続をしました。\n切断するには `{bot:prefix}{command:label} disconnect` と実行してください。",
                             "fields": [
                                 {
                                     "title": "モード",
                                     "description": ""
                                 },
                                 {
-                                    "title": "接続先カテゴリ",
+                                    "title": "グループ",
                                     "description": ""
                                 }
                             ]
@@ -763,18 +763,18 @@
                     "fields": [],
                     "hint": {}
                 },
-                "stop": {
+                "disconnect": {
                     "title": "",
                     "description": "",
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:error} (グローバルチャットから切断){lang:separator}{embed:title}",
-                            "description": "このチャンネルはグローバルチャットに接続していません。",
+                            "title": "{lang:error} (切断){lang:separator}{embed:title}",
+                            "description": "このチャンネルはグローバルチャットに接続していません。\n接続するには `{bot:prefix}{command:label} connect` と実行してください。",
                             "fields": []
                         },
                         {
-                            "title": "{lang:success} (グローバルチャットから切断){lang:separator}{embed:title}",
+                            "title": "{lang:success} (切断){lang:separator}{embed:title}",
                             "description": "グローバルチャットから切断しました。",
                             "fields": []
                         }
@@ -788,30 +788,50 @@
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:error} (接続中のサーバーリスト){lang:separator}{embed:title}",
-                            "description": "このチャンネルはグローバルチャットに接続していません。",
+                            "title": "{lang:error} (チャンネルリスト){lang:separator}{embed:title}",
+                            "description": "このチャンネルはグローバルチャットに接続していません。\n接続するには `{bot:prefix}{command:label} connect` と実行してください。",
                             "fields": []
                         },
                         {
-                            "title": "{lang:information} (接続中のサーバーリスト){lang:separator}{embed:title}",
-                            "description": "{replace:count} 個のサーバー (チャンネル)が {replace:category} に接続しています。",
-                            "fields": [
-                                {
-                                    "title": "接続中のサーバーリスト",
-                                    "description": "{replace}"
-                                }
-                            ]
+                            "title": "{lang:information} (チャンネルリスト){lang:separator}{embed:title}",
+                            "description": "{replace:count} 個のチャンネルが {replace:category} に接続しています。",
+                            "fields": [ ]
                         }
                     ],
                     "fields": [],
                     "hint": {}
                 },
-                "rule": {
-                    "title": "{lang:information} (ルール){lang:separator}{embed:title}",
-                    "description": "[こちら](https://yudzuki.aoichaan0513.jp/page/support/rule)を参照してください。",
-                    "definitions": {},
+                "info": {
+                    "title": "メッセージ{lang:separator}{embed:title}",
+                    "description": "{replace} が送信したメッセージを表示しています。",
+                    "definitions": {
+                        "unknown-guild": "不明なサーバー ({replace})",
+                        "unknown-channel": "不明なチャンネル ({replace})",
+                        "unknown-user": "不明なユーザー ({replace})"
+                    },
                     "dialogs": [],
-                    "fields": [],
+                    "fields": [
+                        {
+                            "title": "コンテンツ",
+                            "description": ""
+                        },
+                        {
+                            "title": "サーバー",
+                            "description": ""
+                        },
+                        {
+                            "title": "チャンネル",
+                            "description": ""
+                        },
+                        {
+                            "title": "ユーザー",
+                            "description": ""
+                        },
+                        {
+                            "title": "送信日時",
+                            "description": ""
+                        }
+                    ],
                     "hint": {}
                 }
             }

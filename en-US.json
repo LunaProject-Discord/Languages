@@ -714,33 +714,47 @@
             "args": {
                 "help": {
                     "title": "Help{lang:separator}{embed:title}",
-                    "description": "`{bot:prefix}{command:label} start [Category]`: __Connect to global chat__\n`{bot:prefix}{command:label} stop`: __Disconnect from global chat__\n`{bot:prefix}{command:label} list`: __Display a list of channels connected to global chat__\n`{bot:prefix}{command:label} rule`: __View rules for global chat__\n`{bot:prefix}{command:label} <ID (8 alphanumeric chars)>`: __Show messages sent in global chat__",
+                    "description": "> __**Connect to global chat**__\n　`{bot:prefix}{command:label} connect [ID]`, `{bot:prefix}{command:label} join [ID]`\n> __**Disconnect from global chat**__\n　`{bot:prefix}{command:label} disconnect`, `{bot:prefix}{command:label} leave`\n> __**Displays the currently connected channel**__\n　`{bot:prefix}{command:label} list`\n> __**Check the message that was sent**__\n　`{bot:prefix}{command:label} <ID>`",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [],
                     "hint": {}
                 },
-                "start": {
+                "create": {
                     "title": "",
                     "description": "",
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:error} (Connect to global chat){lang:separator}{embed:title}",
-                            "description": "This channel is already connected to global chat.\nDisconnect with `{bot:prefix}{command:label} stop` and try again.",
+                            "title": "グループの作成{lang:separator}{embed:title}",
+                            "description": "{replace:a}: 名前の設定\n　 {replace:name}\n{replace:b}: 説明の設定\n{replace:c}: クールタイムの設定\n　 {replace:cooltime}\n{replace:d}: パスワードの設定\n　 {replace:password}\n{replace:e}: 最大行数の設定\n　 {replace:max-lines-count}\n{replace:f}: 最大絵文字数の設定\n　 {replace:max-emotes-count}\n{replace:g}: 最低サーバー作成日数の設定\n　 {replace:minimum-server-created-at}\n{replace:h}: 最低ユーザー作成日数の設定\n　 {replace:minimum-user-created-at}",
+                            "fields": []
+                        }
+                    ],
+                    "fields": [],
+                    "hint": {}
+                },
+                "connect": {
+                    "title": "",
+                    "description": "",
+                    "definitions": {},
+                    "dialogs": [
+                        {
+                            "title": "{lang:error} (Connect){lang:separator}{embed:title}",
+                            "description": "This channel is already connected to the global chat.\nPlease disconnect it with `{bot:prefix}{command:label} disconnect` and try again.",
                             "fields": []
                         },
                         {
-                            "title": "{lang:success} (Connect to global chat){lang:separator}{embed:title}",
-                            "description": "Connected to global chat.",
+                            "title": "{lang:success} (Connect){lang:separator}{embed:title}",
+                            "description": "You have made a connection to the global chat.\nTo disconnect, run `{bot:prefix}{command:label} disconnect`.",
                             "fields": [
                                 {
                                     "title": "Mode",
-                                    "description": "{replace}"
+                                    "description": ""
                                 },
                                 {
-                                    "title": "Connection category",
-                                    "description": "{replace}"
+                                    "title": "Group",
+                                    "description": ""
                                 }
                             ]
                         }
@@ -748,18 +762,18 @@
                     "fields": [],
                     "hint": {}
                 },
-                "stop": {
+                "disconnect": {
                     "title": "",
                     "description": "",
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:error} (Disconnect from global chat){lang:separator}{embed:title}",
-                            "description": "This channel is not connected to global chat.",
+                            "title": "{lang:error} (Disconnect){lang:separator}{embed:title}",
+                            "description": "This channel is not connected to global chat.\nTo connect, run `{bot:prefix}{command:label} connect`.",
                             "fields": []
                         },
                         {
-                            "title": "{lang:success} (Disconnect from global chat){lang:separator}{embed:title}",
+                            "title": "{lang:success} (Disconnect){lang:separator}{embed:title}",
                             "description": "Disconnected from global chat.",
                             "fields": []
                         }
@@ -773,30 +787,50 @@
                     "definitions": {},
                     "dialogs": [
                         {
-                            "title": "{lang:error} (Connected server list){lang:separator}{embed:title}",
-                            "description": "This channel is not connected to global chat.",
+                            "title": "{lang:error} (Channels){lang:separator}{embed:title}",
+                            "description": "This channel is not connected to global chat.\nTo connect, run `{bot:prefix}{command:label} connect`.",
                             "fields": []
                         },
                         {
-                            "title": "{lang:information} (Connected server list){lang:separator}{embed:title}",
-                            "description": "{replace:count} servers (channels) connect to {replace:category}.",
-                            "fields": [
-                                {
-                                    "title": "Connected server list",
-                                    "description": "{replace}"
-                                }
-                            ]
+                            "title": "{lang:information} (Channels){lang:separator}{embed:title}",
+                            "description": "There are {replace:count} channels connected to {replace:category}.",
+                            "fields": [ ]
                         }
                     ],
                     "fields": [],
                     "hint": {}
                 },
-                "rule": {
-                    "title": "{lang:information} (Rule){lang:separator}{embed:title}",
-                    "description": "See [here](https://yudzuki.aoichaan0513.jp/page/support/rule).",
-                    "definitions": {},
+                "info": {
+                    "title": "Message{lang:separator}{embed:title}",
+                    "description": "Display the message sent by {replace}.",
+                    "definitions": {
+                        "unknown-guild": "Unknown Server ({replace})",
+                        "unknown-channel": "Unknown Channel ({replace})",
+                        "unknown-user": "Unknown User ({replace})"
+                    },
                     "dialogs": [],
-                    "fields": [],
+                    "fields": [
+                        {
+                            "title": "Content",
+                            "description": ""
+                        },
+                        {
+                            "title": "Server",
+                            "description": ""
+                        },
+                        {
+                            "title": "Channel",
+                            "description": ""
+                        },
+                        {
+                            "title": "User",
+                            "description": ""
+                        },
+                        {
+                            "title": "Created at",
+                            "description": ""
+                        }
+                    ],
                     "hint": {}
                 }
             }
