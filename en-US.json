@@ -3436,6 +3436,10 @@
                     "title": "Edit role{lang:separator}{embed:title}",
                     "description": "The {replace:property} of {replace:role} has been changed.",
                     "definitions": {
+                        "general": "General",
+                        "textchannel": "Text Channel",
+                        "voicechannel": "Voice Channel",
+                        
                         "name": "Name",
                         "position": "Position",
                         "color": "Color",
