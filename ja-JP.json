@@ -3860,7 +3860,10 @@
         "invisible": "オフライン"
     },
     "permissions": {
+        "category-advanced": "高度な権限",
         "administrator": "管理者",
+
+        "category-general_server": "サーバー全般",
         "view_audit_logs": "サーバーログの表示",
         "manage_server": "サーバーの管理",
         "manage_channel": "チャンネルの管理",
@@ -3868,13 +3871,17 @@
         "manage_permissions": "権限の管理",
         "manage_emotes": "絵文字の管理",
         "manage_webhooks": "Webhookの管理",
-        "kick_members": "メンバーをキック",
-        "ban_members": "メンバーをBan",
+        "view_guild_insights": "サーバー統計の表示",
+        "view_channel": "チャンネルの表示",
+        
+        "category-membership": "メンバーシップ",
         "create_instant_invite": "招待リンクを作成",
         "nickname_change": "ニックネームの変更",
         "nickname_manage": "ニックネームの管理",
-        "view_guild_insights": "サーバー統計の表示",
-        "view_channel": "チャンネルの表示",
+        "kick_members": "メンバーをキック",
+        "ban_members": "メンバーをBan",
+
+        "category-text_channel": "テキストチャンネル",
         "message_read": "メッセージの表示",
         "message_write": "メッセージの送信",
         "message_tts": "音声読み上げメッセージの送信",
@@ -3885,6 +3892,8 @@
         "message_mention_everyone": "役職・全員宛メンション",
         "message_ext_emoji": "外部の絵文字の使用",
         "message_add_reaction": "リアクションの追加",
+
+        "category-voice_channel": "ボイスチャンネル",
         "voice_connect": "接続",
         "voice_speak": "発言",
         "voice_stream": "配信",

@@ -3856,7 +3856,10 @@
         "invisible": "Offline"
     },
     "permissions": {
+        "category-advanced": "Advanced",
         "administrator": "Administrator",
+
+        "category-general_server": "General Server",
         "view_audit_logs": "View Server Log",
         "manage_server": "Manage Server",
         "manage_channel": "Manage Channels",
@@ -3864,14 +3867,17 @@
         "manage_permissions": "Manage Permissions",
         "manage_emotes": "Manage Emotes",
         "manage_webhooks": "Manage Webhooks",
-        "kick_members": "Kick Members",
-        "ban_members": "Ban Members",
-        "create_instant_invite": "Create Invite",
-        "nickname_change": "Change Nickname",
-        "nickname_manage": "Manage Nicknames",
         "view_guild_insights": "View Server Insights",
         "view_channel": "View Channels",
 
+        "category-membership": "Membership",
+        "create_instant_invite": "Create Invite",
+        "nickname_change": "Change Nickname",
+        "nickname_manage": "Manage Nicknames",
+        "kick_members": "Kick Members",
+        "ban_members": "Ban Members",
+
+        "category-text_channel": "Text Channel",
         "message_read": "Read Messages",
         "message_write": "Send Messages",
         "message_tts": "Send TTS Messages",
@@ -3883,6 +3889,7 @@
         "message_ext_emoji": "Use External Emotes",
         "message_add_reaction": "Add Reactions",
         
+        "category-voice_channel": "Voice Channel",
         "voice_connect": "Connect",
         "voice_speak": "Speak",
         "voice_stream": "Stream",
