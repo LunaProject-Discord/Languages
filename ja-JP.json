@@ -3061,7 +3061,8 @@
                     "description": "{replace:member} の {replace:property} が変更されました。",
                     "definitions": {
                         "boost_time": "ブースト時間",
-                        "nick": "ニックネーム"
+                        "nick": "ニックネーム",
+                        "pending": "スクリーニング"
                     },
                     "dialogs": [],
                     "fields": [

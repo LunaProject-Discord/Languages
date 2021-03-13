@@ -3061,7 +3061,8 @@
                     "description": "The {replace:property} of {replace:member} has been changed.",
                     "definitions": {
                         "boost_time": "Boost time",
-                        "nick": "Nickname"
+                        "nick": "Nickname",
+                        "pending": "Pending?"
                     },
                     "dialogs": [],
                     "fields": [
