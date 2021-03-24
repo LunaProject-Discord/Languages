@@ -1924,11 +1924,57 @@
             "args": {}
         },
         "invite": {
-            "title": "",
-            "description": "",
-            "definitions": {},
-            "dialogs": [],
-            "fields": [],
+            "title": "招待情報",
+            "description": "{replace} の情報を表示しています。",
+            "definitions": {
+                "nolimit": "無制限"
+            },
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "指定した条件に合う招待情報が見つかりませんでした。",
+                    "fields": []
+                },
+                {
+                    "title": "検索中…{lang:separator}{embed:title}",
+                    "description": "指定した条件に合う招待情報を検索しています。しばらくお待ちください…",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "有効期限",
+                    "description": ""
+                },
+                {
+                    "title": "使用回数",
+                    "description": ""
+                },
+                {
+                    "title": "一時的",
+                    "description": ""
+                },
+                {
+                    "title": "ユーザー",
+                    "description": ""
+                },
+                {
+                    "title": "サーバー",
+                    "description": ""
+                },
+                {
+                    "title": "チャンネル",
+                    "description": ""
+                },
+                {
+                    "title": "グループ",
+                    "description": ""
+                },
+                {
+                    "title": "作成日時",
+                    "description": ""
+                }
+            ],
             "hint": {},
             "args": {}
         },
@@ -3062,7 +3108,7 @@
                     "definitions": {
                         "boost_time": "ブースト時間",
                         "nick": "ニックネーム",
-                        "pending": "スクリーニング"
+                        "pending": "保留中"
                     },
                     "dialogs": [],
                     "fields": [
