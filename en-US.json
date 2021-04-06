@@ -3748,84 +3748,93 @@
     },
     "dialogs": {
         "evaluate-value": {
-            "title": "{lang:error}",
+            "title": "Underestimation{lang:separator}{lang:error}",
             "description": "You can not use this bot's features because your rating is below {bot:evaluate:minimum}.",
             "fields": []
         },
         "maintenance-mode": {
-            "title": "{lang:error}",
+            "title": "Under Maintenance{lang:separator}{lang:error}",
             "description": "currently undergoing maintenance.\nThe maintenance end time is scheduled for __**{replace}**__.\nPlease wait for the maintenance to finish.",
             "fields": []
         },
         "command-not-found": {
-            "title": "{lang:error}",
-            "description": "The command you executed could not be found.\nCheck if there is a command with `{bot:prefix}help`.\nMaybe: {replace}",
-            "fields": []
-        },
-        "user-permission": {
-            "title": "{lang:error}",
-            "description": "The user does not have permissions.\nPlease grant the missing privileges and then run again.",
+            "title": "Unknown Command{lang:separator}{lang:error}",
+            "description": "The command you executed could not be found.\nCheck if there is a command with `{bot:prefix}help`.",
             "fields": [
                 {
-                    "title": "Authority required for execution",
+                    "title": "Maybe",
                     "description": ""
+                }
+            ]
+        },
+        "user-permission": {
+            "title": "Lack Permissions{lang:separator}{lang:error}",
+            "description": "Some permissions have not been granted to you.\nPlease allow the use of these permissions and run it again.",
+            "fields": [
+                {
+                    "title": "",
+                    "description": "Permissions in bold are restricted by the channel.\nPlease allow the use of these permissions in the channel settings."
                 },
                 {
-                    "title": "Lack of authority",
+                    "title": "",
                     "description": ""
                 }
             ]
         },
         "bot-permission": {
-            "title": "{lang:error}",
-            "description": "The Bot has no permissions.\nPlease grant the missing privileges and then run again.",
+            "title": "Lack Permissions{lang:separator}{lang:error}",
+            "description": "Some permissions have not been granted to the bot.\nPlease allow the use of these permissions and run it again.",
             "fields": [
                 {
-                    "title": "Authority required for execution",
-                    "description": ""
+                    "title": "",
+                    "description": "Permissions in bold are restricted by the channel.\nPlease allow the use of these permissions in the channel settings."
                 },
                 {
-                    "title": "Lack of authority",
+                    "title": "",
                     "description": ""
                 }
             ]
         },
         "user-bot-permission": {
-            "title": "{lang:error}",
-            "description": "The user and Bot do not have permissions.\nPlease grant the missing privileges and then run again.",
+            "title": "Lack Permissions{lang:separator}{lang:error}",
+            "description": "Some permissions have not been granted to you and the bot.\nPlease allow the use of these permissions and run it again.",
             "fields": [
                 {
-                    "title": "Authority required for execution",
+                    "title": "",
+                    "description": "Permissions in bold are restricted by the channel.\nPlease allow the use of these permissions in the channel settings."
+                },
+                {
+                    "title": "Authority you need",
                     "description": ""
                 },
                 {
-                    "title": "Lack of authority",
+                    "title": "Permissions required for Bot",
                     "description": ""
                 }
             ]
         },
         "permission": {
-            "title": "{lang:error}",
+            "title": "Lack Permissions{lang:separator}{lang:error}",
             "description": "You do not have permission.",
             "fields": []
         },
         "owner-permission": {
-            "title": "{lang:error}",
+            "title": "Lack Permissions{lang:separator}{lang:error}",
             "description": "Not authorized.\nTo use it, you must have __**owner or higher privileges**__.",
             "fields": []
         },
         "subowner-permission": {
-            "title": "{lang:error}",
+            "title": "Lack Permissions{lang:separator}{lang:error}",
             "description": "Not authorized.\nTo use it, you must have __**sub-owner or higher privileges**__ to use it.",
             "fields": []
         },
         "admin-permission": {
-            "title": "{lang:error}",
+            "title": "Lack Permissions{lang:separator}{lang:error}",
             "description": "Not authorized.\nTo use it, you must have __**administrator level or higher**__ privileges.",
             "fields": []
         },
         "staff-permission": {
-            "title": "{lang:error}",
+            "title": "Lack Permissions{lang:separator}{lang:error}",
             "description": "Not authorized.\nTo use it, you must have __**staff or higher privileges**__ to use it.",
             "fields": []
         },
@@ -3850,32 +3859,32 @@
             "fields": []
         },
         "not-use": {
-            "title": "{lang:error}",
+            "title": "Usage Restrictions{lang:separator}{lang:error}",
             "description": "This feature is not available.",
             "fields": []
         },
         "not-use-stable": {
-            "title": "{lang:error}",
+            "title": "Usage Restrictions{lang:separator}{lang:error}",
             "description": "This feature is not available in this Bot.\nIf you want to use it, please use the __**stable version of the Bot**__.",
             "fields": []
         },
         "not-use-beta": {
-            "title": "{lang:error}",
+            "title": "Usage Restrictions{lang:separator}{lang:error}",
             "description": "This feature is not available in this Bot.\nIf you want to use it, please use the __**beta version of the Bot**__.",
             "fields": []
         },
         "not-use-dev": {
-            "title": "{lang:error}",
+            "title": "Usage Restrictions{lang:separator}{lang:error}",
             "description": "This feature is not available in this Bot.\nIf you want to use it, please use the __**development version of the Bot**__.",
             "fields": []
         },
         "args": {
-            "title": "{lang:error}",
+            "title": "Unknown Argument{lang:separator}{lang:error}",
             "description": "Invalid argument. Check the usage with `{bot:prefix}help {command:label}`.",
             "fields": []
         },
         "exception": {
-            "title": "{lang:error}",
+            "title": "Unexpected Error{lang:separator}{lang:error}",
             "description": "An unexpected error has occurred.\nIt would be helpful if you could report errors to the producer if you like.",
             "fields": []
         },

@@ -3752,84 +3752,93 @@
     },
     "dialogs": {
         "evaluate-value": {
-            "title": "{lang:error}",
+            "title": "評価値不足{lang:separator}{lang:error}",
             "description": "あなたの評価値が{bot:evaluate:minimum}以下のため、このBotの機能を使用することはできません。",
             "fields": []
         },
         "maintenance-mode": {
-            "title": "{lang:error}",
+            "title": "メンテナンス中{lang:separator}{lang:error}",
             "description": "現在メンテナンス中です。\nメンテナンスの終了時間は__**{replace}**__を予定しております。\nメンテナンスが終了するまでしばらくお待ちください。",
             "fields": []
         },
         "command-not-found": {
-            "title": "{lang:error}",
-            "description": "実行したコマンドが見つかりませんでした。\n`{bot:prefix}help` でコマンドがあるかを確認してください。\nもしかして: {replace}",
-            "fields": []
-        },
-        "user-permission": {
-            "title": "{lang:error}",
-            "description": "ユーザーの権限がありません。\n不足している権限を付与してから再度実行してください。",
+            "title": "不明なコマンド{lang:separator}{lang:error}",
+            "description": "実行したコマンドが見つかりませんでした。\n`{bot:prefix}help` でコマンドがあるかを確認してください。",
             "fields": [
                 {
-                    "title": "実行に必要な権限",
+                    "title": "もしかして",
                     "description": ""
+                }
+            ]
+        },
+        "user-permission": {
+            "title": "権限不足{lang:separator}{lang:error}",
+            "description": "いくつかの権限があなたに与えられていません。\nこれらの権限の利用を許可してから再度実行してください。",
+            "fields": [
+                {
+                    "title": "",
+                    "description": "太字の権限はチャンネル側で制限されています。\nチャンネル設定から権限の利用を許可してください。"
                 },
                 {
-                    "title": "不足している権限",
+                    "title": "",
                     "description": ""
                 }
             ]
         },
         "bot-permission": {
-            "title": "{lang:error}",
-            "description": "Botの権限がありません。\n不足している権限を付与してから再度実行してください。",
+            "title": "権限不足{lang:separator}{lang:error}",
+            "description": "いくつかの権限がBotに与えられていません。\nこれらの権限の利用を許可してから再度実行してください。",
             "fields": [
                 {
-                    "title": "実行に必要な権限",
-                    "description": ""
+                    "title": "",
+                    "description": "太字の権限はチャンネル側で制限されています。\nチャンネル設定から権限の利用を許可してください。"
                 },
                 {
-                    "title": "不足している権限",
+                    "title": "",
                     "description": ""
                 }
             ]
         },
         "user-bot-permission": {
-            "title": "{lang:error}",
-            "description": "ユーザーとBotの権限がありません。\n不足している権限を付与してから再度実行してください。",
+            "title": "権限不足{lang:separator}{lang:error}",
+            "description": "いくつかの権限があなたとBotに与えられていません。\nこれらの権限の利用を許可してから再度実行してください。",
             "fields": [
                 {
-                    "title": "実行に必要な権限",
+                    "title": "",
+                    "description": "太字の権限はチャンネル側で制限されています。\nチャンネル設定から権限の利用を許可してください。"
+                },
+                {
+                    "title": "あなたに必要な権限",
                     "description": ""
                 },
                 {
-                    "title": "不足している権限",
+                    "title": "Botに必要な権限",
                     "description": ""
                 }
             ]
         },
         "permission": {
-            "title": "{lang:error}",
+            "title": "権限不足{lang:separator}{lang:error}",
             "description": "権限がありません。",
             "fields": []
         },
         "owner-permission": {
-            "title": "{lang:error}",
+            "title": "権限不足{lang:separator}{lang:error}",
             "description": "権限がありません。\n利用するには__**オーナー以上の権限**__が付与されている必要があります。",
             "fields": []
         },
         "subowner-permission": {
-            "title": "{lang:error}",
+            "title": "権限不足{lang:separator}{lang:error}",
             "description": "権限がありません。\n利用するには__**サブオーナー以上の権限**__が付与されている必要があります。",
             "fields": []
         },
         "admin-permission": {
-            "title": "{lang:error}",
+            "title": "権限不足{lang:separator}{lang:error}",
             "description": "権限がありません。\n利用するには__**管理者以上の権限**__が付与されている必要があります。",
             "fields": []
         },
         "staff-permission": {
-            "title": "{lang:error}",
+            "title": "権限不足{lang:separator}{lang:error}",
             "description": "権限がありません。\n利用するには__**スタッフ以上の権限**__が付与されている必要があります。",
             "fields": []
         },
@@ -3854,32 +3863,32 @@
             "fields": []
         },
         "not-use": {
-            "title": "{lang:error}",
+            "title": "利用制限{lang:separator}{lang:error}",
             "description": "この機能は利用できません。",
             "fields": []
         },
         "not-use-stable": {
-            "title": "{lang:error}",
+            "title": "利用制限{lang:separator}{lang:error}",
             "description": "この機能はこのBotでは利用できません。\n利用するには__**安定版のBot**__を利用してください。",
             "fields": []
         },
         "not-use-beta": {
-            "title": "{lang:error}",
+            "title": "利用制限{lang:separator}{lang:error}",
             "description": "この機能はこのBotでは利用できません。\n利用するには__**ベータ版のBot**__を利用してください。",
             "fields": []
         },
         "not-use-dev": {
-            "title": "{lang:error}",
+            "title": "利用制限{lang:separator}{lang:error}",
             "description": "この機能はこのBotでは利用できません。\n利用するには__**開発版のBot**__を利用してください。",
             "fields": []
         },
         "args": {
-            "title": "{lang:error}",
+            "title": "不明な引数{lang:separator}{lang:error}",
             "description": "引数が不正です。使い方は `{bot:prefix}help {command:label}` で確認してください。",
             "fields": []
         },
         "exception": {
-            "title": "{lang:error}",
+            "title": "予期しないエラー{lang:separator}{lang:error}",
             "description": "予期しないエラーが発生しました。\nもしよろしければ製作者にエラー報告をしていただければ助かります。",
             "fields": []
         },
