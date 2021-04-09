@@ -3948,6 +3948,7 @@
         "message_mention_everyone": "役職・全員宛メンション",
         "message_ext_emoji": "外部の絵文字の使用",
         "message_add_reaction": "リアクションの追加",
+        "use_slash_commands": "スラッシュコマンドの使用",
 
         "category-voice_channel": "ボイスチャンネル",
         "voice_connect": "接続",

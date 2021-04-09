@@ -3944,6 +3944,7 @@
         "message_mention_everyone": "Mention Roles / Everyone",
         "message_ext_emoji": "Use External Emotes",
         "message_add_reaction": "Add Reactions",
+        "use_slash_commands": "Use Slash Commands",
         
         "category-voice_channel": "Voice Channel",
         "voice_connect": "Connect",
