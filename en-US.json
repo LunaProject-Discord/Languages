@@ -8,7 +8,7 @@
     "empty": "Empty",
     "unknown": "Unknown",
     "help": "Help",
-    "loading": "Loading…",
+    "loading": "Loading...",
     "information": "Information",
     "success": "Success",
     "warning": "Warning",
@@ -539,7 +539,7 @@
             "dialogs": [
                 {
                     "title": "Data acquisition in progress...{lang:separator}{embed:title}",
-                    "description": "Retrieving data. Please wait…",
+                    "description": "Retrieving data. Please wait...",
                     "fields": []
                 }
             ],
@@ -594,9 +594,19 @@
             },
             "dialogs": [
                 {
-                    "title": "{lang:information}{lang:separator}{embed:title}",
-                    "description": "Translation in progress ... Please wait for a while.",
+                    "title": "Translating...{lang:separator}{embed:title}",
+                    "description": "The text is being translated. Please wait a moment...",
                     "fields": []
+                },
+                {
+                    "title": "Select Language{lang:separator}{embed:title}",
+                    "description": "There are multiple languages for {replace:country}.\nChoose the language you wish to translate to within **{replace:time} seconds**.\nIf you wish to cancel, please select {replace:cancel} in this message.",
+                    "fields": [
+                        {
+                            "title": "Default language",
+                            "description": "If you set a default language, you can automatically translate to the pre-defined language when you select a pictogram from that country."
+                        }
+                    ]
                 }
             ],
             "fields": [
@@ -1611,17 +1621,17 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The server with the specified condition could not be found.",
+                    "description": "No servers were found that match the specified criteria.",
                     "fields": []
                 },
                 {
                     "title": "Data acquisition in progress...{lang:separator}{embed:title}",
-                    "description": "Retrieving data. Please wait…",
+                    "description": "Retrieving data. Please wait...",
                     "fields": []
                 },
                 {
                     "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for server under specified conditions. Please wait…",
+                    "description": "Searching for a server that matches the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -1680,17 +1690,17 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The channel with the specified condition could not be found.",
+                    "description": "No channels were found that match the specified criteria.",
                     "fields": []
                 },
                 {
                     "title": "Data acquisition in progress...{lang:separator}{embed:title}",
-                    "description": "Retrieving data. Please wait…",
+                    "description": "Retrieving data. Please wait...",
                     "fields": []
                 },
                 {
                     "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for channels under specified conditions. Please wait…",
+                    "description": "Searching for channels that match the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -1750,7 +1760,7 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The role with the specified condition could not be found.",
+                    "description": "No roles were found that match the criteria you specified.",
                     "fields": []
                 },
                 {
@@ -1760,17 +1770,12 @@
                 },
                 {
                     "title": "Data acquisition in progress...{lang:separator}{embed:title}",
-                    "description": "Retrieving data. Please wait…",
+                    "description": "Retrieving data. Please wait...",
                     "fields": []
                 },
                 {
                     "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for role under specified conditions. Please wait…",
-                    "fields": []
-                },
-                {
-                    "title": "Role list{lang:separator}{embed:title}",
-                    "description": "{replace}",
+                    "description": "Searching for a role that matches the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -1818,12 +1823,12 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The emoji with the specified condition could not be found.",
+                    "description": "No emojis were found that match the specified criteria.",
                     "fields": []
                 },
                 {
                     "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for emoji under specified conditions. Please wait…",
+                    "description": "Searching for emojis that match the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -1859,17 +1864,17 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The user with the specified condition could not be found.",
+                    "description": "No users matching the specified criteria were found.",
                     "fields": []
                 },
                 {
                     "title": "Data acquisition in progress...{lang:separator}{embed:title}",
-                    "description": "Retrieving data. Please wait…",
+                    "description": "Retrieving data. Please wait...",
                     "fields": []
                 },
                 {
                     "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for user under specified conditions. Please wait…",
+                    "description": "Searching for users who match the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -1936,7 +1941,7 @@
                 },
                 {
                     "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for invite information that matches the specified criteria. Please wait a moment...",
+                    "description": "Searching for invite that matches the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -1984,17 +1989,17 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The punishment information for the specified condition was not found.",
+                    "description": "No punishment information matching the specified criteria was found.",
                     "fields": []
                 },
                 {
                     "title": "Data acquisition in progress...{lang:separator}{embed:title}",
-                    "description": "Retrieving data. Please wait…",
+                    "description": "Retrieving data. Please wait...",
                     "fields": []
                 },
                 {
                     "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for punishment information under specified conditions. Please wait…",
+                    "description": "Searching for information on punishments that match the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -2026,17 +2031,17 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "The user with the specified condition could not be found.",
+                    "description": "No name change history matching the specified criteria was found.",
                     "fields": []
                 },
                 {
                     "title": "Data acquisition in progress...{lang:separator}{embed:title}",
-                    "description": "Retrieving data. Please wait…",
+                    "description": "Retrieving data. Please wait...",
                     "fields": []
                 },
                 {
                     "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for user under specified conditions. Please wait…",
+                    "description": "Searching for a name change history that matches the specified criteria. Please wait a moment...",
                     "fields": []
                 },
                 {

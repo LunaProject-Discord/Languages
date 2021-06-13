@@ -595,9 +595,19 @@
             },
             "dialogs": [
                 {
-                    "title": "{lang:information}{lang:separator}{embed:title}",
-                    "description": "翻訳中です…しばらくお待ちください。",
+                    "title": "翻訳中…{lang:separator}{embed:title}",
+                    "description": "テキストを翻訳しています。しばらくお待ちください…",
                     "fields": []
+                },
+                {
+                    "title": "言語の選択{lang:separator}{embed:title}",
+                    "description": "{replace:country} には複数の言語があります。\n翻訳先に指定したい言語を**{replace:time}秒**以内に選択してください。\nまた、キャンセルする場合はこのメッセージについている {replace:cancel} を選択してください。",
+                    "fields": [
+                        {
+                            "title": "既定の言語",
+                            "description": "既定の言語を設定すると、その国の絵文字を選択した場合は予め設定された言語へ自動で翻訳することができます。"
+                        }
+                    ]
                 }
             ],
             "fields": [
@@ -1612,7 +1622,7 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件でのサーバーが見つかりませんでした。",
+                    "description": "指定した条件に合うサーバーが見つかりませんでした。",
                     "fields": []
                 },
                 {
@@ -1622,7 +1632,7 @@
                 },
                 {
                     "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件でのサーバーを検索しています。しばらくお待ちください…",
+                    "description": "指定した条件に合うサーバーを検索しています。しばらくお待ちください…",
                     "fields": []
                 }
             ],
@@ -1681,7 +1691,7 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件でのチャンネルが見つかりませんでした。",
+                    "description": "指定した条件に合うチャンネルが見つかりませんでした。",
                     "fields": []
                 },
                 {
@@ -1691,7 +1701,7 @@
                 },
                 {
                     "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件でのチャンネルを検索しています。しばらくお待ちください…",
+                    "description": "指定した条件に合うチャンネルを検索しています。しばらくお待ちください…",
                     "fields": []
                 }
             ],
@@ -1751,7 +1761,7 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件での役職が見つかりませんでした。",
+                    "description": "指定した条件に合う役職が見つかりませんでした。",
                     "fields": []
                 },
                 {
@@ -1766,12 +1776,7 @@
                 },
                 {
                     "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件での役職を検索しています。しばらくお待ちください…",
-                    "fields": []
-                },
-                {
-                    "title": "役職リスト{lang:separator}{embed:title}",
-                    "description": "{replace}",
+                    "description": "指定した条件に合う役職を検索しています。しばらくお待ちください…",
                     "fields": []
                 }
             ],
@@ -1819,12 +1824,12 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件での絵文字が見つかりませんでした。",
+                    "description": "指定した条件に合う絵文字が見つかりませんでした。",
                     "fields": []
                 },
                 {
                     "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件での絵文字を検索しています。しばらくお待ちください…",
+                    "description": "指定した条件に合う絵文字を検索しています。しばらくお待ちください…",
                     "fields": []
                 }
             ],
@@ -1860,7 +1865,7 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件でのユーザーが見つかりませんでした。",
+                    "description": "指定した条件に合うユーザーが見つかりませんでした。",
                     "fields": []
                 },
                 {
@@ -1870,7 +1875,7 @@
                 },
                 {
                     "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件でのユーザーを検索しています。しばらくお待ちください…",
+                    "description": "指定した条件に合うユーザーを検索しています。しばらくお待ちください…",
                     "fields": []
                 }
             ],
@@ -1932,12 +1937,12 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件に合う招待情報が見つかりませんでした。",
+                    "description": "指定した条件に合う招待が見つかりませんでした。",
                     "fields": []
                 },
                 {
                     "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件に合う招待情報を検索しています。しばらくお待ちください…",
+                    "description": "指定した条件に合う招待を検索しています。しばらくお待ちください…",
                     "fields": []
                 }
             ],
@@ -1985,7 +1990,7 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件での処罰情報が見つかりませんでした。",
+                    "description": "指定した条件に合う処罰情報が見つかりませんでした。",
                     "fields": []
                 },
                 {
@@ -1995,7 +2000,7 @@
                 },
                 {
                     "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件での処罰情報を検索しています。しばらくお待ちください…",
+                    "description": "指定した条件に合う処罰情報を検索しています。しばらくお待ちください…",
                     "fields": []
                 }
             ],
@@ -2027,7 +2032,7 @@
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件での名前変更履歴が見つかりませんでした。",
+                    "description": "指定した条件に合う名前変更履歴が見つかりませんでした。",
                     "fields": []
                 },
                 {
@@ -2037,7 +2042,7 @@
                 },
                 {
                     "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件での名前変更履歴を検索しています。しばらくお待ちください…",
+                    "description": "指定した条件に合う名前変更履歴を検索しています。しばらくお待ちください…",
                     "fields": []
                 },
                 {
