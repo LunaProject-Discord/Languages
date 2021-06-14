@@ -61,13 +61,13 @@
             "definitions": {},
             "dialogs": [
                 {
-                    "title": "Searching…{lang:separator}{embed:title}",
-                    "description": "Searching for a command category. Please wait…",
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "No commands or categories were found that match the specified criteria.",
                     "fields": []
                 },
                 {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "No command or category was found for the specified criteria.",
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for commands and categories that match the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -1853,6 +1853,61 @@
             "hint": {},
             "args": {}
         },
+        "invite": {
+            "title": "Invite information",
+            "description": "Displaying information of {replace}.",
+            "definitions": {
+                "nolimit": "Unlimited"
+            },
+            "dialogs": [
+                {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "No invitations were found that match the criteria you specified.",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for invite that matches the specified criteria. Please wait a moment...",
+                    "fields": []
+                }
+            ],
+            "fields": [
+                {
+                    "title": "Expired at",
+                    "description": ""
+                },
+                {
+                    "title": "Uses",
+                    "description": ""
+                },
+                {
+                    "title": "Temporary?",
+                    "description": ""
+                },
+                {
+                    "title": "User",
+                    "description": ""
+                },
+                {
+                    "title": "Server",
+                    "description": ""
+                },
+                {
+                    "title": "Channel",
+                    "description": ""
+                },
+                {
+                    "title": "Group",
+                    "description": ""
+                },
+                {
+                    "title": "Created at",
+                    "description": ""
+                }
+            ],
+            "hint": {},
+            "args": {}
+        },
         "user": {
             "title": "User information",
             "description": "Displaying information of {replace}.",
@@ -1921,61 +1976,6 @@
                 },
                 {
                     "title": "Permissions ({replace:raw})",
-                    "description": ""
-                }
-            ],
-            "hint": {},
-            "args": {}
-        },
-        "invite": {
-            "title": "Invite information",
-            "description": "Displaying information of {replace}.",
-            "definitions": {
-                "nolimit": "Unlimited"
-            },
-            "dialogs": [
-                {
-                    "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "No invitations were found that match the criteria you specified.",
-                    "fields": []
-                },
-                {
-                    "title": "Searching...{lang:separator}{embed:title}",
-                    "description": "Searching for invite that matches the specified criteria. Please wait a moment...",
-                    "fields": []
-                }
-            ],
-            "fields": [
-                {
-                    "title": "Expired at",
-                    "description": ""
-                },
-                {
-                    "title": "Uses",
-                    "description": ""
-                },
-                {
-                    "title": "Temporary?",
-                    "description": ""
-                },
-                {
-                    "title": "User",
-                    "description": ""
-                },
-                {
-                    "title": "Server",
-                    "description": ""
-                },
-                {
-                    "title": "Channel",
-                    "description": ""
-                },
-                {
-                    "title": "Group",
-                    "description": ""
-                },
-                {
-                    "title": "Created at",
                     "description": ""
                 }
             ],
