@@ -538,8 +538,18 @@
             "definitions": {},
             "dialogs": [
                 {
+                    "title": "{lang:error}{lang:separator}{embed:title}",
+                    "description": "No users matching the specified criteria were found.",
+                    "fields": []
+                },
+                {
                     "title": "Data acquisition in progress...{lang:separator}{embed:title}",
                     "description": "Retrieving data. Please wait...",
+                    "fields": []
+                },
+                {
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for users who match the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -562,9 +572,15 @@
         },
         "leaderboard": {
             "title": "Leaderboard",
-            "description": "{replace}",
+            "description": "",
             "definitions": {},
-            "dialogs": [],
+            "dialogs": [
+                {
+                    "title": "Data acquisition in progress...{lang:separator}{embed:title}",
+                    "description": "Retrieving data. Please wait...",
+                    "fields": []
+                }
+            ],
             "fields": [
                 {
                     "title": "Leaderboard for Web",
@@ -1421,17 +1437,17 @@
             "args": {}
         },
         "search": {
-            "title": "インテリジェント・サーチ",
+            "title": "Intelligent Search",
             "description": "",
             "dialogs": [
                 {
                     "title": "{lang:error}{lang:separator}{embed:title}",
-                    "description": "指定した条件に合うオブジェクトが見つかりませんでした。",
+                    "description": "No objects were found that match the specified criteria.",
                     "fields": []
                 },
                 {
-                    "title": "検索中…{lang:separator}{embed:title}",
-                    "description": "指定した条件に合うオブジェクトを検索しています。しばらくお待ちください…",
+                    "title": "Searching...{lang:separator}{embed:title}",
+                    "description": "Searching for objects that match the specified criteria. Please wait a moment...",
                     "fields": []
                 }
             ],
@@ -1439,178 +1455,30 @@
             "hint": {},
             "args": {
                 "about": {
-                    "title": "概要{lang:separator}{embed:title}",
-                    "description": "指定した条件に合うオブジェクトが**{replace}件**見つかりました。",
+                    "title": "Overview{lang:separator}{embed:title}",
+                    "description": "Found **{replace}** objects that match the specified criteria.",
                     "definitions": {},
                     "dialogs": [],
                     "fields": [
                         {
-                            "title": "カテゴリ・チャンネル",
+                            "title": "Categories / Channels",
                             "description": ""
                         },
                         {
-                            "title": "役職",
+                            "title": "Roles",
                             "description": ""
                         },
                         {
-                            "title": "メンバー",
+                            "title": "Members",
+                            "description": ""
+                        },
+                        {
+                            "title": "Emojis",
                             "description": ""
                         }
                     ],
                     "hint": {},
                     "args": {}
-                },
-                "channel": {
-                    "title": "チャンネル情報{lang:separator}{embed:title}",
-                    "description": "{replace} の情報を表示しています。",
-                    "definitions": {
-                        "role": "役職",
-                        "member": "メンバー"
-                    },
-                    "dialogs": [],
-                    "fields": [
-                        {
-                            "title": "ID",
-                            "description": ""
-                        },
-                        {
-                            "title": "トピック",
-                            "description": ""
-                        },
-                        {
-                            "title": "カテゴリ",
-                            "description": ""
-                        },
-                        {
-                            "title": "NSFW",
-                            "description": ""
-                        },
-                        {
-                            "title": "スローモード (秒)",
-                            "description": ""
-                        },
-                        {
-                            "title": "ビットレート",
-                            "description": "{replace} / {replace:max}kbps"
-                        },
-                        {
-                            "title": "ユーザー人数 (上限)",
-                            "description": ""
-                        },
-                        {
-                            "title": "Created at",
-                            "description": ""
-                        },
-                        {
-                            "title": "アクセス可能役職・メンバー",
-                            "description": ""
-                        }
-                    ],
-                    "hint": {},
-                    "args": {}
-                },
-                "role": {
-                    "title": "役職情報{lang:separator}{embed:title}",
-                    "description": "{replace} の情報を表示しています。",
-                    "definitions": {
-                        "general": "サーバー全般",
-                        "text-channel": "テキストチャンネル",
-                        "voice-channel": "ボイスチャンネル"
-                    },
-                    "dialogs": [],
-                    "fields": [
-                        {
-                            "title": "ID",
-                            "description": ""
-                        },
-                        {
-                            "title": "メンション可能",
-                            "description": ""
-                        },
-                        {
-                            "title": "別表示",
-                            "description": ""
-                        },
-                        {
-                            "title": "カラーコード",
-                            "description": ""
-                        },
-                        {
-                            "title": "付与数",
-                            "description": ""
-                        },
-                        {
-                            "title": "Created at",
-                            "description": ""
-                        },
-                        {
-                            "title": "メンバー ({replace:count})",
-                            "description": ""
-                        },
-                        {
-                            "title": "権限 ({replace:raw})",
-                            "description": ""
-                        }
-                    ],
-                    "hint": {},
-                    "args": {}
-                },
-                "member": {
-                    "title": "メンバー情報{lang:separator}{embed:title}",
-                    "description": "{replace} の情報を表示しています。",
-                    "definitions": {
-                        "general": "サーバー全般",
-                        "text-channel": "テキストチャンネル",
-                        "voice-channel": "ボイスチャンネル"
-                    },
-                    "dialogs": [],
-                    "fields": [
-                        {
-                            "title": "User name",
-                            "description": "{replace:tag}\n({replace:id})"
-                        },
-                        {
-                            "title": "ステータス",
-                            "description": ""
-                        },
-                        {
-                            "title": "Created at",
-                            "description": ""
-                        },
-                        {
-                            "title": "参加日時",
-                            "description": ""
-                        },
-                        {
-                            "title": "ニックネーム",
-                            "description": ""
-                        },
-                        {
-                            "title": "Evaluation value",
-                            "description": ""
-                        },
-                        {
-                            "title": "Bot",
-                            "description": ""
-                        },
-                        {
-                            "title": "Verified (Bot)",
-                            "description": ""
-                        },
-                        {
-                            "title": "Permission (Bot)",
-                            "description": ""
-                        },
-                        {
-                            "title": "役職 ({replace:count})",
-                            "description": ""
-                        },
-                        {
-                            "title": "権限 ({replace:raw})",
-                            "description": ""
-                        }
-                    ],
-                    "hint": {}
                 }
             }
         },
