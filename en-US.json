@@ -3827,6 +3827,9 @@
         "voice_deaf_others": "Deafen Members",
         "voice_move_others": "Move Members",
         "voice_use_vad": "Use Voice Activity",
-        "priority_speaker": "Priority Speaker"
+        "priority_speaker": "Priority Speaker",
+
+        "category-stage_channel": "Stage Channel",
+        "request_to_speak": "Request to Speak"
     }
 }

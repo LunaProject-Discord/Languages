@@ -3831,6 +3831,9 @@
         "voice_deaf_others": "メンバーのスピーカーをミュート",
         "voice_move_others": "メンバーの移動",
         "voice_use_vad": "音声検出を使用",
-        "priority_speaker": "優先スピーカー"
+        "priority_speaker": "優先スピーカー",
+        
+        "category-stage_channel": "ボイスチャンネル",
+        "request_to_speak": "スピーカー参加をリクエスト"
     }
 }
